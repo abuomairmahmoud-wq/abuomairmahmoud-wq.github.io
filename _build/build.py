@@ -5,6 +5,8 @@ _D=_j.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'product
 P=[(p['slug'],p['title'],p['cat'],p['price_cents'],p['cover'],p['h1'],p['desc'],p['bullets']) for p in _D['products']]
 CATS=[(c['id'],c['name'],c['desc']) for c in _D['categories']]
 from guides import G
+from tools import T, TOOL_CSS
+KOFI = _D.get('kofi', '')
 
 BASE = sys.argv[1].rstrip('/') if len(sys.argv) > 1 else "https://abuomairmahmoud-wq.github.io"
 OUT = sys.argv[2] if len(sys.argv) > 2 else os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "_site")
@@ -14,6 +16,10 @@ TODAY = datetime.date.today().isoformat()
 E = html.escape
 BYSLUG = {p[0]: p for p in P}
 CATNAME = {c[0]: c[1] for c in CATS}
+
+
+def short(t, n):
+    return t if len(t) <= n else t[:n].rsplit(' ', 1)[0].rstrip(',;:') + '...'
 
 
 def price(c):
@@ -58,10 +64,11 @@ def page(path, title, desc, body, canon=None, img=None, jsonld=None, typ="websit
 <title>{E(title)}</title><meta name="description" content="{E(desc)}"><link rel="canonical" href="{canon}">
 <meta property="og:type" content="{typ}"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}"><meta property="og:url" content="{canon}"><meta property="og:image" content="{img}"><meta property="og:site_name" content="LaunchKit Labs">
 <meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="{rel(path)}style.css">{ld}</head><body>
-<header><div class="w"><a class="logo" href="{rel(path)}">LaunchKit Labs</a><nav><a href="{rel(path)}free/">Free templates</a><a href="{rel(path)}#all">All templates</a><a href="{rel(path)}guides/">Guides</a></nav></div></header>
+<header><div class="w"><a class="logo" href="{rel(path)}">LaunchKit Labs</a><nav><a href="{rel(path)}tools/">Free calculators</a><a href="{rel(path)}free/">Free templates</a><a href="{rel(path)}#all">All templates</a><a href="{rel(path)}guides/">Guides</a></nav></div></header>
 {body}
 <footer><div class="w"><p><strong style="color:#fff">LaunchKit Labs</strong>: practical Excel templates, planners and calculators. Instant download, no subscriptions.</p>
-<p><a href="{rel(path)}free/">Free templates</a> · <a href="{rel(path)}guides/">Guides</a> · <a href="https://mahmoudian113.gumroad.com" rel="noopener">Shop on Gumroad</a> · <a href="https://payhip.com/BestLaunchKitLabs" rel="noopener">Payhip store</a></p>
+<p><a href="{rel(path)}tools/">Free calculators</a> · <a href="{rel(path)}free/">Free templates</a> · <a href="{rel(path)}guides/">Guides</a> · <a href="https://mahmoudian113.gumroad.com" rel="noopener">Shop on Gumroad</a> · <a href="https://payhip.com/BestLaunchKitLabs" rel="noopener">Payhip store</a></p>
+{('<p><a class="kofi" href="'+KOFI+'" rel="noopener">☕ Support LaunchKit Labs on Ko-fi</a></p>') if KOFI else ''}
 <p>Templates are planning tools, not financial, legal, tax or medical advice. © {datetime.date.today().year} LaunchKit Labs</p></div></footer></body></html>"""
     full = os.path.join(OUT, path)
     os.makedirs(os.path.dirname(full), exist_ok=True)
@@ -83,7 +90,7 @@ def build():
     if os.path.exists(OUT):
         shutil.rmtree(OUT)
     os.makedirs(OUT)
-    open(os.path.join(OUT, "style.css"), "w").write(CSS)
+    open(os.path.join(OUT, "style.css"), "w").write(CSS + "\n" + TOOL_CSS)
     open(os.path.join(OUT, ".nojekyll"), "w").write("")
     root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
     for f in os.listdir(root):
@@ -100,11 +107,12 @@ def build():
         anchor = ' id="all"' if cid == "deals" else ""
         secs += f'<section{anchor}><h2 id="{cid}">{E(cname)}</h2><p class="sub">{E(cdesc)}</p><div class="grid">{"".join(card(p, "") for p in items)}</div></section>'
     guides = "".join(f'<li><a href="guides/{g[0]}/">{E(g[1])}</a></li>' for g in G)
+    tl = "".join(f'<li><a href="tools/{t[0]}/">{E(t[1])}</a></li>' for t in T)
     body = f"""<section class="hero"><div class="w"><h1>Excel Templates for Budgets, Deals, Small Business &amp; Life Planning</h1>
 <p>Ready-to-use spreadsheets that do the math for you: budget planners, Black Friday deal trackers, grocery price books, car loan calculators, invoice trackers and more. Built for the USA, UK and Canada.</p>
 <a class="btn" href="free/">Get free templates</a><a class="btn ghost" href="#all">Browse all</a>
 <div class="trust"><span>✓ Instant download</span><span>✓ No subscription</span><span>✓ Works in Microsoft Excel</span><span>✓ Sample data included</span></div></div></section>
-<main class="w">{secs}<section><h2>Free money-saving guides</h2><ul>{guides}</ul></section></main>"""
+<main class="w"><section><h2 id="tools">Free online calculators</h2><p class="sub">Quick answers in your browser, no download needed.</p><ul>{tl}</ul></section>{secs}<section><h2>Free money-saving guides</h2><ul>{guides}</ul></section></main>"""
     org = {"@context": "https://schema.org", "@type": "Organization", "name": "LaunchKit Labs", "url": BASE + "/",
            "sameAs": ["https://mahmoudian113.gumroad.com", "https://payhip.com/BestLaunchKitLabs", "https://contra.com/mahmoud_abuomair_7sxshnhl"]}
     site = {"@context": "https://schema.org", "@type": "WebSite", "name": "LaunchKit Labs", "url": BASE + "/"}
@@ -162,8 +170,8 @@ def build():
     for slug, title, desc, free_slug, paid_slug, content in G:
         f, pd = BYSLUG[free_slug], BYSLUG[paid_slug]
         body = f"""<article><div class="crumb"><a href="../../">Home</a> › <a href="../">Guides</a></div><h1>{E(title)}</h1>{content}
-<div class="cta"><h3>Free download: {E(f[1])}</h3><p>{E(f[6][:180])}</p><a class="btn" href="../../{f[0]}/">Get it free</a></div>
-<div class="cta" style="background:#eff6ff;border-color:#bfdbfe"><h3>Want the full version? {E(pd[1])}</h3><p>{E(pd[6][:180])}</p><a class="btn" href="../../{pd[0]}/">See {E(pd[1])}: {price(pd[3])}</a></div></article>"""
+<div class="cta"><h3>Free download: {E(f[1])}</h3><p>{E(short(f[6], 180))}</p><a class="btn" href="../../{f[0]}/">Get it free</a></div>
+<div class="cta" style="background:#eff6ff;border-color:#bfdbfe"><h3>Want the full version? {E(pd[1])}</h3><p>{E(short(pd[6], 180))}</p><a class="btn" href="../../{pd[0]}/">See {E(pd[1])}: {price(pd[3])}</a></div></article>"""
         art = {"@context": "https://schema.org", "@type": "Article", "headline": title, "description": desc, "datePublished": TODAY, "dateModified": TODAY,
                "author": {"@type": "Organization", "name": "LaunchKit Labs"}, "publisher": {"@type": "Organization", "name": "LaunchKit Labs"}, "image": IMG + pd[4]}
         page(f"guides/{slug}/index.html", title, desc, body, img=IMG + pd[4], jsonld=[art], typ="article")
@@ -173,6 +181,24 @@ def build():
          "Free step-by-step guides: spot fake Black Friday deals, calculate grocery unit prices, make a monthly budget, debt snowball vs avalanche and lease vs buy a car.",
          f'<article><h1>Money-Saving Guides</h1><ul style="list-style:none;padding:0">{gl}</ul></article>')
     urls.append(BASE + "/guides/")
+
+
+    # ---------- tools ----------
+    tlist = ""
+    for slug, title, h1, desc, intro, tool, paid_slug, free_slug in T:
+        pd, f = BYSLUG[paid_slug], BYSLUG[free_slug]
+        kofi = f'<p class="mut">Found this useful? <a href="{KOFI}" rel="noopener">Buy me a coffee on Ko-fi</a>.</p>' if KOFI else ""
+        body = f"""<article><div class="crumb"><a href="../../">Home</a> \u203a <a href="../">Free calculators</a></div><h1>{E(h1)}</h1>{intro}{tool}
+<div class="cta" style="background:#eff6ff;border-color:#bfdbfe"><h3>Want to track this every week? {E(pd[1])}</h3><p>{E(short(pd[6], 200))}</p><a class="btn" href="../../{pd[0]}/">See {E(pd[1])}: {price(pd[3])}</a></div>
+<div class="cta"><h3>Free download: {E(f[1])}</h3><p>{E(short(f[6], 160))}</p><a class="btn" href="../../{f[0]}/">Get it free</a></div>{kofi}</article>"""
+        app = {"@context": "https://schema.org", "@type": "WebApplication", "name": title, "url": BASE + f"/tools/{slug}/", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": desc}
+        page(f"tools/{slug}/index.html", f"{h1} | Free", desc, body, img=IMG + pd[4], jsonld=[app], typ="website")
+        urls.append(BASE + f"/tools/{slug}/")
+        tlist += f'<li style="margin:10px 0"><a href="{slug}/"><strong>{E(h1)}</strong></a><br><span style="color:var(--mut)">{E(desc)}</span></li>'
+    page("tools/index.html", "Free Online Money Calculators: Budget, Debt, Mortgage, Car & Grocery | LaunchKit Labs",
+         "Free calculators: grocery unit price, Black Friday countdown, lease vs buy, debt snowball vs avalanche, mortgage payment and 50/30/20 budget.",
+         f'<article><h1>Free Online Money Calculators</h1><p>No sign-up, no download. Your numbers stay in your browser.</p><ul style="list-style:none;padding:0">{tlist}</ul></article>')
+    urls.append(BASE + "/tools/")
 
     # ---------- 404, robots, sitemap ----------
     page("404.html", "Page not found | LaunchKit Labs", "Page not found.", '<article><h1>Page not found</h1><p><a href="/">Go to the home page</a></p></article>', canon=BASE + "/")
