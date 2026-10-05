@@ -1,0 +1,832 @@
+{
+ "categories": [
+  {
+   "id": "free",
+   "name": "Free Excel Templates",
+   "desc": "Free downloads: no cost, instant download."
+  },
+  {
+   "id": "deals",
+   "name": "Shopping, Deals & Saving Money",
+   "desc": "Catch real deals, compare prices and stop overspending."
+  },
+  {
+   "id": "money",
+   "name": "Budget & Personal Finance",
+   "desc": "Budgets, debt payoff, net worth and home buying."
+  },
+  {
+   "id": "business",
+   "name": "Small Business & Online Sellers",
+   "desc": "Bookkeeping, inventory, profit and pricing."
+  },
+  {
+   "id": "creators",
+   "name": "Freelancers & Content Creators",
+   "desc": "Invoices, taxes, content calendars and brand deals."
+  },
+  {
+   "id": "career",
+   "name": "Career, Study & Developers",
+   "desc": "Job search, CVs, student planners and starter code."
+  },
+  {
+   "id": "home",
+   "name": "Home, Family & Travel",
+   "desc": "Weddings, travel, family binders and reading."
+  },
+  {
+   "id": "health",
+   "name": "Health & Habits",
+   "desc": "Habits, workouts, ADHD planning and weight journeys."
+  },
+  {
+   "id": "bundles",
+   "name": "Bundles (Best Value)",
+   "desc": "Several templates together for less."
+  }
+ ],
+ "products": [
+  {
+   "slug": "free-black-friday-wishlist",
+   "title": "Free Black Friday Wishlist & Price Checker",
+   "cat": "free",
+   "price_cents": 0,
+   "cover": "spqlmph0afs304rsa49j3nrfgswx",
+   "h1": "Free Black Friday Wishlist Spreadsheet (Excel)",
+   "desc": "Know if a Black Friday deal is really a deal before you buy. Add what you want, set a target price, type today's price and the sheet shows your real saving and flags BUY NOW when the price hits your target. Works for the USA, UK and Canada in any currency.",
+   "bullets": [
+    "Wishlist for 30 items with regular, target and today's price",
+    "Automatic saving and saving %",
+    "BUY NOW / Close / Wait / Bought flags",
+    "Total budget, planned spend, money left and total saved"
+   ]
+  },
+  {
+   "slug": "free-grocery-unit-price-calculator",
+   "title": "Free Grocery Unit Price Calculator",
+   "cat": "free",
+   "price_cents": 0,
+   "cover": "9gg3abjv9sakxxwo9tdd1g1aj3pf",
+   "h1": "Free Grocery Unit Price Calculator (Excel)",
+   "desc": "Stop guessing which pack or store is cheaper. Type the price and size of two options and the sheet works out the unit price, picks the cheaper one and shows how much you save.",
+   "bullets": [
+    "Compare two options for 35 items",
+    "Automatic unit price for each option",
+    "Cheaper option highlighted with saving %",
+    "Works with oz, lb, fl oz, g, kg, ml, l or item counts"
+   ]
+  },
+  {
+   "slug": "free-simple-monthly-budget",
+   "title": "Free Simple Monthly Budget Spreadsheet",
+   "cat": "free",
+   "price_cents": 0,
+   "cover": "0ro2chft05ljkt2rgubn5ge9w6k6",
+   "h1": "Free Simple Monthly Budget Spreadsheet (Excel)",
+   "desc": "A simple budget you will actually keep using. Enter your income, set a budget for each category and type what you spend. The sheet shows what's left and highlights overspending. Great for beginners.",
+   "bullets": [
+    "Monthly take-home income",
+    "15 editable categories with budget, actual, left and % used",
+    "Red alert when a category is over budget",
+    "Income left after budget and after spending"
+   ]
+  },
+  {
+   "slug": "free-small-business-excel-starter-pack",
+   "title": "Free Small Business Excel Starter Pack",
+   "cat": "free",
+   "price_cents": 0,
+   "cover": "g68va9cql7cq2q8rfxdxiqk20wub",
+   "h1": "Free Small Business Excel Templates: Expense, Inventory & Project Tracker",
+   "desc": "Start organizing your small business with three practical Excel trackers in one free workbook, with sample data and clear input areas.",
+   "bullets": [
+    "Expense tracker with automatic total spending",
+    "Inventory tracker with automatic reorder status",
+    "Project tracker with priorities, deadlines, owners and status"
+   ]
+  },
+  {
+   "slug": "black-friday-deal-planner-2026",
+   "title": "Black Friday & Boxing Day Deal Planner 2026",
+   "cat": "deals",
+   "price_cents": 399,
+   "cover": "6k32y5rlidqik4bet9d1pb4c8t4s",
+   "h1": "Black Friday Deal Planner 2026: Wishlist, Price Tracker & Holiday Budget Spreadsheet",
+   "desc": "Catch the real deals this Black Friday, Cyber Monday and Boxing Day, and stay on budget. Log prices as you see them and the planner tells you when a price hits your target, how much you really saved and how much budget is left. Built for the USA, UK and Canada.",
+   "bullets": [
+    "Country presets: USA sales tax, UK VAT, Canada GST/HST",
+    "200-item wishlist with lowest price seen and best store",
+    "BUY NOW flags when a price hits your target",
+    "Price Watch log, budget by category and a gift list for 30 people",
+    "Countdowns to Black Friday, Cyber Monday and Boxing Day"
+   ]
+  },
+  {
+   "slug": "grocery-price-book-deal-finder",
+   "title": "Grocery Price Book & Deal Finder",
+   "cat": "deals",
+   "price_cents": 499,
+   "cover": "261jm527co6keaegs9d0jj655o3g",
+   "h1": "Grocery Price Book Spreadsheet: Unit Price Comparison & Coupon Tracker",
+   "desc": "Know which store is really cheapest for every item you buy. Log prices from shelves, flyers or receipts and the price book converts every size to a fair unit price, finds the best store and tracks coupons and your weekly grocery budget. USA, UK and Canada.",
+   "bullets": [
+    "600-row price book with automatic unit conversion",
+    "Best store for every item found automatically",
+    "Coupon tracker with expiry alerts",
+    "Shopping list that picks the cheapest store",
+    "12-week grocery budget and savings dashboard"
+   ]
+  },
+  {
+   "slug": "car-deal-analyzer",
+   "title": "Car Deal Analyzer",
+   "cat": "deals",
+   "price_cents": 599,
+   "cover": "soaaue0zltf9t60tnuf3yb49vrh5",
+   "h1": "Car Deal Analyzer: Lease vs Buy, Car Loan & True Cost of Ownership Calculator",
+   "desc": "Stop guessing which car deal is best. Enter each dealer's offer and the analyzer works out the out-the-door price, monthly payment, interest, running costs and resale value, then ranks offers by true cost per year. USA, UK and Canada.",
+   "bullets": [
+    "Compare 8 offers side by side",
+    "Out-the-door price with fees, add-ons and tax",
+    "Cash, finance (APR) or lease (residual and money factor)",
+    "Fuel, insurance, maintenance and resale for true cost per year",
+    "Dealer quote log and 30-step negotiation checklist"
+   ]
+  },
+  {
+   "slug": "2026-holiday-spending-control-center",
+   "title": "2026 Holiday Spending Control Center",
+   "cat": "deals",
+   "price_cents": 300,
+   "cover": "eehe93dkcm9sjq3gmzz8a5bivklz",
+   "h1": "Holiday Budget Planner 2026: Christmas Gift List & Spending Tracker",
+   "desc": "Keep holiday spending on budget and know where every gift, delivery and return stands, all in one dashboard.",
+   "bullets": [
+    "Total holiday budget and remaining balance",
+    "Gift list by recipient",
+    "Delivery status for every order",
+    "Returns and return deadlines",
+    "Excel, Google Sheets and offline HTML versions"
+   ]
+  },
+  {
+   "slug": "purchase-protection-return-deadline-dashboard",
+   "title": "Purchase Protection & Return Deadline Dashboard",
+   "cat": "deals",
+   "price_cents": 1499,
+   "cover": "uooqsnn1g7it2poqz3rpdc0uoksc",
+   "h1": "Return Deadline Tracker: Refunds, Warranties & Price Protection Spreadsheet",
+   "desc": "Stop losing money to missed return windows, forgotten refunds, expired warranties and unclaimed price drops. One Excel system for every online order after checkout.",
+   "bullets": [
+    "Automatic return deadlines",
+    "Refunds still outstanding",
+    "Warranty expiration dates",
+    "Price-protection periods and potential savings",
+    "Daily action dashboard with alerts"
+   ]
+  },
+  {
+   "slug": "subscription-audit-tracker",
+   "title": "Subscription Audit & Cancellation Tracker",
+   "cat": "deals",
+   "price_cents": 599,
+   "cover": "36iy6i85tkk9aeulwxnti4onysaj",
+   "h1": "Subscription Tracker Spreadsheet: Find and Cancel Subscriptions",
+   "desc": "See exactly what recurring services cost, what renews next and what you can cancel. Turns scattered subscriptions into a simple money-saving audit.",
+   "bullets": [
+    "Monthly and annual cost of every subscription",
+    "Next renewal date and days remaining",
+    "Keep, review or cancel workflow",
+    "Potential savings and cost by category"
+   ]
+  },
+  {
+   "slug": "meal-planner-grocery-budget",
+   "title": "Meal Planner & Grocery Budget",
+   "cat": "deals",
+   "price_cents": 399,
+   "cover": "e6rduesu411pylb8335qpxzdictr",
+   "h1": "Weekly Meal Planner & Grocery Budget Spreadsheet",
+   "desc": "Plan seven days of meals, build a costed grocery list and control weekly food spending in one simple Excel workbook.",
+   "bullets": [
+    "Weekly breakfast, lunch, dinner and snack planner",
+    "Grocery list with quantity, unit price and totals",
+    "Grocery budget with remaining balance",
+    "Pantry inventory with automatic Buy? flag"
+   ]
+  },
+  {
+   "slug": "paycheck-budget-planner",
+   "title": "Paycheck Budget Planner",
+   "cat": "money",
+   "price_cents": 399,
+   "cover": "ag1kcxbd6lqx0upueieiayd57omy",
+   "h1": "Paycheck Budget Planner Spreadsheet: Budget by Paycheck",
+   "desc": "Give every paycheck a job before it lands. See which bills each paycheck must cover and exactly how much is left, so you stop running short before payday.",
+   "bullets": [
+    "Up to 26 paychecks and 60 bills",
+    "Assign each bill to a paycheck",
+    "Red warning when a paycheck is over-assigned",
+    "Paid / unpaid status and dashboard"
+   ]
+  },
+  {
+   "slug": "2027-annual-budget-sinking-funds-planner",
+   "title": "2027 Annual Budget & Sinking Funds Planner",
+   "cat": "money",
+   "price_cents": 799,
+   "cover": "e8xr2slvuax3if1glfih7v1s9h87",
+   "h1": "2027 Budget Planner Spreadsheet with Sinking Funds",
+   "desc": "Plan your whole 2027 and never be surprised by a big bill again. A full-year budget with sinking funds, so you save a little every month for the expenses you know are coming.",
+   "bullets": [
+    "12-month budget vs actual",
+    "Up to 15 sinking funds with monthly savings amount",
+    "1,000-row transaction log",
+    "Savings rate and dashboard"
+   ]
+  },
+  {
+   "slug": "debt-payoff-calculator",
+   "title": "Debt Payoff Strategy Calculator",
+   "cat": "money",
+   "price_cents": 799,
+   "cover": "249xfkusdsykpicrav1xl82vk5lg",
+   "h1": "Debt Snowball & Avalanche Calculator Spreadsheet",
+   "desc": "Turn your debt balances into a clear payoff plan. Compare snowball and avalanche, estimate payoff timing and track monthly progress.",
+   "bullets": [
+    "Snowball and avalanche rankings",
+    "Estimated payoff months for each debt",
+    "24-month payoff log",
+    "Dashboard with total balance and extra payments"
+   ]
+  },
+  {
+   "slug": "net-worth-dividend-tracker",
+   "title": "Net Worth & Dividend Tracker",
+   "cat": "money",
+   "price_cents": 699,
+   "cover": "gglu8zbmsvmyfd2g5fijzsmitbcb",
+   "h1": "Net Worth Tracker & Dividend Income Spreadsheet",
+   "desc": "Watch your net worth grow and see exactly how much your investments pay you, in one private dashboard.",
+   "bullets": [
+    "Assets, debts and monthly net worth snapshots",
+    "40 holdings with gain/loss and yield",
+    "Projected annual dividend income",
+    "Dividends by month chart"
+   ]
+  },
+  {
+   "slug": "trading-journal-performance-dashboard",
+   "title": "Trading Journal & Performance Dashboard",
+   "cat": "money",
+   "price_cents": 699,
+   "cover": "o2nx4wcpx57oxqmlk0uduk78sjca",
+   "h1": "Trading Journal Spreadsheet with Performance Dashboard",
+   "desc": "See exactly which trades and setups make you money. Every trade you log becomes clear performance stats.",
+   "bullets": [
+    "Automatic P&L and R-multiple",
+    "Win rate, profit factor, expectancy and drawdown",
+    "Results by setup and month",
+    "Equity curve chart"
+   ]
+  },
+  {
+   "slug": "home-buying-planner-mortgage-calculator",
+   "title": "Home Buying Planner & Mortgage Calculator",
+   "cat": "money",
+   "price_cents": 599,
+   "cover": "vz3fy01g0774iia8pvevidd6yruq",
+   "h1": "Home Buying Planner & Mortgage Affordability Calculator Spreadsheet",
+   "desc": "Buy your home with clear numbers. See a comfortable price range, the real monthly payment, the cash you need to close and which home scores best.",
+   "bullets": [
+    "Affordability with the 28/36 rule",
+    "Mortgage with tax, insurance, PMI and HOA",
+    "30-year amortization",
+    "Compare and score up to 15 homes",
+    "Closing costs and 43-step checklist"
+   ]
+  },
+  {
+   "slug": "fijci",
+   "title": "Personal Finance & Life Planning Bundle",
+   "cat": "bundles",
+   "price_cents": 1999,
+   "cover": "j45wm3mtb7lpvamdsnd6yse3rmce",
+   "h1": "Personal Finance Spreadsheet Bundle: Wedding Budget, Debt Payoff & Subscription Tracker",
+   "desc": "Three Excel systems in one bundle: Wedding Planning Command Center, Debt Payoff Strategy Calculator and Subscription Audit & Cancellation Tracker.",
+   "bullets": [
+    "3 editable Excel workbooks",
+    "3 quick start guides",
+    "Dashboards, sample data and formulas"
+   ]
+  },
+  {
+   "slug": "rzpbfs",
+   "title": "LaunchKit 2026 Planner Bundle (7 Excel Templates)",
+   "cat": "bundles",
+   "price_cents": 1999,
+   "cover": "2qqdm3pxwklhtxtho342jrwy0dxi",
+   "h1": "Excel Planner Bundle: 7 Budget, Study, Health & Habit Templates",
+   "desc": "All 7 LaunchKit Excel planners for less than half the price of buying them one by one.",
+   "bullets": [
+    "Trading Journal, 2027 Budget, Paycheck Budget",
+    "Student Planner, Net Worth Tracker",
+    "Gamified Habit Tracker, GLP-1 Tracker"
+   ]
+  },
+  {
+   "slug": "small-business-excel-dashboard-bundle",
+   "title": "Small Business Excel Dashboard Bundle",
+   "cat": "bundles",
+   "price_cents": 799,
+   "cover": "h8spgwd6wyyd11fhqwcao9x1iya5",
+   "h1": "Small Business Excel Bundle: Bookkeeping, Inventory & Project Dashboards",
+   "desc": "Three practical Excel dashboards in one discounted bundle: track income and expenses, control inventory and reorder levels, and manage projects and budgets.",
+   "bullets": [
+    "Small Business Bookkeeping & Tax Organizer 2026",
+    "Inventory & Reorder Dashboard",
+    "Project Management Dashboard"
+   ]
+  },
+  {
+   "slug": "online-seller-business-toolkit",
+   "title": "Online Seller Business Toolkit",
+   "cat": "bundles",
+   "price_cents": 1499,
+   "cover": "olwqs91yldj96cf268bfu003fa9r",
+   "h1": "Online Seller Toolkit: Profit Calculator, Invoice Tracker, Q4 Planner & AI Templates",
+   "desc": "Four practical tools for running an online business: product profit, client invoices, Q4 sales and content planning, and AI prompts for routine work.",
+   "bullets": [
+    "E-commerce Profit & Pricing Calculator",
+    "Freelancer Client & Invoice Tracker",
+    "Q4 Sales & Content Planner",
+    "Small Business AI Toolkit"
+   ]
+  },
+  {
+   "slug": "small-business-bookkeeping-tax-organizer-2026",
+   "title": "Small Business Bookkeeping & Tax Organizer 2026",
+   "cat": "business",
+   "price_cents": 399,
+   "cover": "6l1psrolel7pr2h07q21z10u7n4w",
+   "h1": "Small Business Bookkeeping Spreadsheet & Tax Organizer 2026",
+   "desc": "Keep your 2026 business finances organized without complicated accounting software.",
+   "bullets": [
+    "Income and expense log",
+    "Monthly profit summary",
+    "Tax-deductible expense total",
+    "Automatic dashboard"
+   ]
+  },
+  {
+   "slug": "inventory-reorder-dashboard-excel",
+   "title": "Inventory & Reorder Dashboard",
+   "cat": "business",
+   "price_cents": 399,
+   "cover": "xvcm5h3idtxb75hxkkx61ok0u4vt",
+   "h1": "Inventory Spreadsheet with Reorder Alerts (Excel)",
+   "desc": "Know what is in stock and what needs reordering before you lose a sale.",
+   "bullets": [
+    "Automatic stock in / stock out",
+    "Low-stock and reorder alerts",
+    "Inventory value and unit profit",
+    "Space for 300 products"
+   ]
+  },
+  {
+   "slug": "project-management-dashboard-excel",
+   "title": "Project Management Dashboard",
+   "cat": "business",
+   "price_cents": 399,
+   "cover": "5wv5crisvunug6wnll3tcdho3b6b",
+   "h1": "Excel Project Management Dashboard & Task Tracker",
+   "desc": "Manage tasks, owners, deadlines, completion and costs in one practical Excel dashboard.",
+   "bullets": [
+    "Task, owner, status and priority",
+    "Days remaining and overdue flags",
+    "Budget vs actual cost",
+    "Space for 300 tasks"
+   ]
+  },
+  {
+   "slug": "13-week-cash-flow-runway-planner",
+   "title": "13-Week Cash Flow & Runway Planner",
+   "cat": "business",
+   "price_cents": 799,
+   "cover": "365egseia3len1gikzi5jy5ymjas",
+   "h1": "13-Week Cash Flow Forecast Template (Excel)",
+   "desc": "See the next 13 weeks of cash before a shortage surprises you.",
+   "bullets": [
+    "Rolling 13-week forecast",
+    "Lowest-cash and runway warnings",
+    "Burn rate",
+    "Recurring cash items"
+   ]
+  },
+  {
+   "slug": "ecommerce-profit-pricing-calculator-2026",
+   "title": "E-commerce Profit & Pricing Calculator 2026",
+   "cat": "business",
+   "price_cents": 899,
+   "cover": "am32j1qsq2exq4k6qcclzjtrd1zb",
+   "h1": "Etsy, Shopify & Amazon Profit Calculator Spreadsheet",
+   "desc": "Know your real profit before you set a price or run an ad. Adds every cost behind a sale and shows what you keep.",
+   "bullets": [
+    "Platform, payment and ad costs",
+    "Break-even price and ROAS",
+    "Unprofitable product warnings",
+    "100 products, multi-currency"
+   ]
+  },
+  {
+   "slug": "online-seller-profit-fees-inventory-dashboard",
+   "title": "Online Seller Profit, Fees & Inventory Dashboard",
+   "cat": "business",
+   "price_cents": 1999,
+   "cover": "mpip4zt89xorke70ah0bgzbjir2b",
+   "h1": "Online Seller Profit & Fees Dashboard (Excel)",
+   "desc": "Know exactly which products, platforms and fees drive your profit.",
+   "bullets": [
+    "Profit by platform and product",
+    "Refunds, marketplace and payment fees",
+    "Inventory and low-stock warnings",
+    "Monthly profit trends"
+   ]
+  },
+  {
+   "slug": "reseller-inventory-profit-tracker",
+   "title": "Reseller Inventory & Profit Tracker",
+   "cat": "business",
+   "price_cents": 499,
+   "cover": "tydmsl0t2v4gprenmqgtto14d3mv",
+   "h1": "Reseller Spreadsheet for eBay, Poshmark & Mercari Flipping",
+   "desc": "Know exactly what every flip really made you after fees, shipping and costs.",
+   "bullets": [
+    "Automatic platform fees",
+    "Profit, ROI and days to sell",
+    "Stale listing alerts",
+    "Best sources and platforms"
+   ]
+  },
+  {
+   "slug": "airbnb-host-dashboard-2026",
+   "title": "Airbnb Host Dashboard 2026",
+   "cat": "business",
+   "price_cents": 499,
+   "cover": "b3a2qpy2k2935peo3qxe6jsixqb8",
+   "h1": "Airbnb Host Spreadsheet: Bookings, Expenses & Profit Tracker",
+   "desc": "Run your short-term rental from one practical Excel workbook.",
+   "bullets": [
+    "Booking and guest log",
+    "Nights, revenue and occupancy",
+    "Cleaning and operating costs",
+    "Monthly profit dashboard"
+   ]
+  },
+  {
+   "slug": "rental-property-management-dashboard",
+   "title": "Rental Property Management Dashboard",
+   "cat": "business",
+   "price_cents": 799,
+   "cover": "b8mcusjyn0j69ltuhyikeeg566k5",
+   "h1": "Rental Property Spreadsheet for Landlords (Excel)",
+   "desc": "Manage rent, leases, expenses, maintenance and cash flow without expensive software.",
+   "bullets": [
+    "Property and lease directory",
+    "Rent collection log",
+    "Expense and maintenance tracker",
+    "Portfolio dashboard"
+   ]
+  },
+  {
+   "slug": "contractor-job-costing-quote-calculator",
+   "title": "Contractor Job Costing & Quote Calculator",
+   "cat": "business",
+   "price_cents": 799,
+   "cover": "f28ctoia2hu10lwb4q6onmzqnuvf",
+   "h1": "Contractor Job Costing & Quote Calculator Spreadsheet",
+   "desc": "Price jobs with confidence: labor, materials, equipment, subcontractors, overhead, recommended quote and true margin.",
+   "bullets": [
+    "Margin-based recommended price",
+    "Estimate vs actual tracker",
+    "Job profit and collections",
+    "Sample project"
+   ]
+  },
+  {
+   "slug": "saas-spend-contract-renewal-dashboard",
+   "title": "SaaS Spend & Contract Renewal Dashboard",
+   "cat": "business",
+   "price_cents": 2499,
+   "cover": "tp3v59z8rah8ulelyywmg5054p0n",
+   "h1": "SaaS Spend Tracker & Software Renewal Dashboard (Excel)",
+   "desc": "Stop paying for unused software and missing cancellation deadlines.",
+   "bullets": [
+    "Up to 100 software contracts",
+    "Annualized cost and seat utilization",
+    "Renewal and cancellation deadlines",
+    "Keep / right-size / cancel decisions"
+   ]
+  },
+  {
+   "slug": "small-business-ai-toolkit",
+   "title": "Small Business AI Toolkit",
+   "cat": "business",
+   "price_cents": 900,
+   "cover": "07ife5v3gmq4719sikufs764di3p",
+   "h1": "Small Business AI Toolkit: 100 AI Prompts & Excel Templates",
+   "desc": "Business trackers and templates plus 100 AI prompts and 50 ready-to-use customer messages in Arabic and English.",
+   "bullets": [
+    "Income, expense, cash flow and pricing tools",
+    "Invoice and quotation templates",
+    "100 AI business prompts",
+    "50 Arabic / English messages"
+   ]
+  },
+  {
+   "slug": "freelancer-client-invoice-tracker",
+   "title": "Freelancer Client & Invoice Tracker",
+   "cat": "creators",
+   "price_cents": 500,
+   "cover": "tszn8zhx3ykkpd223ksq551u8x0v",
+   "h1": "Freelancer Invoice Tracker & Client Spreadsheet",
+   "desc": "Track clients, projects, invoices, payments, overdue balances, project profit and effective hourly rate in one workbook.",
+   "bullets": [
+    "Client directory and project tracker",
+    "Invoice tracker with overdue days",
+    "Project profit and hourly rate",
+    "Up to 200 clients, projects and invoices"
+   ]
+  },
+  {
+   "slug": "freelancer-income-tax-planner",
+   "title": "Freelancer Income & Tax Planner",
+   "cat": "creators",
+   "price_cents": 799,
+   "cover": "hbau5op5s2mvhz60zwyd4d53g5es",
+   "h1": "Freelancer Income & Quarterly Tax Planner Spreadsheet",
+   "desc": "Know what you earned, what you can deduct and how much to reserve for taxes.",
+   "bullets": [
+    "Income and expense log",
+    "Q1 to Q4 summary",
+    "Estimated tax reserve",
+    "After-tax profit"
+   ]
+  },
+  {
+   "slug": "content-creator-planner-2026",
+   "title": "Content Creator Planner 2026",
+   "cat": "creators",
+   "price_cents": 499,
+   "cover": "hnrtk6hfxtl5v0lz03kfxs2fqqob",
+   "h1": "Content Calendar Spreadsheet 2026 for Creators",
+   "desc": "Plan content across YouTube, Instagram, TikTok, LinkedIn, blogs and podcasts while tracking views, sponsorships and revenue.",
+   "bullets": [
+    "Multi-platform content calendar",
+    "Idea-to-published workflow",
+    "Sponsorship pipeline and invoices",
+    "Revenue dashboard"
+   ]
+  },
+  {
+   "slug": "creator-sponsorship-rate-calculator",
+   "title": "Creator Sponsorship Rate Calculator",
+   "cat": "creators",
+   "price_cents": 799,
+   "cover": "30hy4hngnfcmucc56a4a3s962hp5",
+   "h1": "Influencer Rate Calculator: Brand Deal Pricing Spreadsheet",
+   "desc": "Build a practical sponsorship rate from audience, views, engagement, production time, usage rights and exclusivity.",
+   "bullets": [
+    "Suggested prices for posts, videos and bundles",
+    "Usage and exclusivity multipliers",
+    "Brand deal tracker",
+    "Effective hourly earnings"
+   ]
+  },
+  {
+   "slug": "q4-2026-sales-content-planner",
+   "title": "Q4 2026 Sales & Content Planner",
+   "cat": "creators",
+   "price_cents": 500,
+   "cover": "dlstb7n1l9rei767ue52fafybue7",
+   "h1": "Q4 2026 Content Calendar & Black Friday Campaign Planner",
+   "desc": "Plan every day of Q4 2026, from October to your Black Friday launch and beyond.",
+   "bullets": [
+    "92-day Q4 calendar",
+    "Sales planning tools",
+    "Social media scheduler",
+    "Black Friday campaign tracker"
+   ]
+  },
+  {
+   "slug": "2026-job-search-command-center",
+   "title": "2026 Job Search Command Center",
+   "cat": "career",
+   "price_cents": 599,
+   "cover": "1wi2v9gptmzcxs68u3rrox83g1cf",
+   "h1": "Job Application Tracker Spreadsheet 2026",
+   "desc": "Run your whole job search from one dashboard: applications, contacts, interviews and follow-ups.",
+   "bullets": [
+    "Applications, companies and roles",
+    "Interview stages and follow-up dates",
+    "Pipeline dashboard",
+    "Contacts and recruiters"
+   ]
+  },
+  {
+   "slug": "ai-job-search-kit-2026",
+   "title": "AI Job Search Kit 2026",
+   "cat": "career",
+   "price_cents": 399,
+   "cover": "q4d25zreftncj72z4wwkjo5d65nt",
+   "h1": "AI Job Search Kit: Resume Templates, Cover Letter & 50+ ChatGPT Prompts",
+   "desc": "Templates, AI prompts and tools to create stronger applications and prepare for interviews faster.",
+   "bullets": [
+    "ATS-friendly resume templates",
+    "50+ AI prompts for applications",
+    "30 interview questions with answer frameworks",
+    "Salary negotiation scripts"
+   ]
+  },
+  {
+   "slug": "cv-resume-pack-arabic-english",
+   "title": "Professional CV & Resume Pack (Arabic + English)",
+   "cat": "career",
+   "price_cents": 500,
+   "cover": "3yfzgmdmojq7iw1epbemxsvb65e1",
+   "h1": "Arabic & English CV Templates (Word)",
+   "desc": "Clean bilingual CV templates so you can put together a complete job application in one sitting.",
+   "bullets": [
+    "English CV template",
+    "Arabic CV template",
+    "Cover letter template",
+    "CV writing guide"
+   ]
+  },
+  {
+   "slug": "student-planner-grade-tracker-2026-27",
+   "title": "Student Planner & Grade Tracker 2026-27",
+   "cat": "career",
+   "price_cents": 599,
+   "cover": "vxylssb7uwe34y9fp55ffq8ndx0f",
+   "h1": "Student Planner Spreadsheet with GPA & Grade Calculator",
+   "desc": "Know your grade in every class and never miss a deadline.",
+   "bullets": [
+    "12 courses and 300 assignments",
+    "Weighted grades and GPA",
+    "Upcoming deadlines",
+    "Weekly class schedule"
+   ]
+  },
+  {
+   "slug": "launchkit-flutter-starter",
+   "title": "LaunchKit Flutter Starter",
+   "cat": "career",
+   "price_cents": 899,
+   "cover": "0ix5g9pwr0dr7bo4rh7sk94u38z0",
+   "h1": "Flutter Starter Project Template",
+   "desc": "A clean Flutter starter project you can inspect, learn from and adapt for your own mobile apps.",
+   "bullets": [
+    "Flutter project ZIP",
+    "Source code you can customize",
+    "For developers and students"
+   ]
+  },
+  {
+   "slug": "wedding-planning-command-center",
+   "title": "Wedding Planning Command Center",
+   "cat": "home",
+   "price_cents": 1299,
+   "cover": "mi0h8n7vimnod448i292b9iter6m",
+   "h1": "Wedding Budget & Planning Spreadsheet",
+   "desc": "Plan your wedding from one organized workbook: budget, vendors, guests, RSVPs and deadlines.",
+   "bullets": [
+    "Wedding budget with payments",
+    "Vendor comparison",
+    "Guest list with RSVP and meals",
+    "Planning timeline"
+   ]
+  },
+  {
+   "slug": "travel-planner-trip-budget",
+   "title": "Travel Planner & Trip Budget",
+   "cat": "home",
+   "price_cents": 499,
+   "cover": "34idl6sfe92yt9mpxo9jzdicsjmi",
+   "h1": "Travel Itinerary & Trip Budget Spreadsheet",
+   "desc": "Plan the whole trip in one file and always know what you can still spend.",
+   "bullets": [
+    "Day-by-day itinerary",
+    "Bookings with confirmation numbers",
+    "Budget vs spent with currency conversion",
+    "Packing list"
+   ]
+  },
+  {
+   "slug": "60-minute-family-emergency-binder",
+   "title": "60-Minute Family Emergency Binder",
+   "cat": "home",
+   "price_cents": 799,
+   "cover": "3thc6awgd2oqhnchp8s6ecn6vrja",
+   "h1": "Printable Family Emergency Binder",
+   "desc": "Build your family's emergency plan in about 60 minutes. 26 fillable, printable pages.",
+   "bullets": [
+    "Emergency contacts and medical info",
+    "Insurance and utilities",
+    "Evacuation plans",
+    "Key documents checklist"
+   ]
+  },
+  {
+   "slug": "aging-parent-caregiver-handoff-binder",
+   "title": "Aging Parent Caregiver Handoff Binder",
+   "cat": "home",
+   "price_cents": 999,
+   "cover": "wspefeqd84z8482rslqo0wy8p9l9",
+   "h1": "Caregiver Binder for Aging Parents (Printable)",
+   "desc": "Keep essential care information in one place so family members or caregivers can take over with confidence.",
+   "bullets": [
+    "Daily routines and medications",
+    "Appointments and contacts",
+    "Preferences and household instructions",
+    "Where documents are kept"
+   ]
+  },
+  {
+   "slug": "reading-tracker-book-journal-2027",
+   "title": "Reading Tracker & Book Journal 2027",
+   "cat": "home",
+   "price_cents": 499,
+   "cover": "ua6cjklyx2ysgylcs2svbi7tbcfu",
+   "h1": "Reading Tracker Spreadsheet & Book Journal 2027",
+   "desc": "See your whole reading year in one automatic book journal.",
+   "bullets": [
+    "400-book log with ratings",
+    "Reading goal progress",
+    "Monthly and genre stats",
+    "TBR list and 24 reading challenges"
+   ]
+  },
+  {
+   "slug": "adhd-friendly-life-planner",
+   "title": "ADHD-Friendly Life Planner",
+   "cat": "health",
+   "price_cents": 499,
+   "cover": "k7o3efav9v8p65e4b9t98zh4gjle",
+   "h1": "ADHD Planner Spreadsheet: Brain Dump, Daily Planner & Routines",
+   "desc": "Get everything out of your head and into one simple, visual planner.",
+   "bullets": [
+    "200-task brain dump with auto flags",
+    "Daily time blocks and top 3",
+    "Weekly planner and habits",
+    "Morning and evening routines"
+   ]
+  },
+  {
+   "slug": "gamified-habit-goal-tracker",
+   "title": "Gamified Habit & Goal Tracker",
+   "cat": "health",
+   "price_cents": 499,
+   "cover": "dv8jzcylx8r6p7vhhb688cbbxg0g",
+   "h1": "Habit Tracker Spreadsheet with XP & Levels",
+   "desc": "Turn your habits into a game: earn XP, level up and protect your streaks.",
+   "bullets": [
+    "10 habits with XP",
+    "365-day check-in grid",
+    "Streaks and completion %",
+    "Goals with milestones"
+   ]
+  },
+  {
+   "slug": "workout-gym-progress-tracker",
+   "title": "Workout & Gym Progress Tracker",
+   "cat": "health",
+   "price_cents": 349,
+   "cover": "6xgd9ooe9hbve70l2t00jyton5o4",
+   "h1": "Workout Log Spreadsheet with PRs & 1RM Calculator",
+   "desc": "See your strength go up, set by set. Volume, estimated 1RM and personal records calculated automatically.",
+   "bullets": [
+    "1,000-row workout log",
+    "Automatic volume and 1RM",
+    "PRs per exercise",
+    "Body measurements and progress charts"
+   ]
+  },
+  {
+   "slug": "glp-1-weight-journey-tracker",
+   "title": "GLP-1 & Weight Journey Tracker",
+   "cat": "health",
+   "price_cents": 599,
+   "cover": "zohu065pf98wxxudm28ad72zxe9k",
+   "h1": "GLP-1 Weight Loss Tracker Spreadsheet",
+   "desc": "Log weigh-ins, doses, daily habits and how you feel, and bring clear notes to every appointment.",
+   "bullets": [
+    "Weekly weight, BMI and measurements",
+    "Dose log with injection site rotation",
+    "Protein, water, steps and side effects",
+    "Progress dashboard"
+   ]
+  }
+ ]
+}
