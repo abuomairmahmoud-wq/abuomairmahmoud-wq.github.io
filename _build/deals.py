@@ -1,13 +1,11 @@
-# Deal & buying guides with shop links. Links are built in build.py from the
-# "aff" settings in products.json (Amazon tag, Admitad deeplink bases), so the
-# same pages earn commission as soon as the tags are added.
+# Deal & buying guides (no store links).
 # Each guide: (slug, title, meta description, intro html, sections, tool_slug, product_slug)
 # section: (heading, text, [(item name, why it saves money, search query), ...])
 
 D = [
 ("black-friday-what-to-buy",
  "What to Buy on Black Friday 2026 (and What to Skip)",
- "The product categories that usually get real Black Friday discounts, what to skip, and quick links to compare prices on Amazon and AliExpress.",
+ "The product categories that usually get real Black Friday discounts, what to skip, and how to plan your budget before the sales start.",
  """<p>Black Friday 2026 is on <strong>Friday, November 27</strong>, with Cyber Monday on November 30. Not every "deal" is a deal, but some categories reliably get their lowest prices of the year. Use this list to plan, then set a target price for each item before the sale starts.</p>""",
  [("Usually worth buying",
    "These categories often see their biggest discounts of the year around Black Friday and Cyber Monday.",
@@ -26,7 +24,7 @@ D = [
 
 ("money-saving-kitchen-tools",
  "Kitchen Tools That Help You Spend Less on Groceries",
- "Simple kitchen tools that cut food waste and grocery bills: storage containers, a kitchen scale, slow cookers and more, with price comparison links.",
+ "Simple kitchen tools that cut food waste and grocery bills: storage containers, a kitchen scale, slow cookers and more.",
  """<p>The fastest way to lower your grocery bill is to waste less food and buy in bulk when the unit price is right. These everyday tools make both easier. Compare prices before you buy, and work out unit prices with our free <a href="../../tools/grocery-unit-price-calculator/">grocery unit price calculator</a>.</p>""",
  [("Store food so it lasts longer",
    "Food that spoils is money in the bin.",
@@ -60,7 +58,7 @@ D = [
 
 ("home-office-on-a-budget",
  "Home Office Setup on a Budget: What You Really Need",
- "A budget home office checklist for remote work and study: monitor, chair support, lighting and cables, with links to compare prices.",
+ "A budget home office checklist for remote work and study: monitor, chair support, lighting and cables.",
  """<p>You don't need an expensive setup to work comfortably from home. Start with the items that make the biggest difference to comfort and focus, and add the rest later.</p>""",
  [("Comfort first",
    "Neck, back and eyes matter more than gadgets.",
