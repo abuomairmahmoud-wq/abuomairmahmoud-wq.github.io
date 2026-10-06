@@ -7,8 +7,6 @@ CATS=[(c['id'],c['name'],c['desc']) for c in _D['categories']]
 from guides import G
 from tools import T, TOOL_CSS
 from deals import D
-from urllib.parse import quote_plus, quote
-AFF = _D.get('aff', {})
 KOFI = _D.get('kofi', '')
 
 BASE = sys.argv[1].rstrip('/') if len(sys.argv) > 1 else "https://abuomairmahmoud-wq.github.io"
@@ -78,26 +76,7 @@ def page(path, title, desc, body, canon=None, img=None, jsonld=None, typ="websit
     open(full, "w", encoding="utf-8").write(doc)
 
 
-def shop_links(q):
-    """Search links for a product query. Adds the Amazon Associates tag and
-    Admitad deeplink bases from products.json "aff" when they are set."""
-    out = []
-    tag = AFF.get("amazon_tag", "")
-    a = "https://www.amazon.com/s?k=" + quote_plus(q) + (("&tag=" + tag) if tag else "")
-    out.append(("Amazon", a))
-    ali = "https://www.aliexpress.com/w/wholesale-" + quote(q.replace(" ", "-")) + ".html"
-    if AFF.get("aliexpress"):
-        ali = AFF["aliexpress"] + "?ulp=" + quote(ali, safe="")
-    out.append(("AliExpress", ali))
-    if AFF.get("temu"):
-        t = "https://www.temu.com/search_result.html?search_key=" + quote_plus(q)
-        out.append(("Temu", AFF["temu"] + "?ulp=" + quote(t, safe="")))
-    return out
-
-
-DISCLOSURE = ("<p class=\"mut\" style=\"font-size:14px\"><em>Disclosure: some links on this page are affiliate links. If you buy through them, "
-              "LaunchKit Labs may earn a small commission at no extra cost to you."
-              + (" As an Amazon Associate I earn from qualifying purchases." if AFF.get("amazon_tag") else "") + "</em></p>")
+DISCLOSURE = ""
 
 
 def rel(path):
@@ -236,13 +215,13 @@ def build():
         for h, txt, items in sections:
             rows = ""
             for name, why, q in items:
-                links = " ".join(f'<a class="btn ghost" style="padding:6px 12px;font-size:14px;margin:4px 6px 0 0;color:#1e293b;border:1px solid #cbd5e1" href="{u}" rel="sponsored nofollow noopener" target="_blank">Compare on {st}</a>' for st, u in shop_links(q))
+                links = ""
                 rows += f'<div class="deal" style="border:1px solid #e2e8f0;border-radius:12px;padding:14px 16px;margin:12px 0"><h3 style="margin:0 0 4px">{E(name)}</h3><p style="margin:0 0 6px">{E(why)}</p>{links}</div>'
                 items_ld.append(name)
             sec += f"<h2>{E(h)}</h2><p>{E(txt)}</p>{rows}"
         toolcta = f'<div class="cta"><h3>Free tool: {E(tt[0][2])}</h3><p>{E(short(tt[0][3], 160))}</p><a class="btn" href="../../tools/{tool_slug}/">Open the free calculator</a></div>' if tt else ""
         body = f"""<article><div class="crumb"><a href="../../">Home</a> \u203a <a href="../">Deals &amp; buying guides</a></div><h1>{E(title)}</h1>{DISCLOSURE}{intro}
-<p><strong>Tip:</strong> prices change daily. Use the buttons to compare current prices, and check the seller rating and return policy before you buy.</p>{sec}{toolcta}
+<p><strong>Tip:</strong> prices change daily. Set a target price before you shop, compare a few stores, and check the seller rating and return policy before you buy.</p>{sec}{toolcta}
 <div class="cta" style="background:#eff6ff;border-color:#bfdbfe"><h3>Plan your spending: {E(pd[1])}</h3><p>{E(short(pd[6], 180))}</p><a class="btn" href="../../{pd[0]}/">See {E(pd[1])}: {price(pd[3])}</a></div></article>"""
         art = {"@context": "https://schema.org", "@type": "Article", "headline": title, "description": desc, "datePublished": TODAY, "dateModified": TODAY,
                "author": {"@type": "Organization", "name": "LaunchKit Labs"}, "publisher": {"@type": "Organization", "name": "LaunchKit Labs"}, "image": IMG + pd[4]}
@@ -251,7 +230,7 @@ def build():
         dlist += f'<li style="margin:10px 0"><a href="{slug}/"><strong>{E(title)}</strong></a><br><span style="color:var(--mut)">{E(desc)}</span></li>'
     page("deals/index.html", "Deals & Buying Guides: Black Friday, Kitchen, Home Office & Gifts | LaunchKit Labs",
          "Honest buying guides to save money: what to buy on Black Friday 2026, money-saving kitchen tools, energy-saving gadgets, budget home office and gifts under $25.",
-         f'<article><h1>Deals &amp; Buying Guides</h1><p>Practical lists to help you spend less, with quick links to compare prices.</p>{DISCLOSURE}<ul style="list-style:none;padding:0">{dlist}</ul></article>')
+         f'<article><h1>Deals &amp; Buying Guides</h1><p>Practical lists to help you spend less, plus free tools to plan every purchase.</p>{DISCLOSURE}<ul style="list-style:none;padding:0">{dlist}</ul></article>')
     urls.append(BASE + "/deals/")
 
     # ---------- 404, robots, sitemap ----------
