@@ -828,6 +828,70 @@
     "Protein, water, steps and side effects",
     "Progress dashboard"
    ]
+  },
+  {
+   "slug": "gig-driver-mileage-earnings-tracker",
+   "title": "Gig Driver Mileage & Earnings Tracker",
+   "cat": "business",
+   "price_cents": 449,
+   "cover": "bzugh527b2kswd4qeh5ezkfnjlop",
+   "h1": "Gig Driver Mileage Log & Earnings Tracker (Excel)",
+   "desc": "Log driving miles, shift earnings and out-of-pocket costs, then see what you actually keep after mileage and expenses on one dashboard. Built for rideshare and delivery drivers.",
+   "bullets": [
+    "Mileage log with business miles and mileage deduction calculated automatically",
+    "Earnings log: platform, hours, trips, base pay, tips and bonuses with $ per hour",
+    "Expense tracker with dropdown categories",
+    "Dashboard with estimated profit, tax set-aside, $ per hour and $ per mile",
+    "Platform comparison, monthly table and weekly earnings goal"
+   ]
+  },
+  {
+   "slug": "savings-challenge-tracker",
+   "title": "Savings Challenge Tracker",
+   "cat": "money",
+   "price_cents": 399,
+   "cover": "n9y985usqmn92v48tuwx6p316md7",
+   "h1": "52-Week Savings Challenge & 100 Envelope Tracker (Excel)",
+   "desc": "Run the 52-Week Money Challenge and the 100 Envelope Challenge in one Excel file, plus your own savings goals. Enter what you save and the dashboard shows your totals, progress and whether you're on track.",
+   "bullets": [
+    "52-Week Challenge with dates, planned vs actual and running totals (increasing or reverse order)",
+    "100 Envelope Challenge log with filled-envelope highlighting",
+    "Up to 12 custom goals with deadline, % complete and amount to save per week",
+    "Dashboard with 12 KPIs, planned-vs-actual line chart and goals chart",
+    "Change the base amount to save $1,378, $6,890 or more"
+   ]
+  },
+  {
+   "slug": "moving-house-planner-budget",
+   "title": "Moving House Planner & Budget",
+   "cat": "home",
+   "price_cents": 499,
+   "cover": "7y5f2qhi0i6j9oyw4klrcw3j8byg",
+   "h1": "Moving House Checklist & Budget Planner (Excel)",
+   "desc": "Plan your move in one Excel file. Enter your moving date and the 35-task checklist gets due dates from 8 weeks before to 3 weeks after; track moving costs against your budget, number every box and tick off address changes.",
+   "bullets": [
+    "35-task moving checklist with due dates calculated from your moving date and overdue flags",
+    "Moving budget: estimated vs actual across 10 categories",
+    "Box inventory for 80 boxes: room, contents, fragile, unpack priority, delivered, unpacked",
+    "Address change list for banks, employer, doctors, insurance and subscriptions",
+    "Dashboard with days until move, tasks done, budget left and box counts"
+   ]
+  },
+  {
+   "slug": "credit-card-rewards-bonus-tracker",
+   "title": "Credit Card Rewards & Bonus Tracker",
+   "cat": "money",
+   "price_cents": 499,
+   "cover": "c5ooytnfjlaemf3y4lucnn7ddd67",
+   "h1": "Credit Card Rewards & Sign-Up Bonus Tracker (Excel)",
+   "desc": "Never miss a sign-up bonus or a surprise annual fee. Log your cards and purchases and this Excel tracker shows how much spend is left for each bonus, days left, points earned, the value of your rewards and whether each card earns more than its fee.",
+   "bullets": [
+    "Up to 15 cards: open date, annual fee, next fee date, bonus points, minimum spend and bonus window",
+    "Bonus status per card: spend so far, spend left, days left, Earned / In progress / Missed",
+    "Spending log with earn rate (e.g. 3x dining) and points earned per purchase",
+    "Redemptions log with real cents-per-point value",
+    "Dashboard: rewards value vs annual fees per card, next fee due and cards to review"
+   ]
   }
  ]
 }
