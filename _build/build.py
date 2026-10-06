@@ -6,6 +6,9 @@ P=[(p['slug'],p['title'],p['cat'],p['price_cents'],p['cover'],p['h1'],p['desc'],
 CATS=[(c['id'],c['name'],c['desc']) for c in _D['categories']]
 from guides import G
 from tools import T, TOOL_CSS
+from deals import D
+from urllib.parse import quote_plus, quote
+AFF = _D.get('aff', {})
 KOFI = _D.get('kofi', '')
 
 BASE = sys.argv[1].rstrip('/') if len(sys.argv) > 1 else "https://abuomairmahmoud-wq.github.io"
@@ -64,15 +67,37 @@ def page(path, title, desc, body, canon=None, img=None, jsonld=None, typ="websit
 <title>{E(title)}</title><meta name="description" content="{E(desc)}"><link rel="canonical" href="{canon}">
 <meta property="og:type" content="{typ}"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}"><meta property="og:url" content="{canon}"><meta property="og:image" content="{img}"><meta property="og:site_name" content="LaunchKit Labs">
 <meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="{rel(path)}style.css">{ld}</head><body>
-<header><div class="w"><a class="logo" href="{rel(path)}">LaunchKit Labs</a><nav><a href="{rel(path)}tools/">Free calculators</a><a href="{rel(path)}free/">Free templates</a><a href="{rel(path)}#all">All templates</a><a href="{rel(path)}guides/">Guides</a></nav></div></header>
+<header><div class="w"><a class="logo" href="{rel(path)}">LaunchKit Labs</a><nav><a href="{rel(path)}tools/">Free calculators</a><a href="{rel(path)}free/">Free templates</a><a href="{rel(path)}#all">All templates</a><a href="{rel(path)}guides/">Guides</a><a href="{rel(path)}deals/">Deals</a></nav></div></header>
 {body}
 <footer><div class="w"><p><strong style="color:#fff">LaunchKit Labs</strong>: practical Excel templates, planners and calculators. Instant download, no subscriptions.</p>
-<p><a href="{rel(path)}tools/">Free calculators</a> · <a href="{rel(path)}free/">Free templates</a> · <a href="{rel(path)}guides/">Guides</a> · <a href="https://mahmoudian113.gumroad.com" rel="noopener">Shop on Gumroad</a> · <a href="https://payhip.com/BestLaunchKitLabs" rel="noopener">Payhip store</a></p>
+<p><a href="{rel(path)}tools/">Free calculators</a> · <a href="{rel(path)}free/">Free templates</a> · <a href="{rel(path)}guides/">Guides</a> · <a href="{rel(path)}deals/">Deals &amp; buying guides</a> · <a href="https://mahmoudian113.gumroad.com" rel="noopener">Shop on Gumroad</a> · <a href="https://payhip.com/BestLaunchKitLabs" rel="noopener">Payhip store</a></p>
 {('<p><a class="kofi" href="'+KOFI+'" rel="noopener">☕ Support LaunchKit Labs on Ko-fi</a></p>') if KOFI else ''}
 <p>Templates are planning tools, not financial, legal, tax or medical advice. © {datetime.date.today().year} LaunchKit Labs</p></div></footer></body></html>"""
     full = os.path.join(OUT, path)
     os.makedirs(os.path.dirname(full), exist_ok=True)
     open(full, "w", encoding="utf-8").write(doc)
+
+
+def shop_links(q):
+    """Search links for a product query. Adds the Amazon Associates tag and
+    Admitad deeplink bases from products.json "aff" when they are set."""
+    out = []
+    tag = AFF.get("amazon_tag", "")
+    a = "https://www.amazon.com/s?k=" + quote_plus(q) + (("&tag=" + tag) if tag else "")
+    out.append(("Amazon", a))
+    ali = "https://www.aliexpress.com/w/wholesale-" + quote(q.replace(" ", "-")) + ".html"
+    if AFF.get("aliexpress"):
+        ali = AFF["aliexpress"] + "?ulp=" + quote(ali, safe="")
+    out.append(("AliExpress", ali))
+    if AFF.get("temu"):
+        t = "https://www.temu.com/search_result.html?search_key=" + quote_plus(q)
+        out.append(("Temu", AFF["temu"] + "?ulp=" + quote(t, safe="")))
+    return out
+
+
+DISCLOSURE = ("<p class=\"mut\" style=\"font-size:14px\"><em>Disclosure: some links on this page are affiliate links. If you buy through them, "
+              "LaunchKit Labs may earn a small commission at no extra cost to you."
+              + (" As an Amazon Associate I earn from qualifying purchases." if AFF.get("amazon_tag") else "") + "</em></p>")
 
 
 def rel(path):
@@ -107,12 +132,13 @@ def build():
         anchor = ' id="all"' if cid == "deals" else ""
         secs += f'<section{anchor}><h2 id="{cid}">{E(cname)}</h2><p class="sub">{E(cdesc)}</p><div class="grid">{"".join(card(p, "") for p in items)}</div></section>'
     guides = "".join(f'<li><a href="guides/{g[0]}/">{E(g[1])}</a></li>' for g in G)
+    dl = "".join(f'<li><a href="deals/{d[0]}/">{E(d[1])}</a></li>' for d in D)
     tl = "".join(f'<li><a href="tools/{t[0]}/">{E(t[1])}</a></li>' for t in T)
     body = f"""<section class="hero"><div class="w"><h1>Excel Templates for Budgets, Deals, Small Business &amp; Life Planning</h1>
 <p>Ready-to-use spreadsheets that do the math for you: budget planners, Black Friday deal trackers, grocery price books, car loan calculators, invoice trackers and more. Built for the USA, UK and Canada.</p>
 <a class="btn" href="free/">Get free templates</a><a class="btn ghost" href="#all">Browse all</a>
 <div class="trust"><span>✓ Instant download</span><span>✓ No subscription</span><span>✓ Works in Microsoft Excel</span><span>✓ Sample data included</span></div></div></section>
-<main class="w"><section><h2 id="tools">Free online calculators</h2><p class="sub">Quick answers in your browser, no download needed.</p><ul>{tl}</ul></section>{secs}<section><h2>Free money-saving guides</h2><ul>{guides}</ul></section></main>"""
+<main class="w"><section><h2 id="tools">Free online calculators</h2><p class="sub">Quick answers in your browser, no download needed.</p><ul>{tl}</ul></section>{secs}<section><h2>Free money-saving guides</h2><ul>{guides}</ul></section><section><h2 id="deals-guides">Deals &amp; buying guides</h2><ul>{dl}</ul></section></main>"""
     org = {"@context": "https://schema.org", "@type": "Organization", "name": "LaunchKit Labs", "url": BASE + "/",
            "sameAs": ["https://mahmoudian113.gumroad.com", "https://payhip.com/BestLaunchKitLabs", "https://contra.com/mahmoud_abuomair_7sxshnhl"]}
     site = {"@context": "https://schema.org", "@type": "WebSite", "name": "LaunchKit Labs", "url": BASE + "/"}
@@ -199,6 +225,34 @@ def build():
          "Free calculators: grocery unit price, Black Friday countdown, lease vs buy, debt snowball vs avalanche, mortgage payment and 50/30/20 budget.",
          f'<article><h1>Free Online Money Calculators</h1><p>No sign-up, no download. Your numbers stay in your browser.</p><ul style="list-style:none;padding:0">{tlist}</ul></article>')
     urls.append(BASE + "/tools/")
+
+    # ---------- deals / buying guides ----------
+    dlist = ""
+    for slug, title, desc, intro, sections, tool_slug, paid_slug in D:
+        pd = BYSLUG[paid_slug]
+        tt = [t for t in T if t[0] == tool_slug]
+        sec = ""
+        items_ld = []
+        for h, txt, items in sections:
+            rows = ""
+            for name, why, q in items:
+                links = " ".join(f'<a class="btn ghost" style="padding:6px 12px;font-size:14px;margin:4px 6px 0 0;color:#1e293b;border:1px solid #cbd5e1" href="{u}" rel="sponsored nofollow noopener" target="_blank">Compare on {st}</a>' for st, u in shop_links(q))
+                rows += f'<div class="deal" style="border:1px solid #e2e8f0;border-radius:12px;padding:14px 16px;margin:12px 0"><h3 style="margin:0 0 4px">{E(name)}</h3><p style="margin:0 0 6px">{E(why)}</p>{links}</div>'
+                items_ld.append(name)
+            sec += f"<h2>{E(h)}</h2><p>{E(txt)}</p>{rows}"
+        toolcta = f'<div class="cta"><h3>Free tool: {E(tt[0][2])}</h3><p>{E(short(tt[0][3], 160))}</p><a class="btn" href="../../tools/{tool_slug}/">Open the free calculator</a></div>' if tt else ""
+        body = f"""<article><div class="crumb"><a href="../../">Home</a> \u203a <a href="../">Deals &amp; buying guides</a></div><h1>{E(title)}</h1>{DISCLOSURE}{intro}
+<p><strong>Tip:</strong> prices change daily. Use the buttons to compare current prices, and check the seller rating and return policy before you buy.</p>{sec}{toolcta}
+<div class="cta" style="background:#eff6ff;border-color:#bfdbfe"><h3>Plan your spending: {E(pd[1])}</h3><p>{E(short(pd[6], 180))}</p><a class="btn" href="../../{pd[0]}/">See {E(pd[1])}: {price(pd[3])}</a></div></article>"""
+        art = {"@context": "https://schema.org", "@type": "Article", "headline": title, "description": desc, "datePublished": TODAY, "dateModified": TODAY,
+               "author": {"@type": "Organization", "name": "LaunchKit Labs"}, "publisher": {"@type": "Organization", "name": "LaunchKit Labs"}, "image": IMG + pd[4]}
+        page(f"deals/{slug}/index.html", title, desc, body, img=IMG + pd[4], jsonld=[art], typ="article")
+        urls.append(BASE + f"/deals/{slug}/")
+        dlist += f'<li style="margin:10px 0"><a href="{slug}/"><strong>{E(title)}</strong></a><br><span style="color:var(--mut)">{E(desc)}</span></li>'
+    page("deals/index.html", "Deals & Buying Guides: Black Friday, Kitchen, Home Office & Gifts | LaunchKit Labs",
+         "Honest buying guides to save money: what to buy on Black Friday 2026, money-saving kitchen tools, energy-saving gadgets, budget home office and gifts under $25.",
+         f'<article><h1>Deals &amp; Buying Guides</h1><p>Practical lists to help you spend less, with quick links to compare prices.</p>{DISCLOSURE}<ul style="list-style:none;padding:0">{dlist}</ul></article>')
+    urls.append(BASE + "/deals/")
 
     # ---------- 404, robots, sitemap ----------
     page("404.html", "Page not found | LaunchKit Labs", "Page not found.", '<article><h1>Page not found</h1><p><a href="/">Go to the home page</a></p></article>', canon=BASE + "/")
