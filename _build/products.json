@@ -892,6 +892,54 @@
     "Redemptions log with real cents-per-point value",
     "Dashboard: rewards value vs annual fees per card, next fee due and cards to review"
    ]
+  },
+  {
+   "slug": "thanksgiving-dinner-planner-budget-2026",
+   "title": "Thanksgiving Dinner Planner & Budget 2026",
+   "cat": "home",
+   "price_cents": 399,
+   "cover": "iqicj79x55bz85uydj3zznwzm93w",
+   "h1": "Thanksgiving Dinner Planner & Budget Spreadsheet 2026",
+   "desc": "Plan the whole Thanksgiving dinner in one Excel file: who is coming, what you are cooking and when each dish goes in the oven, what to buy and how much you are spending. Works for US or Canadian Thanksgiving, Friendsgiving or any holiday dinner.",
+   "bullets": [
+    "Guest list with RSVP, adults/kids headcount, dietary needs and who is bringing what",
+    "Menu with oven temperature, cook and rest time - start times calculated from when you want to eat",
+    "Shopping list by category and store with estimated vs actual price and a Bought tick",
+    "Turkey size, fridge-thaw days and the date to move the turkey to the fridge (rule-of-thumb estimates)",
+    "Dashboard: days to go, guests, budget left, cost per guest and spend-by-category chart"
+   ]
+  },
+  {
+   "slug": "home-maintenance-planner-repair-log",
+   "title": "Home Maintenance Planner & Repair Log",
+   "cat": "home",
+   "price_cents": 449,
+   "cover": "oy1zw0dyn5wa4fj0110q4qlkxcoz",
+   "h1": "Home Maintenance Schedule & Repair Log Spreadsheet",
+   "desc": "Keep your home in shape with one Excel file: recurring jobs get a next-due date and Overdue / Due soon status, every repair is logged with its cost, and appliance warranties show when they end. The dashboard compares repair spend with your yearly budget.",
+   "bullets": [
+    "Maintenance schedule: task, area, season, frequency in months, last done - next due date, days left and status",
+    "Repair & service log with contractor, cost, payment method and warranty on the work",
+    "Appliance tracker with purchase date, price, warranty end date, warranty status and age",
+    "Yearly maintenance budget with spend this year and budget left",
+    "Dashboard: overdue jobs, due in 30 days, spend, warranties ending in 90 days + spend-by-area chart"
+   ]
+  },
+  {
+   "slug": "utility-bill-energy-usage-tracker",
+   "title": "Utility Bill & Energy Usage Tracker",
+   "cat": "money",
+   "price_cents": 399,
+   "cover": "0kld46aqfzi4tnflthng2x4minbq",
+   "h1": "Utility Bill Tracker & Energy Usage Spreadsheet",
+   "desc": "Track every electricity, gas, water, internet and phone bill in one Excel file. Each bill shows its cost per unit so you can spot price rises, the monthly summary compares spend with your budget, and the dashboard shows unpaid bills and your most expensive month. Works in any currency.",
+   "bullets": [
+    "Bill log (200 rows): bill month, utility, provider, usage, unit, amount, due date, paid and paid-on date",
+    "Cost per unit calculated for every bill (e.g. per kWh, therm, m3 or gallon)",
+    "Monthly summary: 12 months x 6 utilities with totals, budget and over/under",
+    "Settings: rename utilities and set a monthly budget for each",
+    "Dashboard: spent this year, average month, unpaid bills and amount, priciest month + stacked 12-month chart"
+   ]
   }
  ]
 }
