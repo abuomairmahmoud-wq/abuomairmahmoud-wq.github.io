@@ -990,6 +990,51 @@
     "Per-child dashboard with balance owed and charts",
     "Printable weekly chore chart"
    ]
+  },
+  {
+   "slug": "free-debt-snowball-tracker",
+   "title": "Free Debt Snowball Tracker (Lite)",
+   "cat": "free",
+   "price_cents": 0,
+   "cover": "lf1tswf91h9d9rip8wzvrmxg776w",
+   "h1": "Free Debt Snowball Spreadsheet for Excel",
+   "desc": "List up to 8 debts and this free Excel tracker sorts them into debt snowball order (smallest balance first), with your total debt, monthly minimums and approximate monthly interest.",
+   "bullets": [
+    "Debts sheet for up to 8 debts: balance, APR and minimum payment",
+    "Automatic snowball payoff order",
+    "Approximate monthly interest per debt",
+    "Summary with total debt, minimums and a balance chart"
+   ]
+  },
+  {
+   "slug": "free-52-week-savings-challenge",
+   "title": "Free 52-Week Savings Challenge (Lite)",
+   "cat": "free",
+   "price_cents": 0,
+   "cover": "0yl19rsa25hh6exiaka725k53hih",
+   "h1": "Free 52-Week Savings Challenge Spreadsheet",
+   "desc": "Save $1 in week 1, $2 in week 2 and so on. Tick each week as you save and this free Excel tracker shows your running total and progress toward $1,378.",
+   "bullets": [
+    "52 weekly rows with dates from your start date",
+    "Change the amount per step for a bigger goal",
+    "Running total of what you saved",
+    "Summary with goal, left to save, progress % and a chart"
+   ]
+  },
+  {
+   "slug": "free-christmas-gift-list-budget",
+   "title": "Free Christmas Gift List & Budget (Lite)",
+   "cat": "free",
+   "price_cents": 0,
+   "cover": "21kfwncjoqertxlutk3wzlngwdyn",
+   "h1": "Free Christmas Gift List & Budget Spreadsheet",
+   "desc": "Plan every Christmas gift in one free Excel list: who it is for, the idea, your budget and what you paid, with a running total against your holiday gift budget.",
+   "bullets": [
+    "Gift list for up to 40 gifts with budget vs actual",
+    "Status dropdown: To buy, Bought, Wrapped, Given",
+    "Spent so far and left to spend",
+    "Summary with gifts still to buy and a status chart"
+   ]
   }
  ]
 }
