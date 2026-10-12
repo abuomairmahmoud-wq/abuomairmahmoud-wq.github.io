@@ -76,11 +76,11 @@ def page(path, title, desc, body, canon=None, img=None, jsonld=None, typ="websit
     doc = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{E(title)}</title><meta name="description" content="{E(desc)}"><link rel="canonical" href="{canon}">
 <meta property="og:type" content="{typ}"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}"><meta property="og:url" content="{canon}"><meta property="og:image" content="{img}"><meta property="og:site_name" content="LaunchKit Labs">
-<meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="{rel(path)}style.css">{ld}</head><body>
+<meta name="twitter:card" content="summary_large_image"><meta name="p:domain_verify" content="1035c7f2c4361dd960e4be7650a13619"><link rel="stylesheet" href="{rel(path)}style.css">{ld}</head><body>
 <header><div class="w"><a class="logo" href="{rel(path)}">LaunchKit Labs</a><nav><a href="{rel(path)}tools/">Free calculators</a><a href="{rel(path)}free/">Free templates</a><a href="{rel(path)}#all">All templates</a><a href="{rel(path)}guides/">Guides</a><a href="{rel(path)}deals/">Deals</a><a href="https://www.teepublic.com/user/launchkittees" rel="noopener">Shirts &amp; gifts</a></nav></div></header>
 {body}
 <footer><div class="w"><p><strong style="color:#fff">LaunchKit Labs</strong>: practical Excel templates, planners and calculators. Instant download, no subscriptions.</p>
-<p><a href="{rel(path)}tools/">Free calculators</a> · <a href="{rel(path)}free/">Free templates</a> · <a href="{rel(path)}guides/">Guides</a> · <a href="{rel(path)}deals/">Deals &amp; buying guides</a> · <a href="https://www.teepublic.com/user/launchkittees" rel="noopener">Shirts &amp; gifts</a> · <a href="https://mahmoudian113.gumroad.com" rel="noopener">Shop on Gumroad</a> · <a href="https://payhip.com/BestLaunchKitLabs" rel="noopener">Payhip store</a></p>
+<p><a href="{rel(path)}tools/">Free calculators</a> · <a href="{rel(path)}free/">Free templates</a> · <a href="{rel(path)}guides/">Guides</a> · <a href="{rel(path)}deals/">Deals &amp; buying guides</a> · <a href="https://www.teepublic.com/user/launchkittees" rel="noopener">Shirts &amp; gifts</a> · <a href="https://mahmoudian113.gumroad.com" rel="noopener">Shop on Gumroad</a> · <a href="https://payhip.com/BestLaunchKitLabs" rel="noopener">Payhip store</a> · <a href="https://mahmoudian113.gumroad.com/affiliates" rel="noopener">Earn 30% as an affiliate</a></p>
 {('<p><a class="kofi" href="'+KOFI+'" rel="noopener">☕ Support LaunchKit Labs on Ko-fi</a></p>') if KOFI else ''}
 <p>Templates are planning tools, not financial, legal, tax or medical advice. © {datetime.date.today().year} LaunchKit Labs</p></div></footer></body></html>"""
     full = os.path.join(OUT, path)
@@ -159,6 +159,9 @@ def build():
         if is_excel(p):
             faqs.append(("What do I need to use it?", "Microsoft Excel. The file is a standard .xlsx workbook with no macros and includes sample data so you can see how it works."))
             faqs.append(("Can I edit it?", "Yes. Yellow input cells are for your own data, and categories and labels can be changed to fit you."))
+        if cents:
+            faqs.append(("What if it is not right for me?", "Every paid LaunchKit Labs template comes with a 30-day money-back guarantee. Just reply to your Gumroad receipt email."))
+            faqs.append(("Is there a free version?", "Yes. Try one of our free Excel templates first: a simple monthly budget, a grocery unit price calculator and a Black Friday wishlist. Links are on the home page under Free templates."))
         faqhtml = "".join(f"<h3>{E(q)}</h3><p>{E(a)}</p>" for q, a in faqs)
         btn = "Download free" if cents == 0 else f"Buy now: {price(cents)}"
         body = f"""<main class="w"><div class="crumb"><a href="../">Home</a> › <a href="../#{cat}">{E(CATNAME[cat])}</a> › {E(name)}</div>
@@ -167,6 +170,7 @@ def build():
 <p style="color:var(--mut);font-size:14px;margin-top:10px">Instant download · Secure checkout on Gumroad</p></div></div>
 <div class="prod" style="padding-top:0"><div class="box"><h2 style="margin-top:0">What's included</h2><ul class="ck">{"".join(f"<li>{E(b)}</li>" for b in bullets)}</ul></div>
 <div class="box faq"><h2 style="margin-top:0">Questions</h2>{faqhtml}</div></div>
+{('<div class="box" style="margin-bottom:24px"><h2 style="margin-top:0">How it works</h2><ol style="margin:0;padding-left:20px"><li>' + ('Get it free on Gumroad' if cents == 0 else 'Buy securely on Gumroad') + ' and download the file instantly.</li><li>Open it in Microsoft Excel and look through the sample data to see how it works.</li><li>Replace the sample rows with your own numbers in the input cells. The formulas do the math for you.</li></ol></div>') if is_excel(p) else ''}
 <h2>You may also like</h2><div class="grid">{"".join(card(q, "../") for q in rel_items)}</div></main>"""
         prod = {"@context": "https://schema.org", "@type": "Product", "name": name, "description": desc, "image": IMG + img,
                 "brand": {"@type": "Brand", "name": "LaunchKit Labs"}, "url": BASE + f"/{slug}/",
