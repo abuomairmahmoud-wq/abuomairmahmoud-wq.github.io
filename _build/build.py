@@ -8,6 +8,18 @@ from guides import G
 from tools import T, TOOL_CSS
 from deals import D
 KOFI = _D.get('kofi', '')
+AFF = _D.get('aff', {}) or {}
+AFF_SHOPS = [("amazon_us", "Amazon US", "https://www.amazon.com/s?k="), ("amazon_uk", "Amazon UK", "https://www.amazon.co.uk/s?k="), ("amazon_de", "Amazon DE", "https://www.amazon.de/s?k="), ("amazon_ca", "Amazon CA", "https://www.amazon.ca/s?k=")]
+
+
+def aff_links(q):
+    from urllib.parse import quote_plus
+    out = []
+    for key, label, url in AFF_SHOPS:
+        tag = (AFF.get(key) or "").strip()
+        if tag:
+            out.append(f'<a class="btn" style="margin:4px 6px 0 0;padding:8px 14px;font-size:14px" rel="sponsored nofollow noopener" target="_blank" href="{url}{quote_plus(q)}&amp;tag={html.escape(tag)}">Check price on {label}</a>')
+    return "".join(out)
 
 BASE = sys.argv[1].rstrip('/') if len(sys.argv) > 1 else "https://abuomairmahmoud-wq.github.io"
 OUT = sys.argv[2] if len(sys.argv) > 2 else os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "_site")
@@ -76,7 +88,7 @@ def page(path, title, desc, body, canon=None, img=None, jsonld=None, typ="websit
     open(full, "w", encoding="utf-8").write(doc)
 
 
-DISCLOSURE = ""
+DISCLOSURE = ('<p style="font-size:13px;color:#64748b;border-left:3px solid #fbbf24;padding-left:10px">Some links on this page are affiliate links. As an Amazon Associate we earn from qualifying purchases, at no extra cost to you. Prices and availability change, so always check the final price before you buy.</p>' if any((AFF.get(k) or "").strip() for k, _l, _u in AFF_SHOPS) else "")
 
 
 def rel(path):
@@ -215,7 +227,7 @@ def build():
         for h, txt, items in sections:
             rows = ""
             for name, why, q in items:
-                links = ""
+                links = aff_links(q)
                 rows += f'<div class="deal" style="border:1px solid #e2e8f0;border-radius:12px;padding:14px 16px;margin:12px 0"><h3 style="margin:0 0 4px">{E(name)}</h3><p style="margin:0 0 6px">{E(why)}</p>{links}</div>'
                 items_ld.append(name)
             sec += f"<h2>{E(h)}</h2><p>{E(txt)}</p>{rows}"
@@ -229,7 +241,7 @@ def build():
         urls.append(BASE + f"/deals/{slug}/")
         dlist += f'<li style="margin:10px 0"><a href="{slug}/"><strong>{E(title)}</strong></a><br><span style="color:var(--mut)">{E(desc)}</span></li>'
     page("deals/index.html", "Deals & Buying Guides: Black Friday, Kitchen, Home Office & Gifts | LaunchKit Labs",
-         "Honest buying guides to save money: what to buy on Black Friday 2026, money-saving kitchen tools, energy-saving gadgets, budget home office and gifts under $25.",
+         "Honest buying guides to save money: what to buy on Black Friday 2026, money-saving kitchen tools, energy-saving gadgets, budget home office, Christmas gifts for him and her, Secret Santa ideas and stocking stuffers.",
          f'<article><h1>Deals &amp; Buying Guides</h1><p>Practical lists to help you spend less, plus free tools to plan every purchase.</p>{DISCLOSURE}<ul style="list-style:none;padding:0">{dlist}</ul></article>')
     urls.append(BASE + "/deals/")
 
