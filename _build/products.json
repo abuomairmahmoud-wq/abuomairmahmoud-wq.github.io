@@ -940,6 +940,53 @@
     "Settings: rename utilities and set a monthly budget for each",
     "Dashboard: spent this year, average month, unpaid bills and amount, priciest month + stacked 12-month chart"
    ]
+  },
+  {
+   "slug": "medical-expense-hsa-fsa-tracker",
+   "title": "Medical Expense & HSA/FSA Tracker",
+   "cat": "health",
+   "price_cents": 499,
+   "cover": "697jskthifbvi7ootpjnfiewlqw9",
+   "h1": "Medical Expense Tracker Spreadsheet with HSA & FSA Log",
+   "desc": "Log every doctor, dentist, pharmacy and vision bill for your household in one Excel file. See what insurance paid and what you paid out of pocket, track HSA and FSA spending, count missing receipts and log medical mileage on one dashboard.",
+   "bullets": [
+    "Expenses log with automatic out-of-pocket cost per bill",
+    "Dashboard with insurance paid, HSA spending, FSA used and FSA left to spend",
+    "Receipts-missing and awaiting-reimbursement counters",
+    "Out-of-pocket by category and family member with charts",
+    "Medical mileage log using the rate you enter"
+   ]
+  },
+  {
+   "slug": "pet-care-expense-tracker",
+   "title": "Pet Care & Pet Expense Tracker",
+   "cat": "home",
+   "price_cents": 399,
+   "cover": "mpll7wwv6bd9nzwj5nun7h4fve39",
+   "h1": "Pet Expense Tracker & Pet Care Log Spreadsheet",
+   "desc": "Keep every pet's profile, expenses and health schedule in one Excel file. The dashboard shows your monthly pet budget, spending by category and by pet, and which vaccines or treatments are due in the next 30 days.",
+   "bullets": [
+    "Pet profiles with age, microchip, vet and insurance details",
+    "Expense log with monthly budget and budget-left KPI",
+    "Vaccine and treatment schedule with next due date and overdue highlights",
+    "Spending by category and by pet with charts"
+   ]
+  },
+  {
+   "slug": "kids-chore-chart-allowance-tracker",
+   "title": "Kids Chore Chart & Allowance Tracker",
+   "cat": "home",
+   "price_cents": 349,
+   "cover": "pk1b32ijfsw66ec7sjjpc7vgqs5g",
+   "h1": "Kids Chore Chart & Allowance Tracker Spreadsheet",
+   "desc": "Turn chores into points and points into allowance. Track each child's weekly chores, what they earned, what you've paid and their Save / Spend / Give jar balances, then print the weekly chore chart for the fridge.",
+   "bullets": [
+    "Chore list with points per chore",
+    "Weekly log that converts points into allowance",
+    "Save / Spend / Give jar balances and payout log",
+    "Per-child dashboard with balance owed and charts",
+    "Printable weekly chore chart"
+   ]
   }
  ]
 }
