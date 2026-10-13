@@ -1035,6 +1035,69 @@
     "Spent so far and left to spend",
     "Summary with gifts still to buy and a status chart"
    ]
+  },
+  {
+   "slug": "free-weekly-meal-planner",
+   "title": "Free Weekly Meal Planner (Lite)",
+   "cat": "free",
+   "price_cents": 0,
+   "cover": "49onvw0670e6bql3pimndp9uj3hx",
+   "h1": "Free Weekly Meal Planner Template (Excel)",
+   "desc": "A free Excel weekly meal planner: plan breakfast, lunch, dinner and snacks for 7 days, build a grocery list with prices and see how much of your grocery budget is left.",
+   "bullets": [
+    "7-day meal grid for breakfast, lunch, dinner and snack",
+    "Grocery list with quantity, unit price, total and Bought? column",
+    "Weekly grocery budget and budget left",
+    "Summary with cost by store section chart"
+   ]
+  },
+  {
+   "slug": "small-business-income-expense-tracker",
+   "title": "Small Business Income & Expense Tracker",
+   "cat": "business",
+   "price_cents": 499,
+   "cover": "vmkvfoi7rdgrvfpvwfz5a8p4wte9",
+   "h1": "Small Business Income and Expense Tracker (Excel Spreadsheet Template)",
+   "desc": "A simple Excel income and expense tracker for small businesses: log every sale and cost in one list and see monthly profit, profit margin, a running bank balance and totals by category on an automatic dashboard.",
+   "bullets": [
+    "Income and expense log with 500 rows and drop-down categories",
+    "Monthly profit, margin and running bank balance",
+    "Totals by income and expense category",
+    "Tax-deductible expense total",
+    "Dashboard with KPIs, monthly bar chart and expense pie chart"
+   ]
+  },
+  {
+   "slug": "simple-crm-sales-pipeline-tracker",
+   "title": "Simple CRM & Sales Pipeline Tracker",
+   "cat": "business",
+   "price_cents": 549,
+   "cover": "uqq4xikjoy4x6hlbdgeym6edar9t",
+   "h1": "Simple CRM Spreadsheet Template & Sales Pipeline Tracker for Small Business",
+   "desc": "A simple CRM spreadsheet template in Excel for small businesses: track contacts and follow-ups, move deals through your sales pipeline and see a weighted sales forecast, win rate and target progress on one dashboard.",
+   "bullets": [
+    "Contact list with automatic OVERDUE / TODAY follow-up flags",
+    "Sales pipeline with stages, probability and weighted value",
+    "Stage summary and won-by-month vs your sales target",
+    "Dashboard with open pipeline, forecast, win rate and charts",
+    "Customisable stages, lead sources and team members"
+   ]
+  },
+  {
+   "slug": "bill-payment-tracker-due-date-calendar",
+   "title": "Bill Payment Tracker & Due-Date Calendar",
+   "cat": "money",
+   "price_cents": 399,
+   "cover": "m4ey04ddn9gcwospfx943525qv8h",
+   "h1": "Bill Payment Tracker & Due-Date Calendar (Excel Bill Tracker Template)",
+   "desc": "An Excel bill payment tracker with a due-date calendar: list each bill once and see its next due date, the bills due on each day of the month, a paid/due checklist for every month and your total monthly bills.",
+   "bullets": [
+    "Bill list with automatic next due date and days left",
+    "Monthly due-date calendar",
+    "Payment log and paid/due checklist for all 12 months",
+    "Monthly, quarterly and yearly bills plus autopay tracking",
+    "Dashboard with bills due in the next 7 days and category chart"
+   ]
   }
  ]
 }
