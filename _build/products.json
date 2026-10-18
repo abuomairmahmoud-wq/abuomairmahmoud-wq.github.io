@@ -1098,6 +1098,69 @@
     "Monthly, quarterly and yearly bills plus autopay tracking",
     "Dashboard with bills due in the next 7 days and category chart"
    ]
+  },
+  {
+   "slug": "monthly-expense-tracker",
+   "title": "Monthly Expense Tracker",
+   "cat": "money",
+   "price_cents": 399,
+   "cover": "5ig5x9da0x9fhk0wevih8chy6hnn",
+   "h1": "Monthly Expense Tracker (Excel Spreadsheet Template with Budget vs Actual)",
+   "desc": "A monthly expense tracker in Excel: log each expense once and it totals your spending by category and month, compares it with your budget and charts the whole year.",
+   "bullets": [
+    "Expense log with category and payment method drop-downs (500 rows)",
+    "14 editable categories with a monthly budget each",
+    "Budget vs actual for any month, over-budget lines turn red",
+    "January to December summary by category",
+    "Dashboard with savings rate, spending-by-month and by-category charts"
+   ]
+  },
+  {
+   "slug": "employee-shift-schedule-pto-tracker",
+   "title": "Employee Shift Schedule & PTO Tracker",
+   "cat": "business",
+   "price_cents": 549,
+   "cover": "24cnvkomc7fy32vdpmb2n67s4p21",
+   "h1": "Employee Shift Schedule Template & PTO Tracker (Excel)",
+   "desc": "An Excel employee shift schedule template: pick a shift code for each person and day to get paid hours, labour cost and daily coverage, while a PTO log keeps every employee's vacation, sick and personal days balanced.",
+   "bullets": [
+    "Weekly schedule with shift-code drop-downs for up to 20 staff",
+    "15 shift codes with breaks and overnight shifts",
+    "Hours and labour cost per person, over 40 hours flagged",
+    "PTO log and remaining PTO balance per employee",
+    "Dashboard with hours-by-employee and PTO charts"
+   ]
+  },
+  {
+   "slug": "wedding-guest-list-rsvp-tracker",
+   "title": "Wedding Guest List & RSVP Tracker",
+   "cat": "home",
+   "price_cents": 399,
+   "cover": "hyl2qwk1lv9yqtrmo15mfqaa2ttl",
+   "h1": "Wedding Guest List & RSVP Tracker (Excel Spreadsheet Template)",
+   "desc": "A wedding guest list template in Excel: add each invitation once and it counts guests invited and attending, replies still outstanding, meals per option, seats per table and thank-you notes still to send.",
+   "bullets": [
+    "Guest list for 300 invitations with RSVP, meal choice and dietary notes",
+    "Attending headcount and invitations awaiting reply",
+    "Table seating with free seats and over-capacity warning",
+    "Gift received and thank-you sent tracking",
+    "Dashboard with RSVP and meal-choice charts"
+   ]
+  },
+  {
+   "slug": "free-paycheck-budget",
+   "title": "Free Paycheck Budget (Lite)",
+   "cat": "free",
+   "price_cents": 0,
+   "cover": "9pji8pq6kyhbhjpyssnpc72zvafd",
+   "h1": "Free Paycheck Budget Template (Excel)",
+   "desc": "A free Excel paycheck budget: type your pay date and take-home pay, list the bills and spending you will cover from this paycheck, mark each one paid and see what is left over.",
+   "bullets": [
+    "Pay date and take-home pay inputs",
+    "Up to 25 budget lines with category, amount, due date and Paid?",
+    "Summary: planned, left over, already paid and still to pay",
+    "Chart of spending by category"
+   ]
   }
  ]
 }
