@@ -128,7 +128,7 @@ def build():
     body = f"""<section class="hero"><div class="w"><h1>Excel Templates for Budgets, Deals, Small Business &amp; Life Planning</h1>
 <p>Ready-to-use spreadsheets that do the math for you: budget planners, Black Friday deal trackers, grocery price books, car loan calculators, invoice trackers and more. Built for the USA, UK and Canada.</p>
 <a class="btn" href="free/">Get free templates</a><a class="btn ghost" href="#all">Browse all</a>
-<div class="trust"><span>✓ Instant download</span><span>✓ No subscription</span><span>✓ Works in Microsoft Excel</span><span>✓ Sample data included</span></div></div></section>
+<div class="trust"><span>✓ Instant download</span><span>✓ No subscription</span><span>✓ Works in Excel &amp; Google Sheets</span><span>✓ Sample data included</span></div></div></section>
 <main class="w"><section><h2 id="tools">Free online calculators</h2><p class="sub">Quick answers in your browser, no download needed.</p><ul>{tl}</ul></section>{secs}<section><h2>Free money-saving guides</h2><ul>{guides}</ul></section><section><h2 id="deals-guides">Deals &amp; buying guides</h2><ul>{dl}</ul></section></main>"""
     org = {"@context": "https://schema.org", "@type": "Organization", "name": "LaunchKit Labs", "url": BASE + "/",
            "sameAs": ["https://mahmoudian113.gumroad.com", "https://payhip.com/BestLaunchKitLabs", "https://contra.com/mahmoud_abuomair_7sxshnhl"]}
@@ -157,7 +157,7 @@ def build():
         faqs = [("How do I get it?", "Click the button to open the secure checkout on Gumroad. You get the download link instantly by email and on screen." if cents else "Click the button, enter your email on Gumroad and download it instantly. It is completely free."),
                 ("Is this a subscription?", "No. It is a one-time download with no monthly fees." if cents else "No. It is free, with no subscription.")]
         if is_excel(p):
-            faqs.append(("What do I need to use it?", "Microsoft Excel. The file is a standard .xlsx workbook with no macros and includes sample data so you can see how it works."))
+            faqs.append(("What do I need to use it?", "Microsoft Excel, or free Google Sheets (File > Import the .xlsx). It is a standard .xlsx workbook with no macros and includes sample data so you can see how it works."))
             faqs.append(("Can I edit it?", "Yes. Yellow input cells are for your own data, and categories and labels can be changed to fit you."))
         if cents:
             faqs.append(("What if it is not right for me?", "Every paid LaunchKit Labs template comes with a 30-day money-back guarantee. Just reply to your Gumroad receipt email."))
@@ -170,7 +170,7 @@ def build():
 <p style="color:var(--mut);font-size:14px;margin-top:10px">Instant download · Secure checkout on Gumroad</p></div></div>
 <div class="prod" style="padding-top:0"><div class="box"><h2 style="margin-top:0">What's included</h2><ul class="ck">{"".join(f"<li>{E(b)}</li>" for b in bullets)}</ul></div>
 <div class="box faq"><h2 style="margin-top:0">Questions</h2>{faqhtml}</div></div>
-{('<div class="box" style="margin-bottom:24px"><h2 style="margin-top:0">How it works</h2><ol style="margin:0;padding-left:20px"><li>' + ('Get it free on Gumroad' if cents == 0 else 'Buy securely on Gumroad') + ' and download the file instantly.</li><li>Open it in Microsoft Excel and look through the sample data to see how it works.</li><li>Replace the sample rows with your own numbers in the input cells. The formulas do the math for you.</li></ol></div>') if is_excel(p) else ''}
+{('<div class="box" style="margin-bottom:24px"><h2 style="margin-top:0">How it works</h2><ol style="margin:0;padding-left:20px"><li>' + ('Get it free on Gumroad' if cents == 0 else 'Buy securely on Gumroad') + ' and download the file instantly.</li><li>Open it in Microsoft Excel or upload it to Google Sheets, then look through the sample data to see how it works.</li><li>Replace the sample rows with your own numbers in the input cells. The formulas do the math for you.</li></ol></div>') if is_excel(p) else ''}
 <h2>You may also like</h2><div class="grid">{"".join(card(q, "../") for q in rel_items)}</div></main>"""
         prod = {"@context": "https://schema.org", "@type": "Product", "name": name, "description": desc, "image": IMG + img,
                 "brand": {"@type": "Brand", "name": "LaunchKit Labs"}, "url": BASE + f"/{slug}/",
