@@ -1161,6 +1161,69 @@
     "Summary: planned, left over, already paid and still to pay",
     "Chart of spending by category"
    ]
+  },
+  {
+   "slug": "apartment-hunting-spreadsheet",
+   "title": "Apartment Hunting Spreadsheet",
+   "cat": "home",
+   "price_cents": 399,
+   "cover": "njd000yxfu2bpgpt7qh8o5p1vek7",
+   "h1": "Apartment Hunting Spreadsheet Template (Excel & Google Sheets)",
+   "desc": "This apartment hunting spreadsheet compares every rental you view side by side and calculates the true monthly cost, move-in cash and a weighted score for each one.",
+   "bullets": [
+    "Total monthly cost per apartment: rent + utilities + parking + pet and other fees",
+    "Move-in cash needed (rent, deposit, application fee) and cost per sq ft",
+    "Within-budget check based on your take-home pay and max housing %",
+    "Weighted score /100 and automatic rank from your own priorities and 1-5 ratings",
+    "Printable apartment viewing checklist for up to 5 tours"
+   ]
+  },
+  {
+   "slug": "college-application-tracker",
+   "title": "College Application Tracker",
+   "cat": "career",
+   "price_cents": 449,
+   "cover": "c7c2adb49emodvxo7ql0itxnkhnr",
+   "h1": "College Application Tracker Spreadsheet (Excel & Google Sheets)",
+   "desc": "This college application tracker keeps every school, deadline, essay, recommendation letter and decision in one spreadsheet, with a days-left countdown and net cost after financial aid.",
+   "bullets": [
+    "Applications list with Reach / Match / Safety and deadline type (ED, EA, RD, Rolling)",
+    "Days-left countdown and the next open deadline on the dashboard",
+    "5-item checklist per college: essays, recommendations, transcript, test scores, FAFSA/CSS",
+    "Essay and supplement tracker with word limits and draft status",
+    "Net cost per year after financial aid to compare offers"
+   ]
+  },
+  {
+   "slug": "sales-commission-tracker",
+   "title": "Sales Commission Tracker",
+   "cat": "business",
+   "price_cents": 499,
+   "cover": "xxs08c6iw3bn134vlk0r50vajheu",
+   "h1": "Sales Commission Tracker Template for Excel",
+   "desc": "This sales commission tracker template for Excel logs every sale and calculates commission automatically from your tiered rates, with quota attainment and paid vs pending commission per rep.",
+   "bullets": [
+    "Sales log for up to 200 sales with units, price, discount and sale amount",
+    "Automatic tiered commission rate and commission per sale",
+    "Rep summary for any month: sales, quota %, commission, paid and pending",
+    "Dashboard with total sales, commission, pending payouts, deals and average deal size",
+    "Settings for up to 10 reps, 4 commission tiers and your product list"
+   ]
+  },
+  {
+   "slug": "free-habit-tracker",
+   "title": "Free Habit Tracker (Lite)",
+   "cat": "free",
+   "price_cents": 0,
+   "cover": "0udyr9l2qbopjq8a2ausr412e77z",
+   "h1": "Free Habit Tracker Spreadsheet (Excel & Google Sheets)",
+   "desc": "This free habit tracker spreadsheet lets you track up to 8 daily habits for a month by typing an x, and shows your completion rate and best habit automatically.",
+   "bullets": [
+    "Monthly grid: 8 habits x 31 days with weekday labels",
+    "Goal (days) and goal reached % per habit",
+    "Summary with habits tracked, total check-ins, average goal % and best habit",
+    "Chart of days completed per habit"
+   ]
   }
  ]
 }
