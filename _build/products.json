@@ -1224,6 +1224,65 @@
     "Summary with habits tracked, total check-ins, average goal % and best habit",
     "Chart of days completed per habit"
    ]
+  },
+  {
+   "slug": "task-tracker-multiple-projects",
+   "title": "Task Tracker for Multiple Projects",
+   "cat": "business",
+   "price_cents": 449,
+   "cover": "h59e18xyuwcmwphr0pqaxx4um2ly",
+   "h1": "Task Tracker for Multiple Projects (Excel Spreadsheet Template)",
+   "desc": "An Excel task tracker for multiple projects: one list for every task with owner, priority, status and due date. Overdue tasks are flagged automatically and the dashboard shows the progress of each project.",
+   "bullets": [
+    "300-row task list with project, owner, priority, status and due date drop-downs",
+    "Days left and Overdue flags calculate automatically (overdue rows turn red)",
+    "Project Summary: done, open, overdue, % complete and next due date per project",
+    "Dashboard with 6 KPIs, tasks by status and % complete by project charts"
+   ]
+  },
+  {
+   "slug": "recruitment-hiring-tracker",
+   "title": "Recruitment Tracker & Hiring Pipeline",
+   "cat": "business",
+   "price_cents": 499,
+   "cover": "agk4lshf4i3q2kzgcdgoiji5x6tk",
+   "h1": "Recruitment Tracker: Excel Hiring & Applicant Tracker Template",
+   "desc": "A recruitment tracker in Excel for small businesses: log every applicant with position, source and stage, and see your hiring funnel, offers, hires and average time to hire on the dashboard.",
+   "bullets": [
+    "300-row candidate tracker with position, source, stage, rating and next step",
+    "Pipeline view: candidates per stage for up to 15 open positions",
+    "Source report with applicants, interviews, hires and hire rate per source",
+    "Dashboard: applicants, interviews, offers, hires and average days to hire"
+   ]
+  },
+  {
+   "slug": "hours-worked-tracker-timesheet",
+   "title": "Hours Worked Tracker & Timesheet",
+   "cat": "business",
+   "price_cents": 399,
+   "cover": "7fjdi3shq0foozpzrhekeaub00wu",
+   "h1": "Spreadsheet to Track Hours Worked: Excel Timesheet & Overtime Calculator",
+   "desc": "A spreadsheet to track hours worked: log each shift with start time, end time and break, and get hours, pay and overtime per person plus a weekly Mon-Sun timesheet.",
+   "bullets": [
+    "400-row time log: start/end time and break give hours and pay automatically",
+    "Weekly Mon-Sun timesheet per person with regular hours, overtime and gross pay",
+    "Your own hourly rates, overtime threshold and multiplier in Settings",
+    "Dashboard with total hours, pay, average shift and charts by person and project"
+   ]
+  },
+  {
+   "slug": "free-bill-payment-tracker",
+   "title": "Free Bill Payment Tracker (Lite)",
+   "cat": "free",
+   "price_cents": 0,
+   "cover": "7x9ea5ck190u72bfeej1o4cnmq7i",
+   "h1": "Free Bill Payment Tracker (Excel Bill Tracker Template)",
+   "desc": "A free Excel bill payment tracker: list your monthly bills, mark them paid and see what is still due this month. Lite version of the Bill Payment Tracker & Due-Date Calendar.",
+   "bullets": [
+    "Up to 30 monthly bills with due day, amount, autopay and paid status",
+    "Due soon flag for unpaid bills due in the next 7 days",
+    "Summary with total, paid, still to pay and a chart by category"
+   ]
   }
  ]
 }
