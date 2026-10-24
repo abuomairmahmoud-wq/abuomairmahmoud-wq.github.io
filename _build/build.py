@@ -199,7 +199,7 @@ def build():
         urls.append(BASE + f"/guides/{slug}/")
         gl += f'<li style="margin:10px 0"><a href="{slug}/"><strong>{E(title)}</strong></a><br><span style="color:var(--mut)">{E(desc)}</span></li>'
     page("guides/index.html", "Money-Saving Guides: Budgeting, Deals & Grocery Savings | LaunchKit Labs",
-         "Free step-by-step guides: spot fake Black Friday deals, calculate grocery unit prices, make a monthly budget, debt snowball vs avalanche and lease vs buy a car.",
+         "Free step-by-step guides: Christmas budget, 52-week savings challenge, yearly budget with sinking funds, debt snowball vs avalanche, Black Friday deals and more.",
          f'<article><h1>Money-Saving Guides</h1><ul style="list-style:none;padding:0">{gl}</ul></article>')
     urls.append(BASE + "/guides/")
 
