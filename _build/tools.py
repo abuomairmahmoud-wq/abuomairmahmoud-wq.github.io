@@ -65,7 +65,7 @@ document.querySelectorAll('.calc input').forEach(e=>e.addEventListener('input',r
  "Debt Snowball vs Avalanche Calculator",
  "Debt Snowball vs Avalanche Calculator",
  "Free debt payoff calculator: enter up to 5 debts and an extra monthly payment to compare the snowball and avalanche methods, payoff months and total interest.",
- "<p>Add your debts and how much extra you can pay each month. The calculator simulates both methods month by month.</p>",
+ "<p>Add your debts and how much extra you can pay each month. The calculator simulates the snowball (smallest balance first) and the avalanche (highest APR first) month by month and shows payoff time and total interest for each. New to these methods? Read <a href='../../guides/debt-snowball-vs-avalanche/'>debt snowball vs avalanche explained, with an example</a>.</p>",
  """<div class="calc"><div class="row head"><span>Debt</span><span>Balance</span><span>APR %</span><span>Minimum payment</span></div><div id="drows"></div>
 <div class="row"><label>Extra payment per month<input id="dx" type="number" value="200"></label></div><div class="out" id="dout"></div></div>
 <script>
@@ -81,7 +81,7 @@ const fm=m=>m>=600?'more than 50 years (raise your payment)':`${Math.floor(m/12)
 o.innerHTML=`<table class="tbl"><tr><th></th><th>Snowball (smallest balance first)</th><th>Avalanche (highest APR first)</th></tr><tr><td>Debt-free in</td><td>${fm(s.month)}</td><td>${fm(a.month)}</td></tr><tr><td>Total interest</td><td>${s.interest.toFixed(0)}</td><td>${a.interest.toFixed(0)}</td></tr></table><p class="win">${a.interest<s.interest-1?'Avalanche saves '+(s.interest-a.interest).toFixed(0)+' in interest.':'Both methods cost about the same here; snowball gives quicker wins.'}</p>`;}
 document.querySelectorAll('.calc input').forEach(e=>e.addEventListener('input',run));run();})();
 </script>""",
- "debt-payoff-calculator", "free-simple-monthly-budget"),
+ "debt-payoff-calculator", "free-debt-snowball-tracker"),
 
 ("mortgage-payment-calculator",
  "Mortgage Payment Calculator",
