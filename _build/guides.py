@@ -51,20 +51,39 @@ G = [
 <p>Once a week, type what you really spent next to each budget. Any category in the red tells you where to cut back or where your budget was unrealistic. Adjust next month; a budget gets better every month you use it.</p>
 <p>Our free Simple Monthly Budget template has 15 ready categories, shows budget vs actual, highlights overspending and tells you how much is left.</p>"""),
 ("debt-snowball-vs-avalanche",
- "Debt Snowball vs Avalanche: Which Pays Off Debt Faster?",
- "A plain-English comparison of the debt snowball and debt avalanche methods, with an example and a payoff calculator spreadsheet.",
- "free-simple-monthly-budget", "debt-payoff-calculator",
+ "Debt Snowball vs Avalanche: Which Pays Off Debt Faster? (Free Calculator)",
+ "Debt snowball vs avalanche compared with a real example: payoff months, total interest and which to choose. Free online calculator and free Excel tracker.",
+ "free-debt-snowball-tracker", "debt-payoff-calculator",
  """<p>If you have more than one debt, the two most popular payoff plans are the <strong>snowball</strong> and the <strong>avalanche</strong>. Both work the same way: pay the minimum on every debt, then put every extra dollar on one target debt. They differ only in which debt you target first.</p>
+<p><strong>Want the answer for your own debts?</strong> Use our free <a href="../../tools/debt-snowball-calculator/">debt snowball vs avalanche calculator</a>. It runs both methods month by month in your browser.</p>
 <h2>Debt snowball: smallest balance first</h2>
-<p>You attack the debt with the smallest balance. You clear it quickly, which feels great and keeps you motivated. Then you roll that payment into the next smallest debt.</p>
+<p>You attack the debt with the smallest balance. You clear it quickly, which feels great and keeps you motivated. Then you roll that payment into the next smallest debt, so the payment "snowballs".</p>
 <h2>Debt avalanche: highest interest rate first</h2>
 <p>You attack the debt with the highest APR. Mathematically this usually costs less interest and can finish sooner, especially when a big credit card balance has a high rate.</p>
+<h2>Example: snowball vs avalanche with real numbers</h2>
+<p>Three debts and $200 extra per month on top of the minimums ($630 in total each month):</p>
+<table class="tbl"><tr><th>Debt</th><th>Balance</th><th>APR</th><th>Minimum</th></tr>
+<tr><td>Medical bill</td><td>$800</td><td>0%</td><td>$50</td></tr>
+<tr><td>Credit card</td><td>$4,500</td><td>22.9%</td><td>$120</td></tr>
+<tr><td>Car loan</td><td>$9,800</td><td>7.5%</td><td>$260</td></tr></table>
+<table class="tbl"><tr><th>Plan</th><th>Debt-free in</th><th>Total interest</th></tr>
+<tr><td>Minimum payments only</td><td>67 months</td><td>about $4,890</td></tr>
+<tr><td>Snowball (medical bill first)</td><td>28 months</td><td>about $1,990</td></tr>
+<tr><td>Avalanche (credit card first)</td><td>27 months</td><td>about $1,870</td></tr></table>
+<p>In this example the avalanche saves about $125 and one month. The much bigger win is choosing <em>either</em> plan instead of paying minimums: both cut the time by more than three years and save around $2,900 in interest. (Estimates from the calculator above, interest charged monthly.)</p>
 <h2>Which should you choose?</h2>
 <ul><li>Choose the <strong>avalanche</strong> if your rates are very different and you are disciplined.</li>
-<li>Choose the <strong>snowball</strong> if you need quick wins to stay on track.</li>
+<li>Choose the <strong>snowball</strong> if you need quick wins to stay on track, or if your smallest debts also have high rates.</li>
 <li>The best plan is the one you will stick with. Both are far better than paying only minimums.</li></ul>
-<h2>Run your own numbers</h2>
-<p>Our Debt Payoff Strategy Calculator ranks your debts both ways and estimates payoff months so you can compare before you decide. Start by finding extra money for debt with the free Simple Monthly Budget.</p>"""),
+<h2>Frequently asked questions</h2>
+<h3>Is the debt snowball or avalanche better?</h3>
+<p>The avalanche costs less interest when rates differ a lot. The snowball often wins in real life because early wins keep people going. If the difference in your numbers is small, pick the snowball.</p>
+<h3>Can I combine both methods?</h3>
+<p>Yes. Many people clear one or two tiny balances first for motivation, then switch to the highest rate.</p>
+<h3>What about 0% balance transfers?</h3>
+<p>A 0% card has no interest while the offer lasts, so in an avalanche it goes last. Note the date the promo ends and the transfer fee.</p>
+<h2>Track your payoff for free</h2>
+<p>Download the free Debt Snowball Tracker (Excel and Google Sheets) to list your debts, log payments and watch balances fall. The full Debt Payoff Strategy Calculator ranks debts both ways and estimates payoff months. This is a planning tool, not financial advice.</p>"""),
 ("lease-vs-buy-car-calculator",
  "Lease vs Buy a Car: How to Compare the True Cost",
  "How to compare a car lease, a car loan and paying cash using the out-the-door price and true cost per year, for the USA, UK and Canada.",
@@ -81,4 +100,58 @@ G = [
 <h2>4. Subtract what the car is worth at the end</h2>
 <p>If you buy, the car still has a resale value when you sell it. If you lease, it is zero. Then divide the total by the number of years to get a fair cost per year for every offer.</p>
 <p>Our Car Deal Analyzer compares up to 8 offers side by side using exactly this method and ranks them from cheapest to most expensive.</p>"""),
+("christmas-budget-how-much-to-spend-on-gifts",
+ "Christmas Budget 2026: How Much to Spend on Gifts (Free Gift List Template)",
+ "Set a Christmas budget you can afford, split it per person and track every gift in a free Excel and Google Sheets gift list. Simple 5-step method.",
+ "free-christmas-gift-list-budget", "2026-holiday-spending-control-center",
+ """<p>The easiest way to avoid a January credit card shock is to decide your Christmas total <strong>before</strong> you buy the first present. Here is a simple 5-step method that works for any income.</p>
+<h2>1. Pick one total for the whole season</h2>
+<p>Look at what you can pay from savings and this month's budget without borrowing. Write that number down. Everything else comes out of this total: gifts, food, decorations, cards, wrapping and travel.</p>
+<h2>2. Take off the non-gift costs first</h2>
+<p>Holiday food, hosting, decorations, wrapping paper and postage add up fast. Set a small amount for each before you plan any gifts.</p>
+<h2>3. Split what is left per person</h2>
+<p>List everyone you buy for and give each person a limit. Close family usually gets more; coworkers, teachers and neighbours can share a smaller "small gifts" amount. If the numbers don't fit, shorten the list or agree on Secret Santa.</p>
+<h2>4. Track every gift as you buy it</h2>
+<p>Write down the gift, the store and the price paid. Keep a column for "bought" and "wrapped" so nothing is forgotten, and note return deadlines for anything bought early.</p>
+<h2>5. Check the remaining budget every week</h2>
+<p>Seeing "remaining: $85" stops impulse buys much better than guessing. If one person goes over, take it from someone else's line or from the extras.</p>
+<h2>How much do people spend on Christmas gifts?</h2>
+<p>It varies hugely by family and income, so national averages are not a target. The right number is the one that leaves your January bills fully paid.</p>
+<p>The free Christmas Gift List & Budget template does steps 3 to 5 for you: add each person and their limit, log gifts, and see what is left at a glance.</p>"""),
+("52-week-savings-challenge",
+ "52-Week Savings Challenge: Chart, Rules and Free Tracker",
+ "How the 52-week savings challenge works, how much you save ($1,378), easier and reverse versions, and a free Excel and Google Sheets tracker.",
+ "free-52-week-savings-challenge", "savings-challenge-tracker",
+ """<p>The 52-week savings challenge is a simple habit: save a little more each week for a year. Starting in January is popular, but you can start any week.</p>
+<h2>How it works</h2>
+<p>Week 1 you save $1, week 2 you save $2, week 3 $3, and so on until week 52, when you save $52. Each week you tick off the amount.</p>
+<h2>How much do you save?</h2>
+<p>1 + 2 + 3 + ... + 52 = <strong>$1,378</strong> in one year. Double every amount ($2, $4, $6 ... $104) and you save $2,756.</p>
+<h2>Versions that are easier to stick to</h2>
+<ul><li><strong>Reverse challenge:</strong> start at $52 and go down to $1. The big amounts fall in January, before holiday costs at the end of the year.</li>
+<li><strong>Pick any week:</strong> tick off any unused amount each week, choosing a small one when money is tight.</li>
+<li><strong>Fixed amount:</strong> save $26.50 every week for the same $1,378 total.</li></ul>
+<h2>Tips to finish the year</h2>
+<ul><li>Use a separate savings account so the money is out of sight.</li>
+<li>Set an automatic transfer on payday.</li>
+<li>Give the money a goal: emergency fund, next Christmas or a holiday.</li></ul>
+<p>The free 52-Week Savings Challenge tracker lists every week, ticks off what you saved and shows your running total. The full Savings Challenge Tracker adds more challenge types and goals.</p>"""),
+("how-to-make-a-yearly-budget-sinking-funds",
+ "How to Make a Yearly Budget for 2027 with Sinking Funds",
+ "Plan 2027 in one sitting: yearly income, monthly bills and sinking funds for irregular costs like car repairs, gifts and insurance. Step-by-step with a template.",
+ "free-simple-monthly-budget", "2027-annual-budget-sinking-funds-planner",
+ """<p>A monthly budget handles the bills you pay every month. A <strong>yearly budget</strong> catches the costs that surprise you: car insurance, holidays, birthdays, school fees and repairs. The tool for those is a sinking fund.</p>
+<h2>What is a sinking fund?</h2>
+<p>A sinking fund is money you set aside each month for a known future cost. A $600 car insurance bill due in September becomes $50 a month from January. When the bill arrives, the money is already there.</p>
+<h2>Step 1: Estimate your income for the year</h2>
+<p>Use take-home pay. If your income changes, use a careful (lower) estimate and treat anything extra as a bonus.</p>
+<h2>Step 2: List your regular monthly costs</h2>
+<p>Housing, utilities, groceries, transport, phone, subscriptions and minimum debt payments.</p>
+<h2>Step 3: List every irregular cost</h2>
+<p>Go through last year's bank statements month by month. Typical items: annual subscriptions, insurance, car service, Christmas and birthdays, back to school, travel, vet bills and medical costs.</p>
+<h2>Step 4: Divide each irregular cost by 12</h2>
+<p>That monthly amount is your sinking fund contribution. Add the contributions to your monthly budget like any other bill.</p>
+<h2>Step 5: Review every month</h2>
+<p>Compare actual spending with the plan and adjust. A yearly budget is a plan, not a promise; small corrections each month keep it realistic.</p>
+<p>Start with the free Simple Monthly Budget for your monthly costs, or use the 2027 Annual Budget & Sinking Funds Planner to plan the whole year in one file.</p>"""),
 ]
