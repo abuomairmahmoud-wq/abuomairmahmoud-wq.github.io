@@ -21,6 +21,8 @@ jobs:
         with:
           python-version: "3.11"
       - run: python _build/build.py https://abuomairmahmoud-wq.github.io _site
+      - run: pip install pillow && python _build/pins.py _site
+        continue-on-error: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
