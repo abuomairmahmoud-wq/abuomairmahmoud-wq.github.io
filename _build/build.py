@@ -115,6 +115,7 @@ def build():
     os.makedirs(OUT)
     open(os.path.join(OUT, "style.css"), "w").write(CSS + "\n" + TOOL_CSS)
     open(os.path.join(OUT, ".nojekyll"), "w").write("")
+    open(os.path.join(OUT, "a3f9c2e17b4d4e0f9c6b8d2e5f1a7c30.txt"), "w").write("a3f9c2e17b4d4e0f9c6b8d2e5f1a7c30")  # IndexNow key
     root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
     for f in os.listdir(root):
         if f.startswith("google") and f.endswith(".html"):
