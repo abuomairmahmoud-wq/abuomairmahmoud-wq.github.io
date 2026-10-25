@@ -1283,6 +1283,65 @@
     "Due soon flag for unpaid bills due in the next 7 days",
     "Summary with total, paid, still to pay and a chart by category"
    ]
+  },
+  {
+   "slug": "attendance-tracker-excel",
+   "title": "Attendance Tracker Excel Template",
+   "cat": "business",
+   "price_cents": 449,
+   "cover": "mepscqxw760uxo5n7clvm25diowi",
+   "h1": "Attendance Tracker Excel Template (with Attendance Percentage)",
+   "desc": "An attendance tracker Excel template for a team or a class: mark each day with a one-letter code and the sheet counts present, absent, late, sick and vacation days and shows each person's attendance percentage for the month and the year.",
+   "bullets": [
+    "12 monthly sheets for up to 40 people with drop-down codes (P, A, L, S, V, H, WFH)",
+    "Automatic totals and attendance % per person; below 90% highlighted",
+    "Year Summary with every person's totals and attendance % for the year",
+    "Dashboard with 6 KPIs, attendance % by person and days absent by month charts"
+   ]
+  },
+  {
+   "slug": "christmas-card-list-spreadsheet",
+   "title": "Christmas Card List Spreadsheet",
+   "cat": "home",
+   "price_cents": 349,
+   "cover": "g4tbkzwr1guzlw5y4al7nr1cwoki",
+   "h1": "Christmas Card List Spreadsheet (Address Book & Tracker)",
+   "desc": "A Christmas card list spreadsheet and address book in one: keep every name and mailing address, tick who you sent a card to and who sent one back, and see how many cards are left to write and what postage will cost.",
+   "bullets": [
+    "200-row address book with group, full address, email/phone and notes",
+    "Sent and received columns for this year and last year",
+    "Card + domestic or international postage cost per card",
+    "Dashboard: cards to write, received, total cost, budget left and cards by group chart"
+   ]
+  },
+  {
+   "slug": "2027-budget-planner-spreadsheet",
+   "title": "2027 Budget Planner Spreadsheet",
+   "cat": "money",
+   "price_cents": 499,
+   "cover": "6oaozkbb0aszfgphg4lid7qf15vt",
+   "h1": "2027 Budget Planner Spreadsheet (Monthly & Yearly Budget Template)",
+   "desc": "A 2027 budget planner spreadsheet with a monthly and a yearly view: set a budget for each category once, log your income and spending, and see budget vs actual for every month and for the whole year.",
+   "bullets": [
+    "Up to 30 income and expense categories with a monthly budget",
+    "1,000-row transaction log with category drop-down",
+    "Monthly Budget: budget vs actual, left over and Over budget flag for any month",
+    "Yearly Budget: every category across 12 months, plus a dashboard with savings rate and 2 charts"
+   ]
+  },
+  {
+   "slug": "free-invoice-tracker",
+   "title": "Free Invoice Tracker (Lite)",
+   "cat": "free",
+   "price_cents": 0,
+   "cover": "9v6fkpl69g792epjll0oxhmb62du",
+   "h1": "Free Invoice Tracker (Excel Invoice Tracking Template)",
+   "desc": "A free Excel invoice tracker for freelancers and small businesses: list your invoices, add the date each one is paid and see what is paid, owed and overdue. Lite version of the Freelancer Client & Invoice Tracker.",
+   "bullets": [
+    "Up to 50 invoices with client, issue date, due date, amount and paid date",
+    "Automatic Paid / Due / Overdue status and days overdue",
+    "Summary with total invoiced, paid, outstanding and overdue plus a paid vs owed by client chart"
+   ]
   }
  ]
 }
