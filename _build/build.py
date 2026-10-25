@@ -39,6 +39,13 @@ def price(c):
     return "Free" if c == 0 else f"${c/100:.2f}"
 
 
+PWYW = {p['slug'] for p in _D['products'] if p.get('pwyw')}
+
+
+def pr(p):
+    return f"Pay what you want ({price(p[3])} suggested)" if p[0] in PWYW else price(p[3])
+
+
 def is_excel(p):
     t = (p[1] + p[5] + p[6]).lower()
     return ("excel" in t or "spreadsheet" in t) and "word" not in t and "flutter" not in t and "binder" not in t
@@ -99,7 +106,7 @@ def rel(path):
 def card(p, pre):
     tag = '<span class="tag">FREE</span>' if p[3] == 0 else ""
     return f"""<a class="card" href="{pre}{p[0]}/"><img loading="lazy" src="{IMG}{p[4]}" alt="{E(p[1])} Excel template preview" width="640" height="360">
-<div class="b">{tag}<h3>{E(p[1])}</h3><span class="pr">{price(p[3])}</span></div></a>"""
+<div class="b">{tag}<h3>{E(p[1])}</h3><span class="pr">{pr(p)}</span></div></a>"""
 
 
 def build():
@@ -164,9 +171,14 @@ def build():
             faqs.append(("Is there a free version?", "Yes. Try one of our free Excel templates first: a simple monthly budget, a grocery unit price calculator and a Black Friday wishlist. Links are on the home page under Free templates."))
         faqhtml = "".join(f"<h3>{E(q)}</h3><p>{E(a)}</p>" for q, a in faqs)
         btn = "Download free" if cents == 0 else f"Buy now: {price(cents)}"
+        pw = slug in PWYW
+        if pw:
+            btn = "Get it: pay what you want"
+            faqs.insert(0, ("How does pay what you want work?", f"Enter any amount you like at checkout, from $0. The suggested price is {price(cents)}. If you download it for less, a rating on Gumroad helps a small shop a lot."))
+            faqhtml = "".join(f"<h3>{E(q)}</h3><p>{E(a)}</p>" for q, a in faqs)
         body = f"""<main class="w"><div class="crumb"><a href="../">Home</a> › <a href="../#{cat}">{E(CATNAME[cat])}</a> › {E(name)}</div>
 <div class="prod"><div><img src="{IMG}{img}" alt="{E(name)} preview" width="1280" height="720" style="border-radius:14px;border:1px solid var(--line)"></div>
-<div><h1>{E(kw)}</h1><div class="big">{price(cents)}</div><p>{E(desc)}</p><a class="btn" href="{link}" rel="noopener">{btn}</a>
+<div><h1>{E(kw)}</h1><div class="big">{pr(p)}</div><p>{E(desc)}</p><a class="btn" href="{link}" rel="noopener">{btn}</a>
 <p style="color:var(--mut);font-size:14px;margin-top:10px">Instant download · Secure checkout on Gumroad</p></div></div>
 <div class="prod" style="padding-top:0"><div class="box"><h2 style="margin-top:0">What's included</h2><ul class="ck">{"".join(f"<li>{E(b)}</li>" for b in bullets)}</ul></div>
 <div class="box faq"><h2 style="margin-top:0">Questions</h2>{faqhtml}</div></div>
@@ -174,7 +186,7 @@ def build():
 <h2>You may also like</h2><div class="grid">{"".join(card(q, "../") for q in rel_items)}</div></main>"""
         prod = {"@context": "https://schema.org", "@type": "Product", "name": name, "description": desc, "image": IMG + img,
                 "brand": {"@type": "Brand", "name": "LaunchKit Labs"}, "url": BASE + f"/{slug}/",
-                "offers": {"@type": "Offer", "price": f"{cents/100:.2f}", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": link}}
+                "offers": {"@type": "Offer", "price": "0.00" if pw else f"{cents/100:.2f}", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": link}}
         faq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]}
         crumbs = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE + "/"},
@@ -192,7 +204,7 @@ def build():
         f, pd = BYSLUG[free_slug], BYSLUG[paid_slug]
         body = f"""<article><div class="crumb"><a href="../../">Home</a> › <a href="../">Guides</a></div><h1>{E(title)}</h1>{content}
 <div class="cta"><h3>Free download: {E(f[1])}</h3><p>{E(short(f[6], 180))}</p><a class="btn" href="../../{f[0]}/">Get it free</a></div>
-<div class="cta" style="background:#eff6ff;border-color:#bfdbfe"><h3>Want the full version? {E(pd[1])}</h3><p>{E(short(pd[6], 180))}</p><a class="btn" href="../../{pd[0]}/">See {E(pd[1])}: {price(pd[3])}</a></div></article>"""
+<div class="cta" style="background:#eff6ff;border-color:#bfdbfe"><h3>Want the full version? {E(pd[1])}</h3><p>{E(short(pd[6], 180))}</p><a class="btn" href="../../{pd[0]}/">See {E(pd[1])}: {pr(pd)}</a></div></article>"""
         art = {"@context": "https://schema.org", "@type": "Article", "headline": title, "description": desc, "datePublished": TODAY, "dateModified": TODAY,
                "author": {"@type": "Organization", "name": "LaunchKit Labs"}, "publisher": {"@type": "Organization", "name": "LaunchKit Labs"}, "image": IMG + pd[4]}
         page(f"guides/{slug}/index.html", title, desc, body, img=IMG + pd[4], jsonld=[art], typ="article")
@@ -210,7 +222,7 @@ def build():
         pd, f = BYSLUG[paid_slug], BYSLUG[free_slug]
         kofi = f'<p class="mut">Found this useful? <a href="{KOFI}" rel="noopener">Buy me a coffee on Ko-fi</a>.</p>' if KOFI else ""
         body = f"""<article><div class="crumb"><a href="../../">Home</a> \u203a <a href="../">Free calculators</a></div><h1>{E(h1)}</h1>{intro}{tool}
-<div class="cta" style="background:#eff6ff;border-color:#bfdbfe"><h3>Want to track this every week? {E(pd[1])}</h3><p>{E(short(pd[6], 200))}</p><a class="btn" href="../../{pd[0]}/">See {E(pd[1])}: {price(pd[3])}</a></div>
+<div class="cta" style="background:#eff6ff;border-color:#bfdbfe"><h3>Want to track this every week? {E(pd[1])}</h3><p>{E(short(pd[6], 200))}</p><a class="btn" href="../../{pd[0]}/">See {E(pd[1])}: {pr(pd)}</a></div>
 <div class="cta"><h3>Free download: {E(f[1])}</h3><p>{E(short(f[6], 160))}</p><a class="btn" href="../../{f[0]}/">Get it free</a></div>{kofi}</article>"""
         app = {"@context": "https://schema.org", "@type": "WebApplication", "name": title, "url": BASE + f"/tools/{slug}/", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": desc}
         page(f"tools/{slug}/index.html", f"{h1} | Free", desc, body, img=IMG + pd[4], jsonld=[app], typ="website")
@@ -238,7 +250,7 @@ def build():
         toolcta = f'<div class="cta"><h3>Free tool: {E(tt[0][2])}</h3><p>{E(short(tt[0][3], 160))}</p><a class="btn" href="../../tools/{tool_slug}/">Open the free calculator</a></div>' if tt else ""
         body = f"""<article><div class="crumb"><a href="../../">Home</a> \u203a <a href="../">Deals &amp; buying guides</a></div><h1>{E(title)}</h1>{DISCLOSURE}{intro}
 <p><strong>Tip:</strong> prices change daily. Set a target price before you shop, compare a few stores, and check the seller rating and return policy before you buy.</p>{sec}{toolcta}
-<div class="cta" style="background:#eff6ff;border-color:#bfdbfe"><h3>Plan your spending: {E(pd[1])}</h3><p>{E(short(pd[6], 180))}</p><a class="btn" href="../../{pd[0]}/">See {E(pd[1])}: {price(pd[3])}</a></div></article>"""
+<div class="cta" style="background:#eff6ff;border-color:#bfdbfe"><h3>Plan your spending: {E(pd[1])}</h3><p>{E(short(pd[6], 180))}</p><a class="btn" href="../../{pd[0]}/">See {E(pd[1])}: {pr(pd)}</a></div></article>"""
         art = {"@context": "https://schema.org", "@type": "Article", "headline": title, "description": desc, "datePublished": TODAY, "dateModified": TODAY,
                "author": {"@type": "Organization", "name": "LaunchKit Labs"}, "publisher": {"@type": "Organization", "name": "LaunchKit Labs"}, "image": IMG + pd[4]}
         page(f"deals/{slug}/index.html", title, desc, body, img=IMG + pd[4], jsonld=[art], typ="article")
