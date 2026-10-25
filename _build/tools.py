@@ -113,6 +113,40 @@ document.getElementById('bout').innerHTML=(s!==100?`<p>Your percentages add up t
 document.querySelectorAll('.calc input,.calc select').forEach(e=>e.addEventListener('input',run));run();})();
 </script>""",
  "paycheck-budget-planner", "free-simple-monthly-budget"),
+
+("christmas-budget-calculator",
+ "Christmas Budget Calculator",
+ "Christmas Budget Calculator: How Much Can I Spend per Person?",
+ "Free Christmas budget calculator: enter your total holiday budget, food, decorations and travel, then split what is left fairly across everyone on your gift list.",
+ "<p>Start with the total you can spend without borrowing. Take off the non-gift costs, then share the rest across your gift list. Close family can get a bigger share than friends and coworkers.</p>",
+ """<div class="calc"><div class="row"><label>Total Christmas budget<input id="xt" type="number" value="800"></label><label>Food &amp; hosting<input id="xf" type="number" value="150"></label><label>Decorations, cards &amp; wrapping<input id="xd" type="number" value="60"></label><label>Travel<input id="xv" type="number" value="0"></label></div>
+<div class="row"><label>Close family (big gifts)<input id="xa" type="number" value="4"></label><label>Friends &amp; relatives<input id="xb" type="number" value="5"></label><label>Small gifts (coworkers, teachers, neighbours)<input id="xc" type="number" value="6"></label></div>
+<div class="out" id="xout"></div></div>
+<script>
+(function(){var g=function(i){return +document.getElementById(i).value||0;};function m(v){return v.toFixed(2);}
+function run(){var left=g('xt')-g('xf')-g('xd')-g('xv'),a=g('xa'),b=g('xb'),c=g('xc'),w=a*3+b*1.5+c*0.5,o=document.getElementById('xout');
+if(left<=0){o.innerHTML='<p>Your non-gift costs already use the whole budget. Raise the total or cut food, decorations or travel.</p>';return;}
+if(w<=0){o.innerHTML='<p class="win">Gift budget: <strong>'+m(left)+'</strong></p><p>Add the number of people you buy for.</p>';return;}
+var u=left/w;o.innerHTML='<p class="win">Gift budget: <strong>'+m(left)+'</strong></p><table class="tbl"><tr><th>Who</th><th>People</th><th>Each</th><th>Total</th></tr><tr><td>Close family</td><td>'+a+'</td><td><strong>'+m(u*3)+'</strong></td><td>'+m(u*3*a)+'</td></tr><tr><td>Friends &amp; relatives</td><td>'+b+'</td><td><strong>'+m(u*1.5)+'</strong></td><td>'+m(u*1.5*b)+'</td></tr><tr><td>Small gifts</td><td>'+c+'</td><td><strong>'+m(u*0.5)+'</strong></td><td>'+m(u*0.5*c)+'</td></tr></table><p class="mut">Close family gets 2x a friend and 6x a small gift. Change the numbers to fit your family.</p>';}
+document.querySelectorAll('.calc input').forEach(function(e){e.addEventListener('input',run);});run();})();
+</script>""",
+ "2026-holiday-spending-control-center", "free-christmas-gift-list-budget"),
+
+("gig-driver-earnings-calculator",
+ "Gig Driver Earnings Calculator",
+ "Gig Driver Earnings Calculator: Real Hourly Pay After Gas and Mileage",
+ "Free calculator for Uber, Lyft, DoorDash and Instacart drivers: see your real hourly pay after gas and car costs, plus your estimated mileage deduction.",
+ "<p>App payouts look higher than what you really keep. Enter a week of driving to see your profit per hour and per mile after gas and other car costs, and a mileage deduction estimate.</p>",
+ """<div class="calc"><div class="row"><label>Payouts incl. tips<input id="ge" type="number" value="850"></label><label>Hours online<input id="gh" type="number" value="35"></label><label>Miles driven<input id="gm" type="number" value="620"></label></div>
+<div class="row"><label>Fuel price per gallon<input id="gp" type="number" step="0.01" value="3.40"></label><label>Car MPG<input id="gg" type="number" value="28"></label><label>Other car cost per mile (wear, repairs)<input id="gw" type="number" step="0.01" value="0.10"></label><label>Mileage rate per mile for deduction (check irs.gov)<input id="gr" type="number" step="0.005" value="0.70"></label></div>
+<div class="out" id="gout"></div></div>
+<script>
+(function(){var g=function(i){return +document.getElementById(i).value||0;};function m(v){return v.toFixed(2);}
+function run(){var e=g('ge'),h=g('gh'),mi=g('gm'),fuel=g('gg')>0?mi/g('gg')*g('gp'):0,wear=mi*g('gw'),net=e-fuel-wear,o=document.getElementById('gout');
+o.innerHTML='<table class="tbl"><tr><td>Fuel cost</td><td>'+m(fuel)+'</td></tr><tr><td>Other car costs</td><td>'+m(wear)+'</td></tr><tr><td>Profit after car costs</td><td><strong>'+m(net)+'</strong></td></tr><tr><td>Real pay per hour</td><td><strong>'+(h>0?m(net/h):'-')+'</strong> (app shows '+(h>0?m(e/h):'-')+')</td></tr><tr><td>Profit per mile</td><td>'+(mi>0?m(net/mi):'-')+'</td></tr><tr><td>Estimated mileage deduction</td><td>'+m(mi*g('gr'))+'</td></tr></table><p class="mut">Estimates only, not tax advice. Keep a mileage log; in the USA the IRS standard mileage rate changes each year.</p>';}
+document.querySelectorAll('.calc input').forEach(function(e){e.addEventListener('input',run);});run();})();
+</script>""",
+ "gig-driver-mileage-earnings-tracker", "free-simple-monthly-budget"),
 ]
 
 TOOL_CSS = """.calc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;margin:20px 0}
