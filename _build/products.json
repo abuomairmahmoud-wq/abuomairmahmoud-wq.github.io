@@ -254,7 +254,7 @@
    "slug": "debt-payoff-calculator",
    "title": "Debt Payoff Strategy Calculator",
    "cat": "money",
-   "price_cents": 799,
+   "price_cents": 399,
    "cover": "c5zusbmbqtee42ksq3vvj94qx6pl",
    "h1": "Debt Snowball & Avalanche Calculator Spreadsheet",
    "desc": "Turn your debt balances into a clear payoff plan. Compare snowball and avalanche, estimate payoff timing and track monthly progress.",
@@ -263,7 +263,8 @@
     "Estimated payoff months for each debt",
     "24-month payoff log",
     "Dashboard with total balance and extra payments"
-   ]
+   ],
+   "pwyw": true
   },
   {
    "slug": "net-worth-dividend-tracker",
@@ -1113,7 +1114,8 @@
     "Budget vs actual for any month, over-budget lines turn red",
     "January to December summary by category",
     "Dashboard with savings rate, spending-by-month and by-category charts"
-   ]
+   ],
+   "pwyw": true
   },
   {
    "slug": "employee-shift-schedule-pto-tracker",
