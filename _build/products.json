@@ -1344,6 +1344,65 @@
     "Automatic Paid / Due / Overdue status and days overdue",
     "Summary with total invoiced, paid, outstanding and overdue plus a paid vs owed by client chart"
    ]
+  },
+  {
+   "slug": "loan-amortization-schedule-excel",
+   "title": "Loan Amortization Schedule with Extra Payments",
+   "cat": "money",
+   "price_cents": 499,
+   "cover": "u0ougtqwia325ly1twywlojz9hup",
+   "h1": "Loan Amortization Schedule Excel with Extra Payments",
+   "desc": "A loan amortization schedule Excel template with extra payments: enter your loan once and see every monthly payment split into principal and interest, plus the interest and months you save with extra or lump-sum payments.",
+   "bullets": [
+    "Up to 480 monthly payments (40 years) with date, balance, principal, interest and cumulative interest",
+    "Extra payment every month plus an optional one-time lump sum",
+    "Side-by-side comparison with the same loan without extra payments",
+    "Dashboard: monthly payment, interest saved, months saved, payoff date, balance and principal vs interest charts"
+   ]
+  },
+  {
+   "slug": "vehicle-maintenance-log-template-excel",
+   "title": "Vehicle Maintenance Log Template",
+   "cat": "home",
+   "price_cents": 399,
+   "cover": "jhrtm7vwh8v4uozcnossczo2j788",
+   "h1": "Vehicle Maintenance Log Template (Excel Car Service & Repair Tracker)",
+   "desc": "A vehicle maintenance log template for Excel: list up to 5 cars, set your own service intervals, log every service and repair, and see what is overdue or due soon plus what each vehicle costs to maintain.",
+   "bullets": [
+    "Service schedule with next due odometer and date, miles left, days left and OVERDUE / DUE SOON / OK status",
+    "1,000-row maintenance log with parts and labor cost",
+    "Dashboard: spent per year, cost per vehicle, cost by service type and monthly spend charts",
+    "Editable list of 18 service types"
+   ]
+  },
+  {
+   "slug": "secret-santa-spreadsheet-template",
+   "title": "Secret Santa Spreadsheet Template",
+   "cat": "home",
+   "price_cents": 349,
+   "cover": "7i2hjdnp6f9ot2u3z82hhisg8z70",
+   "h1": "Secret Santa Spreadsheet Template (Name Draw, Wishlists & Gift Tracker)",
+   "desc": "A Secret Santa spreadsheet template that draws names automatically for up to 40 people, gives every giver their person's wishlist and budget, and tracks the gifts until the exchange.",
+   "bullets": [
+    "Automatic name draw in one closed loop - nobody draws themselves; change one number to re-draw",
+    "Participants list with 3 wishlist ideas and sizes / likes per person",
+    "Printable slips for every giver",
+    "Gift tracker and dashboard: bought, wrapped, delivered, total spent and over-budget check"
+   ]
+  },
+  {
+   "slug": "free-workout-log",
+   "title": "Free Workout Log (Lite)",
+   "cat": "free",
+   "price_cents": 0,
+   "cover": "bdc5dt0p2nfgo167ohmebtfoehcc",
+   "h1": "Free Workout Log (Excel Workout Log Template)",
+   "desc": "A free workout log for Excel: write down each exercise with sets, reps and weight and see your workout days, total volume and best lift per exercise. Lite version of the Workout & Gym Progress Tracker.",
+   "bullets": [
+    "100-row workout log with automatic volume (sets x reps x weight)",
+    "Summary: workout days, sets logged, total volume and heaviest lift",
+    "Volume and best weight per exercise with a chart"
+   ]
   }
  ]
 }
