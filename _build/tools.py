@@ -85,8 +85,8 @@ document.querySelectorAll('.calc input').forEach(e=>e.addEventListener('input',r
 
 ("mortgage-payment-calculator",
  "Mortgage Payment Calculator",
- "Mortgage Payment Calculator with Tax, Insurance and PMI",
- "Free mortgage calculator: monthly payment with principal, interest, property tax, home insurance, PMI and HOA, plus total interest over the loan.",
+ "Mortgage Calculator with PMI, Taxes and Insurance",
+ "Free mortgage calculator with PMI, taxes and insurance: full monthly payment (PITI + HOA), total interest, how PMI is calculated and when it goes away.",
  "<p>Enter the home price and loan details to see the full monthly payment, not just principal and interest.</p>",
  """<div class="calc"><div class="row"><label>Home price<input id="mp" type="number" value="400000"></label><label>Down payment %<input id="md" type="number" value="10"></label><label>Interest rate %<input id="mr" type="number" step="0.01" value="6.75"></label><label>Term (years)<input id="mt" type="number" value="30"></label></div>
 <div class="row"><label>Property tax per year<input id="mx" type="number" value="4800"></label><label>Home insurance per year<input id="mi" type="number" value="1800"></label><label>PMI % per year (if down &lt; 20%)<input id="mm" type="number" step="0.01" value="0.6"></label><label>HOA per month<input id="mh" type="number" value="0"></label></div>
@@ -96,13 +96,24 @@ document.querySelectorAll('.calc input').forEach(e=>e.addEventListener('input',r
 const pi=r?L*r/(1-Math.pow(1+r,-n)):L/n,tax=g('mx')/12,ins=g('mi')/12,pmi=dp<0.2?L*g('mm')/1200:0,hoa=g('mh'),tot=pi+tax+ins+pmi+hoa;
 document.getElementById('mout').innerHTML=`<p class="win">Monthly payment: <strong>${tot.toFixed(2)}</strong></p><table class="tbl"><tr><td>Principal &amp; interest</td><td>${pi.toFixed(2)}</td></tr><tr><td>Property tax</td><td>${tax.toFixed(2)}</td></tr><tr><td>Insurance</td><td>${ins.toFixed(2)}</td></tr><tr><td>PMI</td><td>${pmi.toFixed(2)}</td></tr><tr><td>HOA</td><td>${hoa.toFixed(2)}</td></tr><tr><td>Loan amount</td><td>${L.toFixed(0)}</td></tr><tr><td>Total interest over the loan</td><td>${(pi*n-L).toFixed(0)}</td></tr></table><p class="mut">Estimate only, not lending advice.</p>`;}
 document.querySelectorAll('.calc input').forEach(e=>e.addEventListener('input',run));run();})();
-</script>""",
+</script>
+<h2>How PMI is calculated</h2>
+<p>PMI (private mortgage insurance) is usually added to a conventional loan when your down payment is less than 20%. It is quoted as a yearly percentage of the loan amount and paid monthly. The rate depends mainly on your credit score and down payment, so use the rate from your lender's quote if you have one.</p>
+<p><strong>Example with the default numbers:</strong> a $400,000 home with 10% down is a $360,000 loan. PMI at 0.6% a year is $2,160, or <strong>$180 a month</strong>.</p>
+<h2>Example: full monthly payment with PMI and taxes</h2>
+<table class="tbl"><tr><th></th><th>10% down ($360,000 loan)</th><th>20% down ($320,000 loan)</th></tr><tr><td>Principal &amp; interest (6.75%, 30 years)</td><td>$2,334.95</td><td>$2,075.51</td></tr><tr><td>Property tax ($4,800/yr)</td><td>$400.00</td><td>$400.00</td></tr><tr><td>Home insurance ($1,800/yr)</td><td>$150.00</td><td>$150.00</td></tr><tr><td>PMI (0.6%/yr)</td><td>$180.00</td><td>$0.00</td></tr><tr><td><strong>Total per month</strong></td><td><strong>$3,064.95</strong></td><td><strong>$2,625.51</strong></td></tr></table>
+<p>The extra 10% down payment lowers the monthly payment by about $439 in this example: $259 less principal and interest plus no PMI.</p>
+<h2>Mortgage calculator FAQ</h2>
+<h3>When does PMI go away?</h3><p>On most US conventional loans you can ask the lender to cancel PMI once your balance reaches 80% of the home's original value, and it normally ends automatically at 78% (Homeowners Protection Act). FHA loans use a different mortgage insurance (MIP) with its own rules.</p>
+<h3>Does this mortgage calculator include taxes and insurance?</h3><p>Yes. It adds property tax, home insurance, PMI and HOA to principal and interest, so the result is close to the full monthly payment (often called PITI). Check your county's property tax rate and get an insurance quote for exact numbers.</p>
+<h3>How much house can I afford?</h3><p>A common rule of thumb is to keep the full housing payment at or below about 28% of gross monthly income. Try the <a href="../budget-calculator-50-30-20/">50/30/20 budget calculator</a> to see how the payment fits your budget.</p>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is PMI calculated?","acceptedAnswer":{"@type":"Answer","text":"PMI is a yearly percentage of the loan amount, paid monthly. A $360,000 loan with PMI at 0.6% a year costs $2,160 a year, or $180 a month."}},{"@type":"Question","name":"When does PMI go away?","acceptedAnswer":{"@type":"Answer","text":"On most US conventional loans you can request cancellation at 80% of the original home value, and it normally ends automatically at 78% under the Homeowners Protection Act. FHA loans use MIP with different rules."}},{"@type":"Question","name":"Does this mortgage calculator include taxes and insurance?","acceptedAnswer":{"@type":"Answer","text":"Yes. It adds property tax, home insurance, PMI and HOA to principal and interest to estimate the full monthly payment (PITI)."}}]}</script>""",
  "home-buying-planner-mortgage-calculator", "free-simple-monthly-budget"),
 
 ("budget-calculator-50-30-20",
  "50/30/20 Budget Calculator",
- "50/30/20 Budget Calculator: How to Split Your Paycheck",
- "Free 50/30/20 budget calculator. Enter your take-home pay to see how much to spend on needs, wants and savings each month, week or paycheck.",
+ "50/30/20 Rule Calculator: Split Monthly, Biweekly or Weekly Pay",
+ "Free 50/30/20 rule calculator for monthly, biweekly or weekly pay. See how much goes to needs, wants and savings per paycheck and per month, with examples.",
  "<p>The 50/30/20 rule splits take-home pay into 50% needs, 30% wants and 20% savings and debt payoff. Adjust the percentages if your situation is different.</p>",
  """<div class="calc"><div class="row"><label>Take-home pay<input id="bp" type="number" value="4000"></label><label>Paid<select id="bf"><option value="12">Monthly</option><option value="26">Every 2 weeks</option><option value="52">Weekly</option><option value="24">Twice a month</option></select></label></div>
 <div class="row"><label>Needs %<input id="b1" type="number" value="50"></label><label>Wants %<input id="b2" type="number" value="30"></label><label>Savings & debt %<input id="b3" type="number" value="20"></label></div><div class="out" id="bout"></div></div>
@@ -111,7 +122,18 @@ document.querySelectorAll('.calc input').forEach(e=>e.addEventListener('input',r
 const L=['Needs (rent, bills, groceries, transport)','Wants (eating out, fun, shopping)','Savings and extra debt payments'];
 document.getElementById('bout').innerHTML=(s!==100?`<p>Your percentages add up to ${s}%, not 100%.</p>`:'')+`<table class="tbl"><tr><th></th><th>Per paycheck</th><th>Per month</th></tr>`+a.map((x,i)=>`<tr><td>${L[i]}</td><td>${(p*x/100).toFixed(2)}</td><td><strong>${(m*x/100).toFixed(2)}</strong></td></tr>`).join('')+'</table>';}
 document.querySelectorAll('.calc input,.calc select').forEach(e=>e.addEventListener('input',run));run();})();
-</script>""",
+</script>
+<h2>50/30/20 calculator for biweekly pay: an example</h2>
+<p>If you take home $2,000 every two weeks, you get 26 paychecks a year, so your real monthly take-home pay is $2,000 &times; 26 &divide; 12 = <strong>$4,333.33</strong>, not $4,000. Choose "Every 2 weeks" above and the calculator does this conversion for you.</p>
+<table class="tbl"><tr><th>Bucket</th><th>Per $2,000 paycheck</th><th>Per month</th></tr><tr><td>Needs (50%)</td><td>$1,000.00</td><td>$2,166.67</td></tr><tr><td>Wants (30%)</td><td>$600.00</td><td>$1,300.00</td></tr><tr><td>Savings &amp; debt payoff (20%)</td><td>$400.00</td><td>$866.67</td></tr></table>
+<p>With biweekly pay, two months of the year have a third paycheck. Many people send that whole extra paycheck to savings or debt payoff instead of spreading it out.</p>
+<h2>What counts as needs, wants and savings?</h2>
+<ul><li><strong>Needs (50%)</strong>: rent or mortgage, utilities, groceries, insurance, transport to work, minimum debt payments, childcare.</li><li><strong>Wants (30%)</strong>: eating out, streaming and subscriptions, hobbies, travel, shopping, gifts.</li><li><strong>Savings and debt (20%)</strong>: emergency fund, retirement, sinking funds, and any debt payment above the minimum.</li></ul>
+<h2>50/30/20 rule FAQ</h2>
+<h3>Is the 50/30/20 rule based on gross or net income?</h3><p>On take-home (net) pay: what lands in your bank account after tax and payroll deductions. If your employer already takes out retirement savings, you can count that toward the 20%.</p>
+<h3>What if my needs are more than 50%?</h3><p>That is common with high rent. Change the percentages above, for example 60/20/20 or 70/10/20, and keep the savings part as high as you can. The calculator warns you if the three numbers do not add up to 100%.</p>
+<h3>Do debt payments go in needs or savings?</h3><p>Minimum payments are needs. Anything extra you pay to clear debt faster belongs in the 20%. To see which debt to pay first, try the <a href="../debt-snowball-calculator/">debt snowball vs avalanche calculator</a>.</p>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is the 50/30/20 rule based on gross or net income?","acceptedAnswer":{"@type":"Answer","text":"On take-home (net) pay: what lands in your bank account after tax and payroll deductions. Retirement savings taken from your paycheck can count toward the 20%."}},{"@type":"Question","name":"How do I use the 50/30/20 rule with biweekly pay?","acceptedAnswer":{"@type":"Answer","text":"Multiply one paycheck by 26 and divide by 12 to get monthly take-home pay. For a $2,000 biweekly paycheck that is $4,333.33 a month: $2,166.67 needs, $1,300 wants and $866.67 savings."}},{"@type":"Question","name":"What if my needs are more than 50%?","acceptedAnswer":{"@type":"Answer","text":"Adjust the split, for example 60/20/20 or 70/10/20, and keep the savings part as high as you can."}}]}</script>""",
  "paycheck-budget-planner", "free-simple-monthly-budget"),
 
 ("christmas-budget-calculator",
