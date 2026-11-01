@@ -133,11 +133,30 @@ def build():
     guides = "".join(f'<li><a href="guides/{g[0]}/">{E(g[1])}</a></li>' for g in G)
     dl = "".join(f'<li><a href="deals/{d[0]}/">{E(d[1])}</a></li>' for d in D)
     tl = "".join(f'<li><a href="tools/{t[0]}/">{E(t[1])}</a></li>' for t in T)
+    # Holiday / newest picks (edit this list to change the homepage "picks" row)
+    PICKS = [
+        ("vffeef", "Christmas Printables Bundle - 5 packs, 85 pages (save 35%)", 799, "r2g6i725uso6r9zzuf91ijiwm8zp", "EARLYXMAS"),
+        ("ldqvfj", "Christmas Coloring & Activity Pack for Kids", 249, "90muqz3xzi5wvrii0qlsh9p38sj5", "EARLYKIDS"),
+        ("fhfmnb", "Printable Christmas Gift Tags - 64 tags + labels", 199, "zd90ymbuo26gqrxcbywjwwuwgtfu", "EARLYTAGS"),
+        ("hxtkl", "Christmas Printable Games Pack", 299, "bvhm0tcyo3wcn0kpzw15kkoujrca", ""),
+        ("tjjhrl", "Christmas Advent Activity Calendar", 199, "bkzc5y8hx9khfoz4aeuahwvvnv0a", ""),
+        ("qtcqfe", "2027 Meal Planner & Grocery Budget", 299, "hgb1m1r6wahcdidmzvmux5p652x3", "EARLYMEAL"),
+        ("iyrweg", "2027 New Year Goal & Gratitude Journal", 399, "tzzw9jud0vhod2z0rupilbh82wbr", ""),
+        ("gysuon", "AI Prompt & Email Mega Bundle - 650+ prompts", 699, "oscsj1cj8lblof4cjqoe12eqzucf", ""),
+    ]
+    def pick_card(k):
+        perm, title, cents, img, code = k
+        url = GUM + perm + (("/" + code) if code else "")
+        badge = '<span style="display:inline-block;background:#fde68a;color:#7c2d12;font-size:12px;font-weight:700;padding:2px 8px;border-radius:8px;margin-bottom:6px">First 20 buyers: 25% off</span><br>' if code else ""
+        return (f'<div class="card"><a href="{url}" data-gumroad-overlay-checkout="true" rel="noopener"><img src="{IMG}{img}" alt="{E(title)}" loading="lazy" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block"></a>'
+                f'<div style="padding:12px 14px">{badge}<b>{E(title)}</b><div class="big" style="font-size:18px;margin:6px 0">${cents/100:.2f}</div>'
+                f'<a class="btn" style="padding:8px 16px;font-size:14px" href="{url}" data-gumroad-overlay-checkout="true" rel="noopener">Buy now</a></div></div>')
+    picks_html = f'<section id="picks"><h2>Holiday &amp; New Year picks</h2><p class="sub">Printables, planners and AI packs for Christmas and a fresh start in 2027. Instant download.</p><div class="grid">{"".join(pick_card(k) for k in PICKS)}</div></section>'
     body = f"""<section class="hero"><div class="w"><h1>Excel Templates for Budgets, Deals, Small Business &amp; Life Planning</h1>
 <p>Ready-to-use spreadsheets that do the math for you: budget planners, Black Friday deal trackers, grocery price books, car loan calculators, invoice trackers and more. Built for the USA, UK and Canada.</p>
-<a class="btn" href="free/">Get free templates</a><a class="btn ghost" href="#all">Browse all</a>
+<a class="btn" href="#picks">Holiday picks</a><a class="btn ghost" href="free/">Free templates</a>
 <div class="trust"><span>✓ Instant download</span><span>✓ No subscription</span><span>✓ Works in Excel &amp; Google Sheets</span><span>✓ Sample data included</span></div></div></section>
-<main class="w"><section><h2 id="tools">Free online calculators</h2><p class="sub">Quick answers in your browser, no download needed.</p><ul>{tl}</ul></section>{secs}<section><h2>Free money-saving guides</h2><ul>{guides}</ul></section><section><h2 id="deals-guides">Deals &amp; buying guides</h2><ul>{dl}</ul></section></main>"""
+<main class="w">{picks_html}<section><h2 id="tools">Free online calculators</h2><p class="sub">Quick answers in your browser, no download needed.</p><ul>{tl}</ul></section>{secs}<section><h2>Free money-saving guides</h2><ul>{guides}</ul></section><section><h2 id="deals-guides">Deals &amp; buying guides</h2><ul>{dl}</ul></section></main>"""
     org = {"@context": "https://schema.org", "@type": "Organization", "name": "LaunchKit Labs", "url": BASE + "/",
            "sameAs": ["https://mahmoudian113.gumroad.com", "https://payhip.com/BestLaunchKitLabs", "https://contra.com/mahmoud_abuomair_7sxshnhl"]}
     site = {"@context": "https://schema.org", "@type": "WebSite", "name": "LaunchKit Labs", "url": BASE + "/"}
