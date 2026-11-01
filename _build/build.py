@@ -89,7 +89,7 @@ def page(path, title, desc, body, canon=None, img=None, jsonld=None, typ="websit
 <footer><div class="w"><p><strong style="color:#fff">LaunchKit Labs</strong>: practical Excel templates, planners and calculators. Instant download, no subscriptions.</p>
 <p><a href="{rel(path)}tools/">Free calculators</a> · <a href="{rel(path)}free/">Free templates</a> · <a href="{rel(path)}guides/">Guides</a> · <a href="{rel(path)}deals/">Deals &amp; buying guides</a> · <a href="https://www.teepublic.com/user/launchkittees" rel="noopener">Shirts &amp; gifts</a> · <a href="https://mahmoudian113.gumroad.com" rel="noopener">Shop on Gumroad</a> · <a href="https://payhip.com/BestLaunchKitLabs" rel="noopener">Payhip store</a> · <a href="https://mahmoudian113.gumroad.com/affiliates" rel="noopener">Earn 30% as an affiliate</a></p>
 {('<p><a class="kofi" href="'+KOFI+'" rel="noopener">☕ Support LaunchKit Labs on Ko-fi</a></p>') if KOFI else ''}
-<p>Templates are planning tools, not financial, legal, tax or medical advice. © {datetime.date.today().year} LaunchKit Labs</p></div></footer></body></html>"""
+<p>Templates are planning tools, not financial, legal, tax or medical advice. © {datetime.date.today().year} LaunchKit Labs</p></div></footer><script src="https://gumroad.com/js/gumroad.js"></script></body></html>"""
     full = os.path.join(OUT, path)
     os.makedirs(os.path.dirname(full), exist_ok=True)
     open(full, "w", encoding="utf-8").write(doc)
@@ -179,7 +179,7 @@ def build():
             faqhtml = "".join(f"<h3>{E(q)}</h3><p>{E(a)}</p>" for q, a in faqs)
         body = f"""<main class="w"><div class="crumb"><a href="../">Home</a> › <a href="../#{cat}">{E(CATNAME[cat])}</a> › {E(name)}</div>
 <div class="prod"><div><img src="{IMG}{img}" alt="{E(name)} preview" width="1280" height="720" style="border-radius:14px;border:1px solid var(--line)"></div>
-<div><h1>{E(kw)}</h1><div class="big">{pr(p)}</div><p>{E(desc)}</p><a class="btn" href="{link}" rel="noopener">{btn}</a>
+<div><h1>{E(kw)}</h1><div class="big">{pr(p)}</div><p>{E(desc)}</p><a class="btn" href="{link}" data-gumroad-overlay-checkout="true" rel="noopener">{btn}</a><p class="mut" style="font-size:13px;margin-top:8px">Secure checkout by Gumroad opens right here – card or PayPal, instant download.</p>
 <p style="color:var(--mut);font-size:14px;margin-top:10px">Instant download · Secure checkout on Gumroad</p></div></div>
 <div class="prod" style="padding-top:0"><div class="box"><h2 style="margin-top:0">What's included</h2><ul class="ck">{"".join(f"<li>{E(b)}</li>" for b in bullets)}</ul></div>
 <div class="box faq"><h2 style="margin-top:0">Questions</h2>{faqhtml}</div></div>
