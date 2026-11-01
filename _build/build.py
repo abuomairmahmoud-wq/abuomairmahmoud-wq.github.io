@@ -179,7 +179,7 @@ def build():
             faqhtml = "".join(f"<h3>{E(q)}</h3><p>{E(a)}</p>" for q, a in faqs)
         body = f"""<main class="w"><div class="crumb"><a href="../">Home</a> › <a href="../#{cat}">{E(CATNAME[cat])}</a> › {E(name)}</div>
 <div class="prod"><div><img src="{IMG}{img}" alt="{E(name)} preview" width="1280" height="720" style="border-radius:14px;border:1px solid var(--line)"></div>
-<div><h1>{E(kw)}</h1><div class="big">{pr(p)}</div><p>{E(desc)}</p><a class="btn" href="{link}" data-gumroad-overlay-checkout="true" rel="noopener">{btn}</a><p class="mut" style="font-size:13px;margin-top:8px">Secure checkout by Gumroad opens right here – card or PayPal, instant download.</p>
+<div><h1>{E(kw)}</h1><div class="big">{pr(p)}</div><p>{E(desc)}</p><a class="btn" href="{link}" data-gumroad-overlay-checkout="true" rel="noopener">{btn}</a><p class="mut" style="font-size:13px;margin-top:8px">Secure checkout by Gumroad – card or PayPal, instant download.</p>
 <p style="color:var(--mut);font-size:14px;margin-top:10px">Instant download · Secure checkout on Gumroad</p></div></div>
 <div class="prod" style="padding-top:0"><div class="box"><h2 style="margin-top:0">What's included</h2><ul class="ck">{"".join(f"<li>{E(b)}</li>" for b in bullets)}</ul></div>
 <div class="box faq"><h2 style="margin-top:0">Questions</h2>{faqhtml}</div></div>
