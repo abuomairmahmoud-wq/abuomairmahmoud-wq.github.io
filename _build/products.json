@@ -219,11 +219,11 @@
   },
   {
    "slug": "paycheck-budget-planner",
-   "title": "Paycheck Budget Planner",
+   "title": "Biweekly Budget Template: Paycheck Budget Planner",
    "cat": "money",
    "price_cents": 399,
    "cover": "znbh481bof2re3hdnokho1poh67w",
-   "h1": "Paycheck Budget Planner Spreadsheet: Budget by Paycheck",
+   "h1": "Biweekly Budget Template: Paycheck Budget Planner Spreadsheet (Bills by Paycheck)",
    "desc": "Give every paycheck a job before it lands. See which bills each paycheck must cover and exactly how much is left, so you stop running short before payday.",
    "bullets": [
     "Up to 26 paychecks and 60 bills",
@@ -234,11 +234,11 @@
   },
   {
    "slug": "2027-annual-budget-sinking-funds-planner",
-   "title": "2027 Annual Budget & Sinking Funds Planner",
+   "title": "Sinking Funds Tracker & 2027 Annual Budget Planner",
    "cat": "money",
    "price_cents": 799,
    "cover": "485zqvf3squ5a2iiej630bzdgdoj",
-   "h1": "2027 Budget Planner Spreadsheet with Sinking Funds",
+   "h1": "Sinking Funds Tracker & 2027 Budget Planner Spreadsheet",
    "desc": "Plan your whole 2027 and never be surprised by a big bill again. A full-year budget with sinking funds, so you save a little every month for the expenses you know are coming.",
    "bullets": [
     "12-month budget vs actual",
@@ -1012,7 +1012,7 @@
    "cat": "free",
    "price_cents": 0,
    "cover": "r67h03u48idkvenk2i39mby4w9d8",
-   "h1": "Free Debt Snowball Spreadsheet for Excel",
+   "h1": "Free Debt Snowball Tracker: Debt Payoff Template for Excel",
    "desc": "List up to 8 debts and this free Excel tracker sorts them into debt snowball order (smallest balance first), with your total debt, monthly minimums and approximate monthly interest.",
    "bullets": [
     "Debts sheet for up to 8 debts: balance, APR and minimum payment",
@@ -1038,11 +1038,11 @@
   },
   {
    "slug": "free-christmas-gift-list-budget",
-   "title": "Free Christmas Gift List & Budget (Lite)",
+   "title": "Free Christmas Budget Template & Gift List (Lite)",
    "cat": "free",
    "price_cents": 0,
    "cover": "2pdu1ppvd4srqhxb2a4ay4ddxuib",
-   "h1": "Free Christmas Gift List & Budget Spreadsheet",
+   "h1": "Free Christmas Budget Template: Gift List & Budget Spreadsheet",
    "desc": "Plan every Christmas gift in one free Excel list: who it is for, the idea, your budget and what you paid, with a running total against your holiday gift budget.",
    "bullets": [
     "Gift list for up to 40 gifts with budget vs actual",
