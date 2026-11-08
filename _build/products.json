@@ -1779,6 +1779,21 @@
     "30-day action plan and a 1-hour weekly AI routine",
     "250 ChatGPT prompts (PDF + Excel)"
    ]
+  },
+  {
+   "slug": "bmebm",
+   "title": "Etsy Seller Profit Calculator & Shop Dashboard",
+   "cat": "business",
+   "price_cents": 299,
+   "cover": "svwn0tsopmw28tq3ouw55iydb7o2",
+   "h1": "Etsy Seller Profit Calculator & Shop Dashboard (Excel Fee Calculator, Order & Expense Tracker)",
+   "desc": "Know exactly what you keep from every Etsy sale - after listing, transaction, processing and Offsite Ads fees, shipping and materials.",
+   "bullets": [
+    "Every Etsy fee rate in one Settings tab",
+    "Price calculator for 30 products with target margin",
+    "500-row order log with net profit per order",
+    "Expense log and monthly shop dashboard with chart"
+   ]
   }
  ]
 }
