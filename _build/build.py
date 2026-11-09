@@ -136,12 +136,12 @@ def build():
     # Holiday / newest picks (edit this list to change the homepage "picks" row)
     PICKS = [
         ("vffeef", "Christmas Printables Bundle - 5 packs, 85 pages (save 35%)", 799, "r2g6i725uso6r9zzuf91ijiwm8zp", "EARLYXMAS"),
+        ("jbbzu", "Black Friday & Boxing Day Deal Planner 2026", 399, "f9usjsoxttwv71hqv0elvtfeqnbo", ""),
         ("ldqvfj", "Christmas Coloring & Activity Pack for Kids", 249, "90muqz3xzi5wvrii0qlsh9p38sj5", "EARLYKIDS"),
-        ("fhfmnb", "Printable Christmas Gift Tags - 64 tags + labels", 199, "zd90ymbuo26gqrxcbywjwwuwgtfu", "EARLYTAGS"),
-        ("hxtkl", "Christmas Printable Games Pack", 299, "bvhm0tcyo3wcn0kpzw15kkoujrca", ""),
-        ("tjjhrl", "Christmas Advent Activity Calendar", 199, "bkzc5y8hx9khfoz4aeuahwvvnv0a", ""),
-        ("qtcqfe", "2027 Meal Planner & Grocery Budget", 299, "hgb1m1r6wahcdidmzvmux5p652x3", "EARLYMEAL"),
-        ("iyrweg", "2027 New Year Goal & Gratitude Journal", 399, "tzzw9jud0vhod2z0rupilbh82wbr", ""),
+        ("jiets", "2027 Personal Finance System - 9 Excel tools + course", 1900, "hazhlkbxdrj18m3fav3kef8k8sfk", "EARLYMONEY"),
+        ("fexvgd", "Small Business AI & Excel System - 9 tools", 2900, "d4lf5hk6mxzvqg0fllb1wpxurxrx", "EARLYSYSTEM"),
+        ("mbakcr", "NEW: Local SEO Kit - Excel tracker + 150 AI prompts", 499, "l1j4x79p5uaivghonv7yn64p75bd", "EARLYSEO"),
+        ("cjdze", "12 AI Skills for Small Business (Claude)", 499, "8lkrl5c55mvwd5mkx4s5yghfqlq1", "EARLYSKILLS"),
         ("gysuon", "AI Prompt & Email Mega Bundle - 650+ prompts", 699, "oscsj1cj8lblof4cjqoe12eqzucf", ""),
     ]
     def pick_card(k):
