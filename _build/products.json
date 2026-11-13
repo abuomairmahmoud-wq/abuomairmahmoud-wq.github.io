@@ -1841,6 +1841,22 @@
     "15 email & LinkedIn templates + 34 AI prompts",
     "11-page Start Here guide and interview checklists"
    ]
+  },
+  {
+   "slug": "dazzx",
+   "title": "Freelance Pricing Calculator & Quote Builder",
+   "cat": "creators",
+   "price_cents": 399,
+   "cover": "dybgjfyy6ywxfb0fb3dzbgmcow2z",
+   "h1": "Freelance Pricing Calculator & Quote Builder (Excel Hourly Rate, Project Quote & Package Pricing)",
+   "desc": "Know your minimum freelance rate, send confident quotes and stop working below cost. An Excel workbook with 6 tabs plus a 5-page Start Here guide with copy-paste scripts.",
+   "bullets": [
+    "Rate Calculator: minimum and recommended hourly, day and week rate from your income goal, costs and billable hours",
+    "Quote Builder with scope buffer, rush fee, discount, deposit and a below-minimum check",
+    "Basic / Standard / Premium package builder with effective hourly rate per package",
+    "Project Check: ACCEPT, NEGOTIATE or WALK AWAY for a client's budget",
+    "Works in Excel, Google Sheets and Numbers (no macros)"
+   ]
   }
  ]
 }
