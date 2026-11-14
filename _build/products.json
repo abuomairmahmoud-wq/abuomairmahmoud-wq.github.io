@@ -80,12 +80,12 @@
   },
   {
    "slug": "free-simple-monthly-budget",
-   "title": "Free Simple Monthly Budget Spreadsheet",
+   "title": "Free Budget Template 2027: Simple Monthly Budget",
    "cat": "free",
    "price_cents": 0,
    "cover": "wdnhb6spej9yka7r7huk1fp0smqn",
-   "h1": "Free Simple Monthly Budget Spreadsheet (Excel)",
-   "desc": "A simple budget you will actually keep using. Enter your income, set a budget for each category and type what you spend. The sheet shows what's left and highlights overspending. Great for beginners.",
+   "h1": "Free Budget Template for 2027: Simple Monthly Budget Spreadsheet (Excel)",
+   "desc": "A free, simple monthly budget spreadsheet to start 2027 with a plan. Type your take-home pay and 15 budget categories, then add what you really spent: the template shows what is left in each category, the % used and the income left over. Works in any currency and in Microsoft Excel or Google Sheets (import the .xlsx).",
    "bullets": [
     "Monthly take-home income",
     "15 editable categories with budget, actual, left and % used",
@@ -949,8 +949,8 @@
    "cat": "money",
    "price_cents": 399,
    "cover": "vfzzpli7v7ixhrn845juptvoi071",
-   "h1": "Utility Bill Tracker & Energy Usage Spreadsheet",
-   "desc": "Track every electricity, gas, water, internet and phone bill in one Excel file. Each bill shows its cost per unit so you can spot price rises, the monthly summary compares spend with your budget, and the dashboard shows unpaid bills and your most expensive month. Works in any currency.",
+   "h1": "Utility Bill Tracker Spreadsheet: Electricity, Gas & Water Usage Analysis (Excel)",
+   "desc": "Analyse your utility bills in one Excel file: log every electricity, gas, water, internet and phone bill with its usage, and the tracker works out the cost per unit (per kWh, therm, m3 or gallon) so you can spot price rises and high-usage months. The monthly summary compares spend with your budget, and the dashboard shows unpaid bills and your most expensive month. Works in any currency.",
    "bullets": [
     "Bill log (200 rows): bill month, utility, provider, usage, unit, amount, due date, paid and paid-on date",
     "Cost per unit calculated for every bill (e.g. per kWh, therm, m3 or gallon)",

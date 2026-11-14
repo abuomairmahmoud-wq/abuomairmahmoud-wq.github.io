@@ -139,13 +139,16 @@ document.querySelectorAll('.calc input,.calc select').forEach(e=>e.addEventListe
 <p>If you take home $2,000 every two weeks, you get 26 paychecks a year, so your real monthly take-home pay is $2,000 &times; 26 &divide; 12 = <strong>$4,333.33</strong>, not $4,000. Choose "Every 2 weeks" above and the calculator does this conversion for you.</p>
 <table class="tbl"><tr><th>Bucket</th><th>Per $2,000 paycheck</th><th>Per month</th></tr><tr><td>Needs (50%)</td><td>$1,000.00</td><td>$2,166.67</td></tr><tr><td>Wants (30%)</td><td>$600.00</td><td>$1,300.00</td></tr><tr><td>Savings &amp; debt payoff (20%)</td><td>$400.00</td><td>$866.67</td></tr></table>
 <p>With biweekly pay, two months of the year have a third paycheck. Many people send that whole extra paycheck to savings or debt payoff instead of spreading it out.</p>
+<h2>50/30/20 calculator for the UK (and any currency)</h2>
+<p>The calculator works in pounds, euros or dollars: just type your take-home pay. In the UK use your monthly net pay after Income Tax, National Insurance, student loan and workplace pension. Example: with &pound;2,400 take-home a month, the split is &pound;1,200 for needs, &pound;720 for wants and &pound;480 for savings and paying off debt. Paid every four weeks? Choose "Every 2 weeks", enter two payslips added together, or simply enter one payslip x 13 / 12 as monthly pay.</p>
 <h2>What counts as needs, wants and savings?</h2>
 <ul><li><strong>Needs (50%)</strong>: rent or mortgage, utilities, groceries, insurance, transport to work, minimum debt payments, childcare.</li><li><strong>Wants (30%)</strong>: eating out, streaming and subscriptions, hobbies, travel, shopping, gifts.</li><li><strong>Savings and debt (20%)</strong>: emergency fund, retirement, sinking funds, and any debt payment above the minimum.</li></ul>
 <h2>50/30/20 rule FAQ</h2>
 <h3>Is the 50/30/20 rule based on gross or net income?</h3><p>On take-home (net) pay: what lands in your bank account after tax and payroll deductions. If your employer already takes out retirement savings, you can count that toward the 20%.</p>
 <h3>What if my needs are more than 50%?</h3><p>That is common with high rent. Change the percentages above, for example 60/20/20 or 70/10/20, and keep the savings part as high as you can. The calculator warns you if the three numbers do not add up to 100%.</p>
+<h3>Does the 50/30/20 calculator work in the UK?</h3><p>Yes. The rule is the same in any country: enter your monthly take-home pay in pounds (after tax, National Insurance and pension) and read the results in pounds.</p>
 <h3>Do debt payments go in needs or savings?</h3><p>Minimum payments are needs. Anything extra you pay to clear debt faster belongs in the 20%. To see which debt to pay first, try the <a href="../debt-snowball-calculator/">debt snowball vs avalanche calculator</a>.</p>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is the 50/30/20 rule based on gross or net income?","acceptedAnswer":{"@type":"Answer","text":"On take-home (net) pay: what lands in your bank account after tax and payroll deductions. Retirement savings taken from your paycheck can count toward the 20%."}},{"@type":"Question","name":"How do I use the 50/30/20 rule with biweekly pay?","acceptedAnswer":{"@type":"Answer","text":"Multiply one paycheck by 26 and divide by 12 to get monthly take-home pay. For a $2,000 biweekly paycheck that is $4,333.33 a month: $2,166.67 needs, $1,300 wants and $866.67 savings."}},{"@type":"Question","name":"What if my needs are more than 50%?","acceptedAnswer":{"@type":"Answer","text":"Adjust the split, for example 60/20/20 or 70/10/20, and keep the savings part as high as you can."}}]}</script>""",
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is the 50/30/20 rule based on gross or net income?","acceptedAnswer":{"@type":"Answer","text":"On take-home (net) pay: what lands in your bank account after tax and payroll deductions. Retirement savings taken from your paycheck can count toward the 20%."}},{"@type":"Question","name":"How do I use the 50/30/20 rule with biweekly pay?","acceptedAnswer":{"@type":"Answer","text":"Multiply one paycheck by 26 and divide by 12 to get monthly take-home pay. For a $2,000 biweekly paycheck that is $4,333.33 a month: $2,166.67 needs, $1,300 wants and $866.67 savings."}},{"@type":"Question","name":"Does the 50/30/20 calculator work in the UK?","acceptedAnswer":{"@type":"Answer","text":"Yes. Enter your monthly take-home pay in pounds after tax, National Insurance and pension; the split works the same in any currency."}},{"@type":"Question","name":"What if my needs are more than 50%?","acceptedAnswer":{"@type":"Answer","text":"Adjust the split, for example 60/20/20 or 70/10/20, and keep the savings part as high as you can."}}]}</script>""",
  "paycheck-budget-planner", "free-simple-monthly-budget"),
 
 ("christmas-budget-calculator",
@@ -181,6 +184,40 @@ o.innerHTML='<table class="tbl"><tr><td>Fuel cost</td><td>'+m(fuel)+'</td></tr><
 document.querySelectorAll('.calc input').forEach(function(e){e.addEventListener('input',run);});run();})();
 </script>""",
  "gig-driver-mileage-earnings-tracker", "free-simple-monthly-budget"),
+("three-paycheck-months-calculator",
+ "3 Paycheck Months Calculator 2027",
+ "3 Paycheck Months 2027 Calculator: Biweekly Pay Calendar",
+ "Free 3 paycheck months calculator for 2027: enter one biweekly payday and see every payday of the year, which months have three paychecks and how to split the extra check.",
+ "<p>If you are paid every two weeks, most months have two paydays but two (sometimes three) months have three. Enter any recent payday and the calculator lists every payday in the year, highlights the 3-paycheck months and suggests what to do with the extra money.</p>",
+ """<div class="calc"><div class="row"><label>One of your paydays<input id="tp" type="date" value="2027-01-08"></label><label>Year<select id="ty"><option>2026</option><option selected>2027</option><option>2028</option></select></label><label>Take-home pay per paycheck<input id="ta" type="number" value="2000"></label><label>Paid<select id="tf"><option value="14">Every 2 weeks</option><option value="7">Every week</option></select></label></div>
+<div class="out" id="tout"></div></div>
+<script>
+(function(){var M=['January','February','March','April','May','June','July','August','September','October','November','December'];
+function m(v){return v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function run(){var o=document.getElementById('tout'),v=document.getElementById('tp').value,y=+document.getElementById('ty').value,a=+document.getElementById('ta').value||0,step=+document.getElementById('tf').value;
+if(!v){o.innerHTML='Pick one of your paydays.';return;}var p=v.split('-'),d=new Date(+p[0],+p[1]-1,+p[2]);
+while(d.getFullYear()>=y)d.setDate(d.getDate()-step);while(d.getFullYear()<y)d.setDate(d.getDate()+step);
+var by={},n=0;while(d.getFullYear()===y){var k=d.getMonth();(by[k]=by[k]||[]).push(d.getDate());n++;d.setDate(d.getDate()+step);}
+var usual=step===14?2:4,extra=[];for(var i=0;i<12;i++){if((by[i]||[]).length>usual)extra.push(M[i]);}
+var rows='';for(var i=0;i<12;i++){var l=by[i]||[],hi=l.length>usual;rows+='<tr'+(hi?' style="background:#ecfdf5;font-weight:700"':'')+'><td>'+M[i]+'</td><td>'+l.join(', ')+'</td><td>'+l.length+(hi?' (extra!)':'')+'</td><td>'+m(l.length*a)+'</td></tr>';}
+var ex=extra.length*a;
+o.innerHTML='<p class="win">'+y+': '+n+' paychecks. '+(extra.length?(step===14?'3':'5')+'-paycheck months: <strong>'+extra.join(', ')+'</strong>':'No extra-paycheck months')+'</p>'+
+'<p>Normal monthly budget: plan on '+usual+' paychecks = <strong>'+m(usual*a)+'</strong> a month. Extra paychecks in the year: <strong>'+m(ex)+'</strong>'+(ex>0?' (50/30/20 split: '+m(ex*.5)+' needs or bills ahead, '+m(ex*.3)+' wants, '+m(ex*.2)+' savings - or put all of it toward savings and debt).':'.')+'</p>'+
+'<table class="tbl"><tr><th>Month</th><th>Paydays</th><th>Count</th><th>Take-home</th></tr>'+rows+'</table>';}
+document.querySelectorAll('.calc input,.calc select').forEach(function(e){e.addEventListener('input',run);e.addEventListener('change',run);});run();})();
+</script>
+<h2>Which months have 3 paychecks in 2027?</h2>
+<p>It depends on your pay schedule. Two common biweekly Friday schedules in 2027:</p>
+<table class="tbl"><tr><th>First payday of 2027</th><th>Paychecks in 2027</th><th>3-paycheck months</th></tr><tr><td>Friday, January 1</td><td>27</td><td>January, July, December</td></tr><tr><td>Friday, January 8</td><td>26</td><td>April, October</td></tr></table>
+<p>Paid on a different day? Enter one of your own paydays above and the calendar updates instantly.</p>
+<h2>How to budget with biweekly pay</h2>
+<ul><li><strong>Budget on two paychecks a month.</strong> Your normal monthly budget should only count two paychecks. The third one is a bonus.</li><li><strong>Give the extra paycheck a job before it arrives:</strong> emergency fund, an extra debt payment, sinking funds for Christmas or car repairs, or next month's rent paid early.</li><li><strong>Know your real monthly income.</strong> One paycheck x 26 / 12 is your average monthly take-home pay. Try the <a href="../budget-calculator-50-30-20/">50/30/20 calculator</a> with "Every 2 weeks" to see the split.</li></ul>
+<h2>3 paycheck months FAQ</h2>
+<h3>How many paychecks are in 2027 if I am paid biweekly?</h3><p>Usually 26. If your first payday is January 1, 2027 (a Friday), you get 27 paychecks, because December 31, 2027 is also a payday.</p>
+<h3>Why do some months have three paychecks?</h3><p>A year has 52 weeks plus one or two days, so 26 biweekly paydays do not fit evenly into 12 months. Two months (sometimes three) get an extra payday.</p>
+<h3>What should I do with a 3rd paycheck?</h3><p>Many people use it for savings, extra debt payments or sinking funds instead of everyday spending. Pay down the debt that the <a href="../debt-snowball-calculator/">debt snowball vs avalanche calculator</a> says to pay first.</p>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many paychecks are in 2027 if I am paid biweekly?","acceptedAnswer":{"@type":"Answer","text":"Usually 26. If your first payday is Friday, January 1, 2027, you get 27 paychecks because December 31, 2027 is also a payday."}},{"@type":"Question","name":"Which months have 3 paychecks in 2027?","acceptedAnswer":{"@type":"Answer","text":"It depends on your schedule. Biweekly Fridays starting January 1, 2027: January, July and December. Biweekly Fridays starting January 8, 2027: April and October."}},{"@type":"Question","name":"What should I do with a 3rd paycheck?","acceptedAnswer":{"@type":"Answer","text":"Budget on two paychecks a month and give the extra one a job: emergency fund, extra debt payments or sinking funds."}}]}</script>""",
+ "paycheck-budget-planner", "free-paycheck-budget"),
 ]
 
 TOOL_CSS = """.calc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;margin:20px 0}
