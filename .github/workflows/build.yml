@@ -23,6 +23,7 @@ jobs:
       - run: python _build/build.py https://abuomairmahmoud-wq.github.io _site
       - run: pip install pillow && python _build/pins.py _site
         continue-on-error: true
+      - run: echo -n 7c1e9a4f3b2d4e6f8a0b1c2d3e4f5a6b > _site/7c1e9a4f3b2d4e6f8a0b1c2d3e4f5a6b.txt
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
@@ -35,3 +36,18 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+      - name: Tell Bing, Yandex, Naver and Seznam about new pages (IndexNow)
+        if: github.event_name == 'push'
+        continue-on-error: true
+        run: |
+          sleep 20
+          python3 - <<'PY'
+          import re, json, urllib.request
+          H = 'abuomairmahmoud-wq.github.io'
+          K = '7c1e9a4f3b2d4e6f8a0b1c2d3e4f5a6b'
+          x = urllib.request.urlopen('https://' + H + '/sitemap.xml').read().decode()
+          u = re.findall(r'<loc>(.*?)</loc>', x)[:10000]
+          body = json.dumps({'host': H, 'key': K, 'keyLocation': 'https://' + H + '/' + K + '.txt', 'urlList': u}).encode()
+          r = urllib.request.Request('https://api.indexnow.org/indexnow', body, {'Content-Type': 'application/json; charset=utf-8'})
+          print(len(u), urllib.request.urlopen(r).status)
+          PY
