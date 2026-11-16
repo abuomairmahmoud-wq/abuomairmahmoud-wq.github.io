@@ -49,6 +49,22 @@
  ],
  "products": [
   {
+   "slug": "qbgmon",
+   "title": "FREE Christmas Activities for Kids Printable Sampler",
+   "cat": "free",
+   "price_cents": 0,
+   "cover": "x2kz32cjho9yaznh2kihippcqlm1",
+   "h1": "Free Printable Christmas Activities for Kids",
+   "desc": "Print 8 free Christmas activity pages today and keep the kids busy this December. A free sampler from our Christmas printable packs with an Advent countdown, coloring pages, a maze and two family party games.",
+   "bullets": [
+    "Countdown to Christmas poster (color one number a day)",
+    "Family Advent activity cards for days 1-8",
+    "2 coloring pages: Christmas Tree and Happy Snowman",
+    "\"Help Santa Find the Present\" maze",
+    "Would You Rather? Christmas edition + Christmas Scavenger Hunt"
+   ]
+  },
+  {
    "slug": "free-black-friday-wishlist",
    "title": "Free Black Friday Wishlist & Price Checker",
    "cat": "free",
@@ -1856,6 +1872,118 @@
     "Basic / Standard / Premium package builder with effective hourly rate per package",
     "Project Check: ACCEPT, NEGOTIATE or WALK AWAY for a client's budget",
     "Works in Excel, Google Sheets and Numbers (no macros)"
+   ]
+  },
+  {
+   "slug": "gozukj",
+   "title": "Letter from Santa Kit",
+   "cat": "home",
+   "price_cents": 399,
+   "cover": "dvnsz60768kv8ruffv4vvafaef5h",
+   "h1": "Printable Letter from Santa Kit (Editable Santa Letters, Nice List Certificate & Envelope)",
+   "desc": "A complete North Pole mail kit: five ready-to-fill letters from Santa for different ages, plus a certificate, elf report, envelope and stamps. Write by hand or type names into the Word version.",
+   "bullets": [
+    "5 letters from Santa for different ages and situations",
+    "Blank Santa stationery for your own words",
+    "Official Nice List Certificate and Elf Report Card",
+    "My Letter to Santa page for your child",
+    "Envelope front, return-address labels and North Pole stamps"
+   ]
+  },
+  {
+   "slug": "jcumgk",
+   "title": "2027 Digital Planner for iPad & Tablet",
+   "cat": "health",
+   "price_cents": 599,
+   "cover": "moi3b7flkf2fgvmyiuf7jwvf2km0",
+   "h1": "2027 Digital Planner (Hyperlinked PDF for GoodNotes & Notability)",
+   "desc": "A fully dated 2027 digital planner with 444 linked pages. Tap a month tab, tap a date, and you are on that day's page - no paper, no subscription.",
+   "bullets": [
+    "Year-at-a-glance page and 12 monthly calendars",
+    "53 weekly pages with top 3 priorities and to-dos",
+    "365 daily pages with hourly schedule, to-do list and trackers",
+    "Goals page, monthly habit tracker and notes pages",
+    "Monday-start and Sunday-start versions included"
+   ]
+  },
+  {
+   "slug": "qvcrhv",
+   "title": "ATS Resume Template Pack",
+   "cat": "career",
+   "price_cents": 499,
+   "cover": "75kao2otbjdlqtglcccsunj2pkoh",
+   "h1": "ATS Resume Templates for Word & Google Docs + Cover Letters",
+   "desc": "Five one-column resume templates with matching cover letters, built to be read correctly by applicant tracking systems and by humans. Every line has guide text that tells you what to write.",
+   "bullets": [
+    "5 resume templates (.docx): Classic, Modern Blue, Minimal, Executive, Fresh Green",
+    "5 matching cover letter templates",
+    "References page template",
+    "2-page Start Here guide with bullet formula and 60+ action verbs",
+    "No tables, text boxes or icons that confuse ATS software"
+   ]
+  },
+  {
+   "slug": "mgxxd",
+   "title": "50 Big Questions Kids Ask",
+   "cat": "home",
+   "price_cents": 399,
+   "cover": "c85bz33gku6dvukeq5c4touwik6n",
+   "h1": "50 Big Questions Kids Ask: Simple True Answers for Ages 5-10 (Ebook)",
+   "desc": "A read-together ebook with short, true answers to 50 questions children ask, written in words a 6-year-old understands. Many answers come with a fun fact or a simple thing to try at home.",
+   "bullets": [
+    "50 questions in 6 chapters, from sky and space to big questions about life",
+    "Short answers (about 50 words) for ages 5-10",
+    "Fun facts and \"Try it\" mini experiments with household items",
+    "Gentle answers to hard questions",
+    "Guide for grown-ups on answering \"why?\""
+   ]
+  },
+  {
+   "slug": "zcrvai",
+   "title": "The Calm Family Emergency Handbook",
+   "cat": "home",
+   "price_cents": 499,
+   "cover": "khugbaaalv276hq9zjidad1qcnbz",
+   "h1": "Family Emergency Preparedness Handbook & Checklists (Blackout, Disaster, War)",
+   "desc": "A practical, no-panic handbook for ordinary households. Seven simple steps cover almost any emergency, from long power cuts to storms, so your family has water, light, medicine and a plan.",
+   "bullets": [
+    "7 steps: water, food, light and power, first aid, documents and cash, communication plan, go-bags",
+    "How much water and food to store",
+    "Go-bag checklists for adults, children, babies and pets",
+    "Family contact card to copy for every family member",
+    "Talking to children about war and scary news"
+   ]
+  },
+  {
+   "slug": "vktzvr",
+   "title": "10 Minutes That Matter",
+   "cat": "home",
+   "price_cents": 399,
+   "cover": "4vs0liwx2c2s6spv7ol0dimhl72e",
+   "h1": "52 Ways for Moms to Connect with Their Kids + 60 Conversation Starters (Ebook)",
+   "desc": "A warm, guilt-free ebook for busy mothers: one small connection idea a week, questions that get real answers instead of \"fine\", and words to use after you have lost your temper.",
+   "bullets": [
+    "52 connection ideas, one for every week of the year",
+    "60 conversation starters by age, from little ones to teens",
+    "What your child is really asking for: behavior decoded",
+    "The 4-step repair after yelling",
+    "Connection journal pages"
+   ]
+  },
+  {
+   "slug": "cdfrw",
+   "title": "12 AI Skills for Coaches & Consultants + 120 Prompts",
+   "cat": "business",
+   "price_cents": 499,
+   "cover": "dm5mhnzwyvc4x0shvo70m3qmrx68",
+   "h1": "AI Prompts for Coaches & Consultants: 12 Claude Skills + 120 ChatGPT Prompts",
+   "desc": "12 ready-made AI skills (Claude SKILL.md files) for coaches and consultants, plus 120 copy-paste prompts for ChatGPT, Gemini or any AI. Prep discovery calls, write follow-ups and proposals, recap sessions and plan content.",
+   "bullets": [
+    "12 Claude skills: discovery call prep, follow-up, proposal writer, client onboarding and more",
+    "120 copy-paste prompts in Excel and PDF",
+    "Each skill has questions, steps, an output template and a quality check",
+    "Works with Claude, ChatGPT, Gemini or any AI",
+    "Start Here guide"
    ]
   }
  ]
