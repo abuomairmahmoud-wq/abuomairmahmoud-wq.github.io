@@ -136,20 +136,14 @@ def build():
     tl = "".join(f'<li><a href="tools/{t[0]}/">{E(t[1])}</a></li>' for t in T)
     # Holiday / newest picks (edit this list to change the homepage "picks" row)
     PICKS = [
+        ("qbgmon", "FREE: Christmas Activities for Kids - 8 printable pages", 0, "ma5r8divvxgow8x4qpk1zeysgj6c", ""),
+        ("cdfrw", "NEW: 12 AI Skills for Coaches & Consultants + 120 prompts", 499, "f2gunbhuluakrwaxfzxgr0yeu0z1", "EARLYCOACH"),
         ("gozukj", "NEW: Letter from Santa Kit - printable + editable", 399, "6np6w8krwg0i3p9wgk2wlxfqpm2u", "EARLYSANTA"),
-        ("jcumgk", "NEW: 2027 Digital Planner - hyperlinked PDF for iPad & tablet", 599, "9y1gcvrtnue4u8jzqe2hgea37yoe", "EARLYPLAN27"),
-        ("qvcrhv", "NEW: ATS Resume Template Pack - 5 resumes + cover letters", 499, "qevlb2d65vbiy6ytqte9rl2i1d3e", "EARLYCV"),
-        ("mgxxd", "NEW ebook: 50 Big Questions Kids Ask (ages 5-10)", 399, "dy1l3spv8m96f7nkonvuk6bshpxp", ""),
-        ("zcrvai", "NEW ebook: The Calm Family Emergency Handbook", 499, "trpscn65te7nguh555hc2omns6ns", "EARLYREADY"),
-        ("vktzvr", "NEW ebook: 10 Minutes That Matter - for moms and kids", 399, "0j5ygzgmuuqvzjuwzg9l6ex7o3e4", "EARLYMOM"),
         ("vffeef", "Christmas Printables Bundle - 5 packs, 85 pages (save 35%)", 799, "r2g6i725uso6r9zzuf91ijiwm8zp", "EARLYXMAS"),
-        ("jbbzu", "Black Friday & Boxing Day Deal Planner 2026", 399, "f9usjsoxttwv71hqv0elvtfeqnbo", ""),
         ("ldqvfj", "Christmas Coloring & Activity Pack for Kids", 249, "90muqz3xzi5wvrii0qlsh9p38sj5", "EARLYKIDS"),
+        ("jbbzu", "Black Friday & Boxing Day Deal Planner 2026", 399, "f9usjsoxttwv71hqv0elvtfeqnbo", ""),
         ("jiets", "2027 Personal Finance System - 9 Excel tools + course", 1900, "hazhlkbxdrj18m3fav3kef8k8sfk", "EARLYMONEY"),
-        ("fexvgd", "Small Business AI & Excel System - 9 tools", 2900, "d4lf5hk6mxzvqg0fllb1wpxurxrx", "EARLYSYSTEM"),
-        ("mbakcr", "NEW: Local SEO Kit - Excel tracker + 150 AI prompts", 499, "l1j4x79p5uaivghonv7yn64p75bd", "EARLYSEO"),
         ("cjdze", "12 AI Skills for Small Business (Claude)", 499, "8lkrl5c55mvwd5mkx4s5yghfqlq1", "EARLYSKILLS"),
-        ("gysuon", "AI Prompt & Email Mega Bundle - 650+ prompts", 699, "oscsj1cj8lblof4cjqoe12eqzucf", ""),
     ]
     def pick_card(k):
         perm, title, cents, img, code = k
