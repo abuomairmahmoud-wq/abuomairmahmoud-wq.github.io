@@ -1985,6 +1985,70 @@
     "Works with Claude, ChatGPT, Gemini or any AI",
     "Start Here guide"
    ]
+  },
+  {
+   "slug": "txtrwd",
+   "title": "Freelance Contract & Client Paperwork Kit",
+   "cat": "business",
+   "price_cents": 499,
+   "cover": "zwrqguu4hxwe5w1eo2pajq8tl3yd",
+   "h1": "Freelance Contract Templates: Service Agreement, SOW, NDA & Proposal (Word)",
+   "desc": "8 editable Word templates that cover a freelance project from first call to final payment: service agreement, statement of work, proposal, change request, onboarding questionnaire, NDA, payment reminders and sign-off.",
+   "bullets": [
+    "Freelance Service Agreement: deposit, payment terms, late fee, revision rounds, kill fee",
+    "Statement of Work and Project Proposal with Basic / Standard / Premium options",
+    "Change Request Form and Client Onboarding Questionnaire (20 questions)",
+    "Mutual NDA in plain English",
+    "Invoice terms + 5 payment reminder emails, and a project sign-off form"
+   ]
+  },
+  {
+   "slug": "jimucs",
+   "title": "War & Nuclear Emergency Family Guide - USA Edition",
+   "cat": "home",
+   "price_cents": 499,
+   "cover": "uy8wruksuizi0qknxp03tvifc9o8",
+   "h1": "War & Nuclear Emergency Family Guide (USA): What to Do, Where to Shelter, 14-Day Water & Food Plan",
+   "desc": "A calm, practical ebook for American families: what to do in the first minutes of a war or nuclear emergency, where to shelter, and how to store 14 days of water and food on a small budget. Lists Ready.gov, FEMA, CDC and local sources.",
+   "bullets": [
+    "13 short chapters, 23 pages, plain language",
+    "What to do when you hear a warning and in the first minutes after a nuclear explosion",
+    "14-day water and food plan with a low-cost shopping list (gallons and pounds)",
+    "Money in a crisis, common scams, and how to talk to children about war",
+    "Family communication plan, go-bag checklists and a 7-day preparation plan"
+   ]
+  },
+  {
+   "slug": "wpzvj",
+   "title": "War & Nuclear Emergency Family Guide - Europe Edition",
+   "cat": "home",
+   "price_cents": 499,
+   "cover": "1gfjkec3jmtilmxei05832otyzaa",
+   "h1": "War & Nuclear Emergency Family Guide (Europe): What to Do, Where to Shelter, 14-Day Water & Food Plan",
+   "desc": "A calm, practical ebook for European families: what to do in the first minutes of a war or nuclear emergency, where to shelter, and how to store 14 days of water and food on a small budget. Lists official alert sources for 13 countries plus 112.",
+   "bullets": [
+    "13 short chapters, 23 pages, plain language",
+    "What to do when you hear a warning and in the first minutes after a nuclear explosion",
+    "14-day water and food plan with a low-cost shopping list (litres and kilos)",
+    "Official sources for the UK, Germany, France, Netherlands, Poland, Nordics, Ukraine and more",
+    "Family communication plan, go-bag checklists and a 7-day preparation plan"
+   ]
+  },
+  {
+   "slug": "rmyda",
+   "title": "War & Nuclear Emergency Family Guide - Arabic Edition",
+   "cat": "home",
+   "price_cents": 399,
+   "cover": "dvj0nhjsj8vpuavrgnbvkzte3cud",
+   "h1": "War & Nuclear Emergency Family Guide - Arabic Edition (دليل العائلة للطوارئ)",
+   "desc": "The full Arabic-language edition of our family emergency guide: what to do in the first minutes of a war or nuclear emergency, where to shelter, and a 14-day water and food plan on a small budget. Includes civil-defence contacts for Arab countries.",
+   "bullets": [
+    "13 short chapters, 22 pages, in Arabic",
+    "What to do when you hear a warning and after a nuclear explosion",
+    "14-day water and food plan with a cheap shopping list",
+    "Money in a crisis, scams, and talking to children about war",
+    "Go-bag checklists and a 7-day preparation plan"
+   ]
   }
  ]
 }
