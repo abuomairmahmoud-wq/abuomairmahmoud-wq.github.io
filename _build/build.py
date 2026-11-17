@@ -136,6 +136,9 @@ def build():
     tl = "".join(f'<li><a href="tools/{t[0]}/">{E(t[1])}</a></li>' for t in T)
     # Holiday / newest picks (edit this list to change the homepage "picks" row)
     PICKS = [
+        ("jimucs", "NEW: War & Nuclear Emergency Family Guide - USA Edition", 499, "j9556qvxq8idusquyju9onjxcu5d", "EARLYUSA"),
+        ("wpzvj", "NEW: War & Nuclear Emergency Family Guide - Europe Edition", 499, "vwz7u2doggfbj5yym9x3nflmawjm", "EARLYEU"),
+        ("rmyda", "NEW: War & Nuclear Emergency Guide - Arabic Edition", 399, "xjc26nzf4ep5r3fxdupc2lkap0ud", "EARLYAR"),
         ("qbgmon", "FREE: Christmas Activities for Kids - 8 printable pages", 0, "ma5r8divvxgow8x4qpk1zeysgj6c", ""),
         ("cdfrw", "NEW: 12 AI Skills for Coaches & Consultants + 120 prompts", 499, "f2gunbhuluakrwaxfzxgr0yeu0z1", "EARLYCOACH"),
         ("gozukj", "NEW: Letter from Santa Kit - printable + editable", 399, "6np6w8krwg0i3p9wgk2wlxfqpm2u", "EARLYSANTA"),
