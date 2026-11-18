@@ -2049,6 +2049,70 @@
     "Money in a crisis, scams, and talking to children about war",
     "Go-bag checklists and a 7-day preparation plan"
    ]
+  },
+  {
+   "slug": "asnthb",
+   "title": "Freelancer Client & Income Dashboard",
+   "cat": "creators",
+   "price_cents": 399,
+   "cover": "jpqkxhunp5j81cid4125ptflidow",
+   "h1": "Freelancer Invoice & Income Tracker: Excel Dashboard for Clients, Hours & Tax Set-Aside",
+   "desc": "See who owes you money, what you really earn per hour and how much to set aside for tax - in one Excel dashboard. Invoice status turns PAID, DUE or OVERDUE on its own.",
+   "bullets": [
+    "Dashboard: paid, invoiced, unpaid, overdue, expenses, profit, tax set-aside and effective hourly rate",
+    "Clients tab with hours, effective rate and average days to pay per client",
+    "Invoices & Projects tab with automatic PAID / DUE / OVERDUE status",
+    "Expenses tab with 10 business categories and monthly totals",
+    "6 tabs, works in Excel 2016+, Excel Online and Google Sheets"
+   ]
+  },
+  {
+   "slug": "yvwceo",
+   "title": "War & Nuclear Emergency Family Guide - Arab World Edition",
+   "cat": "home",
+   "price_cents": 399,
+   "cover": "uhtm6a3raqk9l7ju5ebu1iimtx6o",
+   "h1": "War & Nuclear Emergency Family Guide for the Arab World (English): What to Do, Where to Shelter, 14-Day Water & Food Plan",
+   "desc": "A calm, practical English-language guide for families and expats in Jordan, the Gulf, Egypt, Iraq, Lebanon and North Africa: what to do in the first minutes of a war or nuclear emergency, and how to store 14 days of water and food with local, low-cost foods.",
+   "bullets": [
+    "13 short chapters, 23 pages, plain English",
+    "What to do when you hear a warning and in the first minutes after a nuclear explosion",
+    "Civil defence sources for every Arab country",
+    "14-day water and food plan with local foods (rice, lentils, dates, tahini, canned fish)",
+    "Family plan, go-bag checklists and a 7-day preparation plan"
+   ]
+  },
+  {
+   "slug": "zdeupo",
+   "title": "War & Nuclear Emergency Family Guide - USA Edition in Arabic",
+   "cat": "home",
+   "price_cents": 499,
+   "cover": "7qbu12hccalr0wsbvpvilawzgbt2",
+   "h1": "Emergency Guide for Arab Families in the USA - in Arabic (دليل الطوارئ للعائلات العربية في أمريكا)",
+   "desc": "An Arabic-language edition for Arab families living in the USA: what to do in the first minutes of a war or nuclear emergency, where to shelter, and a 14-day water and food plan on a small budget. Lists Ready.gov, FEMA, CDC and state emergency offices.",
+   "bullets": [
+    "13 short chapters, 22 pages, in Arabic",
+    "What to do when you hear a warning and after a nuclear explosion",
+    "Official US alert and shelter sources",
+    "14-day water and food plan in gallons and pounds with a cheap shopping list",
+    "Family communication plan, go-bag checklist and a 7-day preparation plan"
+   ]
+  },
+  {
+   "slug": "axzuz",
+   "title": "War & Nuclear Emergency Family Guide - Europe Edition in Arabic",
+   "cat": "home",
+   "price_cents": 499,
+   "cover": "nm4gz7c0a03anqrs4djet2cnvzqn",
+   "h1": "Emergency Guide for Arab Families in Europe - in Arabic (دليل الطوارئ للعائلات العربية في أوروبا)",
+   "desc": "An Arabic-language edition for Arab families living in Europe: what to do in the first minutes of a war or nuclear emergency, where to shelter, and a 14-day water and food plan on a small budget. Covers alert and civil-protection systems in 13 European countries and 112.",
+   "bullets": [
+    "13 short chapters, 22 pages, in Arabic",
+    "What to do when you hear a warning and after a nuclear explosion",
+    "Official alert and shelter sources in Europe",
+    "14-day water and food plan with a cheap shopping list",
+    "Family plan, go-bag checklist and a 7-day preparation plan"
+   ]
   }
  ]
 }
