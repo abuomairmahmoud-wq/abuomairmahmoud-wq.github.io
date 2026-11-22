@@ -196,6 +196,8 @@ def build():
         if cents:
             faqs.append(("What if it is not right for me?", "Every paid LaunchKit Labs template comes with a 30-day money-back guarantee. Just reply to your Gumroad receipt email."))
             faqs.append(("Is there a free version?", "Yes. Try one of our free Excel templates first: a simple monthly budget, a grocery unit price calculator and a Black Friday wishlist. Links are on the home page under Free templates."))
+        tl_rel = [t for t in T if slug in (t[6], t[7])]
+        toolbox = "".join(f'<div class="cta" style="margin-bottom:24px"><h3>Free calculator: {E(t[2])}</h3><p>{E(short(t[3], 170))}</p><a class="btn" href="../tools/{t[0]}/">Open the free calculator</a></div>' for t in tl_rel)
         faqhtml = "".join(f"<h3>{E(q)}</h3><p>{E(a)}</p>" for q, a in faqs)
         btn = "Download free" if cents == 0 else f"Buy now: {price(cents)}"
         pw = slug in PWYW
@@ -210,7 +212,7 @@ def build():
 <div class="prod" style="padding-top:0"><div class="box"><h2 style="margin-top:0">What's included</h2><ul class="ck">{"".join(f"<li>{E(b)}</li>" for b in bullets)}</ul></div>
 <div class="box faq"><h2 style="margin-top:0">Questions</h2>{faqhtml}</div></div>
 {('<div class="box" style="margin-bottom:24px"><h2 style="margin-top:0">How it works</h2><ol style="margin:0;padding-left:20px"><li>' + ('Get it free on Gumroad' if cents == 0 else 'Buy securely on Gumroad') + ' and download the file instantly.</li><li>Open it in Microsoft Excel or upload it to Google Sheets, then look through the sample data to see how it works.</li><li>Replace the sample rows with your own numbers in the input cells. The formulas do the math for you.</li></ol></div>') if is_excel(p) else ''}
-<h2>You may also like</h2><div class="grid">{"".join(card(q, "../") for q in rel_items)}</div></main>"""
+{toolbox}<h2>You may also like</h2><div class="grid">{"".join(card(q, "../") for q in rel_items)}</div></main>"""
         prod = {"@context": "https://schema.org", "@type": "Product", "name": name, "description": desc, "image": IMG + img,
                 "brand": {"@type": "Brand", "name": "LaunchKit Labs"}, "url": BASE + f"/{slug}/",
                 "offers": {"@type": "Offer", "price": "0.00" if pw else f"{cents/100:.2f}", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": link}}
