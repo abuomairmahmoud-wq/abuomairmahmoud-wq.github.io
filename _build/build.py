@@ -136,17 +136,11 @@ def build():
     tl = "".join(f'<li><a href="tools/{t[0]}/">{E(t[1])}</a></li>' for t in T)
     # Holiday / newest picks (edit this list to change the homepage "picks" row)
     PICKS = [
-        ("jimucs", "NEW: War & Nuclear Emergency Family Guide - USA Edition", 499, "j9556qvxq8idusquyju9onjxcu5d", "EARLYUSA"),
-        ("wpzvj", "NEW: War & Nuclear Emergency Family Guide - Europe Edition", 499, "vwz7u2doggfbj5yym9x3nflmawjm", "EARLYEU"),
-        ("rmyda", "NEW: War & Nuclear Emergency Guide - Arabic Edition", 399, "xjc26nzf4ep5r3fxdupc2lkap0ud", "EARLYAR"),
-        ("yvwceo", "NEW: War & Nuclear Emergency Guide - Arab World Edition (English)", 399, "j5zuuf0xd1rhhv52zb6cf3efjibm", "EARLYAREN"),
-        ("zdeupo", "NEW: War & Nuclear Emergency Guide - USA Edition in Arabic", 499, "jj9u0tbyy66xr7aktzurny26palm", "EARLYUSAAR"),
-        ("axzuz", "NEW: War & Nuclear Emergency Guide - Europe Edition in Arabic", 499, "aj42034polfzlk6vjz5llbe9wib7", "EARLYEUAR"),
         ("qbgmon", "FREE: Christmas Activities for Kids - 8 printable pages", 0, "ma5r8divvxgow8x4qpk1zeysgj6c", ""),
-        ("cdfrw", "NEW: 12 AI Skills for Coaches & Consultants + 120 prompts", 499, "f2gunbhuluakrwaxfzxgr0yeu0z1", "EARLYCOACH"),
-        ("gozukj", "NEW: Letter from Santa Kit - printable + editable", 399, "6np6w8krwg0i3p9wgk2wlxfqpm2u", "EARLYSANTA"),
+        ("zxbocl", "NEW: 12 AI Skills for Excel & Google Sheets + 120 prompts", 499, "6ifcrbeh5gfnh4w876ive82ljroz", "EARLYSHEETS"),
         ("vffeef", "Christmas Printables Bundle - 5 packs, 85 pages (save 35%)", 799, "r2g6i725uso6r9zzuf91ijiwm8zp", "EARLYXMAS"),
         ("ldqvfj", "Christmas Coloring & Activity Pack for Kids", 249, "90muqz3xzi5wvrii0qlsh9p38sj5", "EARLYKIDS"),
+        ("gozukj", "Letter from Santa Kit - printable + editable", 399, "6np6w8krwg0i3p9wgk2wlxfqpm2u", "EARLYSANTA"),
         ("jbbzu", "Black Friday & Boxing Day Deal Planner 2026", 399, "f9usjsoxttwv71hqv0elvtfeqnbo", ""),
         ("jiets", "2027 Personal Finance System - 9 Excel tools + course", 1900, "hazhlkbxdrj18m3fav3kef8k8sfk", "EARLYMONEY"),
         ("cjdze", "12 AI Skills for Small Business (Claude)", 499, "8lkrl5c55mvwd5mkx4s5yghfqlq1", "EARLYSKILLS"),
