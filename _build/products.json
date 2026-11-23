@@ -2113,6 +2113,21 @@
     "14-day water and food plan with a cheap shopping list",
     "Family plan, go-bag checklist and a 7-day preparation plan"
    ]
+  },
+  {
+   "slug": "zxbocl",
+   "title": "12 AI Skills for Excel & Google Sheets + 120 Prompts",
+   "cat": "business",
+   "price_cents": 499,
+   "cover": "tybm1rqfiq867v7ddgnntjb26xys",
+   "h1": "AI Prompts for Excel & Google Sheets: Formulas, Data Cleanup & Dashboards (12 Claude Skills + 120 Prompts)",
+   "desc": "12 ready-made AI Skills (Claude SKILL.md files) and 120 copy-paste prompts for spreadsheet work. Get working Excel and Google Sheets formulas, fix #N/A and #VALUE! errors, clean messy exports and plan dashboards with the same careful steps every time.",
+   "bullets": [
+    "12 skills: formula writer, error fixer, lookups, data cleanup, pivots, charts, dashboards, macros and more",
+    "120 prompts for ChatGPT, Gemini, Copilot or any AI chat",
+    "sheet-brief: fill in once so every skill knows your Excel or Sheets version",
+    "Practice workbook + START-HERE install guide"
+   ]
   }
  ]
 }
