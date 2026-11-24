@@ -174,7 +174,7 @@ def build():
 <p>Ready-to-use spreadsheets that do the math for you: budget planners, Black Friday deal trackers, grocery price books, car loan calculators, invoice trackers and more. Built for the USA, UK and Canada.</p>
 <a class="btn" href="#picks">Holiday picks</a><a class="btn ghost" href="free/">Free templates</a>
 <div class="trust"><span>✓ Instant download</span><span>✓ No subscription</span><span>✓ Works in Excel &amp; Google Sheets</span><span>✓ Sample data included</span></div></div></section>
-<main class="w">{picks_html}<div class="cta" style="margin:8px 0 28px"><h3>Need a spreadsheet built for you?</h3><p>I build custom Excel and Google Sheets dashboards and automatic sales reports for small businesses, from $49, delivered in 2-3 days.</p><a class="btn" href="services/">See custom services</a></div><section><h2 id="tools">Free online calculators</h2><p class="sub">Quick answers in your browser, no download needed.</p><ul>{tl}</ul></section>{secs}<section><h2>Free money-saving guides</h2><ul>{guides}</ul></section><section><h2 id="deals-guides">Deals &amp; buying guides</h2><ul>{dl}</ul></section></main>"""
+<main class="w">{picks_html}<div class="cta" style="margin:8px 0 28px"><h3>Need a spreadsheet built for you?</h3><p>I build custom Excel dashboards, fix broken spreadsheets and translate Arabic and English - fixed prices from $20, fast delivery.</p><a class="btn" href="services/">See custom services</a></div><section><h2 id="tools">Free online calculators</h2><p class="sub">Quick answers in your browser, no download needed.</p><ul>{tl}</ul></section>{secs}<section><h2>Free money-saving guides</h2><ul>{guides}</ul></section><section><h2 id="deals-guides">Deals &amp; buying guides</h2><ul>{dl}</ul></section></main>"""
     org = {"@context": "https://schema.org", "@type": "Organization", "name": "LaunchKit Labs", "url": BASE + "/",
            "sameAs": ["https://mahmoudian113.gumroad.com", "https://payhip.com/BestLaunchKitLabs", "https://contra.com/mahmoud_abuomair_7sxshnhl"]}
     site = {"@context": "https://schema.org", "@type": "WebSite", "name": "LaunchKit Labs", "url": BASE + "/"}
@@ -185,6 +185,9 @@ def build():
 
     # ---------- services page (custom work on Contra) ----------
     SVC = [
+        ("Fix & Clean Up Your Excel Spreadsheet in 24 Hours", "$25", "1 day", "https://contra.com/s/7FqZBQRP-fix-and-clean-up-your-excel-spreadsheet-in-24-hours",
+         "Broken formulas, messy data or a spreadsheet nobody understands? Send it and get it back fixed and clean, usually within 24 hours.",
+         ["Formula errors like #REF!, #N/A and #VALUE! and broken lookups fixed", "Duplicates, extra spaces, text-numbers and mixed dates cleaned", "Totals, dropdown lists and conditional formatting added", "A short note telling you exactly what changed"]),
         ("Custom Excel Dashboard for Your Business", "$79", "3 days", "https://contra.com/s/EQ2r3kEQ-custom-excel-dashboard-for-your-business-3-day-delivery",
          "A clean, automatic Excel or Google Sheets dashboard built around your own data: sales, costs, profit and the numbers that matter on one screen, without learning formulas.",
          ["KPI cards and charts for income, expenses, profit, sales by product or client", "Data sheets where you just paste new rows and everything updates", "Start Here sheet with instructions", "1 round of changes included"]),
@@ -194,6 +197,9 @@ def build():
         ("Custom AI Skills & Prompt Templates for Your Business", "$39", "3 days", "https://contra.com/s/oOUYckkm-custom-ai-skills-and-prompt-templates-for-your-business",
          "Ready-to-use prompt templates and AI skills written for your business, so your team gets consistent results from ChatGPT or Claude for emails, posts, quotes and replies.",
          ["Up to 5 custom skills or prompt templates for the tasks you repeat most", "Each with your business details, tone of voice, steps, output template and a quality checklist", "Ready to upload as Skills in Claude or paste as instructions in ChatGPT"]),
+        ("Arabic to English & English to Arabic Translation", "$20", "1 day", "https://contra.com/s/UFFrceRB-arabic-to-english-and-english-to-arabic-translation-24h",
+         "Natural, accurate translation by a native Arabic speaker who works in English every day, usually within 24 hours.",
+         ["Up to 1,000 words, Arabic to English or English to Arabic", "Websites, posts, CVs, menus, emails and short documents", "Delivered in Word, Google Docs or plain text", "1 round of small changes included"]),
     ]
     cards = "".join(f'''<div class="box" style="margin-bottom:20px"><h2 style="margin-top:0">{E(n)}</h2><div class="big">{p} <span style="font-size:15px;color:var(--mut);font-weight:400">· {d} delivery</span></div><p>{E(desc)}</p><ul class="ck">{"".join(f"<li>{E(b)}</li>" for b in bl)}</ul><a class="btn" href="{u}" rel="noopener">See details &amp; message me on Contra</a></div>''' for n, p, d, u, desc, bl in SVC)
     body = f"""<section class="hero"><div class="w"><h1>Custom Excel Dashboards &amp; Spreadsheet Help for Small Businesses</h1><p>Tell me what you track today and I build the spreadsheet for you - fast delivery, fixed price, secure payment through Contra.</p></div></section>
@@ -201,7 +207,7 @@ def build():
     svcld = [{"@context": "https://schema.org", "@type": "Service", "name": n, "provider": {"@type": "Person", "name": "Mahmoud Abuomair"}, "url": u, "description": desc,
               "offers": {"@type": "Offer", "price": p.strip("$"), "priceCurrency": "USD", "url": u}} for n, p, d, u, desc, bl in SVC]
     page("services/index.html", "Custom Excel Dashboard Service for Small Business | LaunchKit Labs",
-         "Hire a freelancer to build a custom Excel or Google Sheets dashboard, an automatic weekly sales report from your CSV exports, or AI prompt templates for your business. Fixed prices from $39.",
+         "Hire a freelancer to build a custom Excel or Google Sheets dashboard, an automatic weekly sales report from your CSV exports, or AI prompt templates for your business. Fixed prices from $20.",
          body, jsonld=svcld)
     urls.append(BASE + "/services/")
 
