@@ -97,7 +97,7 @@ def page(path, title, desc, body, canon=None, img=None, jsonld=None, typ="websit
 <title>{E(title)}</title><meta name="description" content="{E(desc)}"><link rel="canonical" href="{canon}">
 <meta property="og:type" content="{typ}"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}"><meta property="og:url" content="{canon}"><meta property="og:image" content="{img}"><meta property="og:site_name" content="LaunchKit Labs">
 <meta name="twitter:card" content="summary_large_image"><meta name="p:domain_verify" content="1035c7f2c4361dd960e4be7650a13619"><link rel="stylesheet" href="{rel(path)}style.css">{ld}</head><body>
-<header><div class="w"><a class="logo" href="{rel(path)}">LaunchKit Labs</a><nav><a href="{rel(path)}tools/">Free calculators</a><a href="{rel(path)}free/">Free templates</a><a href="{rel(path)}#all">All templates</a><a href="{rel(path)}guides/">Guides</a><a href="{rel(path)}deals/">Deals</a><a href="https://www.teepublic.com/user/launchkittees" rel="noopener">Shirts &amp; gifts</a></nav></div></header>
+<header><div class="w"><a class="logo" href="{rel(path)}">LaunchKit Labs</a><nav><a href="{rel(path)}tools/">Free calculators</a><a href="{rel(path)}free/">Free templates</a><a href="{rel(path)}#all">All templates</a><a href="{rel(path)}guides/">Guides</a><a href="{rel(path)}deals/">Deals</a><a href="{rel(path)}services/">Hire me</a><a href="https://www.teepublic.com/user/launchkittees" rel="noopener">Shirts &amp; gifts</a></nav></div></header>
 <div style="background:#b91c1c;color:#fff;text-align:center;padding:10px 12px;font-weight:700;font-size:15px">BLACK FRIDAY: 40% off every template with code BLACKFRIDAY until Dec 2 &middot; <a href="https://mahmoudian113.gumroad.com/l/qbgmon" style="color:#fde68a">Free Christmas activity pages for kids</a></div>
 {body}
 <footer><div class="w"><p><strong style="color:#fff">LaunchKit Labs</strong>: practical Excel templates, planners and calculators. Instant download, no subscriptions.</p>
@@ -174,7 +174,7 @@ def build():
 <p>Ready-to-use spreadsheets that do the math for you: budget planners, Black Friday deal trackers, grocery price books, car loan calculators, invoice trackers and more. Built for the USA, UK and Canada.</p>
 <a class="btn" href="#picks">Holiday picks</a><a class="btn ghost" href="free/">Free templates</a>
 <div class="trust"><span>✓ Instant download</span><span>✓ No subscription</span><span>✓ Works in Excel &amp; Google Sheets</span><span>✓ Sample data included</span></div></div></section>
-<main class="w">{picks_html}<section><h2 id="tools">Free online calculators</h2><p class="sub">Quick answers in your browser, no download needed.</p><ul>{tl}</ul></section>{secs}<section><h2>Free money-saving guides</h2><ul>{guides}</ul></section><section><h2 id="deals-guides">Deals &amp; buying guides</h2><ul>{dl}</ul></section></main>"""
+<main class="w">{picks_html}<div class="cta" style="margin:8px 0 28px"><h3>Need a spreadsheet built for you?</h3><p>I build custom Excel and Google Sheets dashboards and automatic sales reports for small businesses, from $49, delivered in 2-3 days.</p><a class="btn" href="services/">See custom services</a></div><section><h2 id="tools">Free online calculators</h2><p class="sub">Quick answers in your browser, no download needed.</p><ul>{tl}</ul></section>{secs}<section><h2>Free money-saving guides</h2><ul>{guides}</ul></section><section><h2 id="deals-guides">Deals &amp; buying guides</h2><ul>{dl}</ul></section></main>"""
     org = {"@context": "https://schema.org", "@type": "Organization", "name": "LaunchKit Labs", "url": BASE + "/",
            "sameAs": ["https://mahmoudian113.gumroad.com", "https://payhip.com/BestLaunchKitLabs", "https://contra.com/mahmoud_abuomair_7sxshnhl"]}
     site = {"@context": "https://schema.org", "@type": "WebSite", "name": "LaunchKit Labs", "url": BASE + "/"}
@@ -182,6 +182,28 @@ def build():
          "Practical Excel templates: free budget spreadsheet, Black Friday deal planner, grocery unit price calculator, car deal analyzer, invoice trackers and more. Instant download.",
          body, jsonld=[org, site])
     urls.append(BASE + "/")
+
+    # ---------- services page (custom work on Contra) ----------
+    SVC = [
+        ("Custom Excel Dashboard for Your Business", "$79", "3 days", "https://contra.com/s/EQ2r3kEQ-custom-excel-dashboard-for-your-business-3-day-delivery",
+         "A clean, automatic Excel or Google Sheets dashboard built around your own data: sales, costs, profit and the numbers that matter on one screen, without learning formulas.",
+         ["KPI cards and charts for income, expenses, profit, sales by product or client", "Data sheets where you just paste new rows and everything updates", "Start Here sheet with instructions", "1 round of changes included"]),
+        ("Turn Your Sales Exports into an Automatic Weekly Report", "$49", "2 days", "https://contra.com/s/2NmNUERg-turn-your-sales-exports-into-an-automatic-weekly-report",
+         "Send the export from your shop, POS or payment tool and get a workbook that turns it into a weekly and monthly report every time you paste a new export.",
+         ["A Paste export here sheet matched to your real export columns", "Weekly and monthly summary: revenue, orders, average order, top products or clients", "Costs and profit too, if they are in your data", "Charts and a one-page dashboard you can print or screenshot"]),
+        ("Custom AI Skills & Prompt Templates for Your Business", "$39", "3 days", "https://contra.com/s/oOUYckkm-custom-ai-skills-and-prompt-templates-for-your-business",
+         "Ready-to-use prompt templates and AI skills written for your business, so your team gets consistent results from ChatGPT or Claude for emails, posts, quotes and replies.",
+         ["Up to 5 custom skills or prompt templates for the tasks you repeat most", "Each with your business details, tone of voice, steps, output template and a quality checklist", "Ready to upload as Skills in Claude or paste as instructions in ChatGPT"]),
+    ]
+    cards = "".join(f'''<div class="box" style="margin-bottom:20px"><h2 style="margin-top:0">{E(n)}</h2><div class="big">{p} <span style="font-size:15px;color:var(--mut);font-weight:400">· {d} delivery</span></div><p>{E(desc)}</p><ul class="ck">{"".join(f"<li>{E(b)}</li>" for b in bl)}</ul><a class="btn" href="{u}" rel="noopener">See details &amp; message me on Contra</a></div>''' for n, p, d, u, desc, bl in SVC)
+    body = f"""<section class="hero"><div class="w"><h1>Custom Excel Dashboards &amp; Spreadsheet Help for Small Businesses</h1><p>Tell me what you track today and I build the spreadsheet for you - fast delivery, fixed price, secure payment through Contra.</p></div></section>
+<main class="w" style="padding-top:24px">{cards}<div class="box faq"><h2 style="margin-top:0">Questions</h2><h3>How do I start?</h3><p>Open a service on Contra and press Message. Describe what you track today and, if you can, attach a sample of your data. I confirm the scope and price before starting.</p><h3>Is my payment safe?</h3><p>Yes. You pay securely through Contra, never by bank transfer to a stranger.</p><h3>Excel or Google Sheets?</h3><p>Either. Files are standard .xlsx without macros, so they also open in Google Sheets.</p><h3>Can you work in Arabic?</h3><p>Yes - labels, instructions and prompts can be in English, Arabic or both.</p></div></main>"""
+    svcld = [{"@context": "https://schema.org", "@type": "Service", "name": n, "provider": {"@type": "Person", "name": "Mahmoud Abuomair"}, "url": u, "description": desc,
+              "offers": {"@type": "Offer", "price": p.strip("$"), "priceCurrency": "USD", "url": u}} for n, p, d, u, desc, bl in SVC]
+    page("services/index.html", "Custom Excel Dashboard Service for Small Business | LaunchKit Labs",
+         "Hire a freelancer to build a custom Excel or Google Sheets dashboard, an automatic weekly sales report from your CSV exports, or AI prompt templates for your business. Fixed prices from $39.",
+         body, jsonld=svcld)
+    urls.append(BASE + "/services/")
 
     # ---------- free page ----------
     fr = [p for p in P if p[3] == 0]
