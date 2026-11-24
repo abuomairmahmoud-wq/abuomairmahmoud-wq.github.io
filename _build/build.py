@@ -53,6 +53,22 @@ def onsale(p):
     return SALE and p[3] > 0 and p[0] not in PWYW
 
 
+def seo_title(kw, limit=60):
+    """Short title for Google (about 60 chars show in results)."""
+    t = kw
+    if len(t) > limit:
+        for sep in [": ", " (", " - ", " | ", ", "]:
+            i = t.find(sep)
+            if 25 <= i <= limit:
+                t = t[:i]
+                break
+    if len(t) > limit:
+        t = t[:limit].rsplit(" ", 1)[0].rstrip(" -:,&(")
+    if len(t) + len(" | LaunchKit Labs") <= limit + 5:
+        t += " | LaunchKit Labs"
+    return t
+
+
 def pr(p):
     if onsale(p):
         return f'<s style="color:#94a3b8;font-weight:400">{price(p[3])}</s> {sale(p[3])} <span style="color:#b91c1c;font-size:13px">40% off</span>'
@@ -184,8 +200,9 @@ def build():
     body = f"""<section class="hero"><div class="w"><h1>Excel Templates for Budgets, Deals, Small Business &amp; Life Planning</h1>
 <p>Ready-to-use spreadsheets that do the math for you: budget planners, Black Friday deal trackers, grocery price books, car loan calculators, invoice trackers and more. Built for the USA, UK and Canada.</p>
 <a class="btn" href="#picks">Holiday picks</a><a class="btn ghost" href="free/">Free templates</a>
+<div style="margin-top:18px;max-width:560px"><input id="lksearch" type="search" placeholder="Search templates, ebooks and bundles (e.g. budget, kids, arabic, invoice)" aria-label="Search products" style="width:100%;padding:12px 14px;border-radius:10px;border:0;font-size:16px"></div>
 <div class="trust"><span>✓ Instant download</span><span>✓ No subscription</span><span>✓ Works in Excel &amp; Google Sheets</span><span>✓ Sample data included</span></div></div></section>
-<main class="w">{picks_html}{bundles_html}<div class="cta" style="margin:8px 0 28px"><h3>Need a spreadsheet built for you?</h3><p>I build custom Excel dashboards, fix broken spreadsheets and translate Arabic and English - fixed prices from $20, fast delivery.</p><a class="btn" href="services/">See custom services</a></div><section><h2 id="tools">Free online calculators</h2><p class="sub">Quick answers in your browser, no download needed.</p><ul>{tl}</ul></section>{secs}<section><h2>Free money-saving guides</h2><ul>{guides}</ul></section><section><h2 id="deals-guides">Deals &amp; buying guides</h2><ul>{dl}</ul></section></main>"""
+<main class="w">{picks_html}{bundles_html}<div class="cta" style="margin:8px 0 28px"><h3>Need a spreadsheet built for you?</h3><p>I build custom Excel dashboards, fix broken spreadsheets and translate Arabic and English - fixed prices from $20, fast delivery.</p><a class="btn" href="services/">See custom services</a></div><section><h2 id="tools">Free online calculators</h2><p class="sub">Quick answers in your browser, no download needed.</p><ul>{tl}</ul></section>{secs}<section><h2>Free money-saving guides</h2><ul>{guides}</ul></section><section><h2 id="deals-guides">Deals &amp; buying guides</h2><ul>{dl}</ul></section><p id="lknone" style="display:none">No match - try another word, or see <a href="free/">free templates</a>.</p></main><script>(function(){{var i=document.getElementById("lksearch");if(!i)return;i.addEventListener("input",function(){{var q=i.value.toLowerCase().trim(),n=0;document.querySelectorAll("main .card").forEach(function(c){{var m=!q||c.innerText.toLowerCase().indexOf(q)>=0;c.style.display=m?"":"none";if(m&&q)n++;}});document.querySelectorAll("main section").forEach(function(sec){{var cs=sec.querySelectorAll(".card");if(!cs.length){{sec.style.display=q?"none":"";return;}}var v=[].some.call(cs,function(c){{return c.style.display!=="none";}});sec.style.display=v?"":"none";}});document.getElementById("lknone").style.display=(q&&!n)?"":"none";}});}})();</script>"""
     org = {"@context": "https://schema.org", "@type": "Organization", "name": "LaunchKit Labs", "url": BASE + "/",
            "sameAs": ["https://mahmoudian113.gumroad.com", "https://payhip.com/BestLaunchKitLabs", "https://contra.com/mahmoud_abuomair_7sxshnhl"]}
     site = {"@context": "https://schema.org", "@type": "WebSite", "name": "LaunchKit Labs", "url": BASE + "/"}
@@ -273,9 +290,7 @@ def build():
         crumbs = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE + "/"},
             {"@type": "ListItem", "position": 2, "name": name, "item": BASE + f"/{slug}/"}]}
-        t = f"{kw} | LaunchKit Labs"
-        if len(t) > 70:
-            t = kw
+        t = seo_title(kw)
         md = (desc[:150].rsplit(" ", 1)[0] + "...") if len(desc) > 155 else desc
         page(path, t, md, body, img=IMG + img, jsonld=[prod, faq, crumbs], typ="product")
         urls.append(BASE + f"/{slug}/")
