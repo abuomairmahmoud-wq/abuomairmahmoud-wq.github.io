@@ -169,12 +169,23 @@ def build():
         return (f'<div class="card"><a href="{url}" data-gumroad-overlay-checkout="true" rel="noopener"><img src="{IMG}{img}" alt="{E(title)}" loading="lazy" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block"></a>'
                 f'<div style="padding:12px 14px">{badge}<b>{E(title)}</b><div class="big" style="font-size:18px;margin:6px 0">{ptxt}</div>'
                 f'<a class="btn" style="padding:8px 16px;font-size:14px" href="{url}" data-gumroad-overlay-checkout="true" rel="noopener">{"Download free" if cents == 0 else "Buy now"}</a></div></div>')
+    S3 = "https://pe56d.s3.amazonaws.com/"
+    BUNDLES = [
+        ("https://payhip.com/b/3erY5", "Family Library: 18 English & Arabic PDFs (kids books, ebooks, planners)", "$15", "$52.82", "o_1k86ltbfo1837lom1li2e1mmj91f.png"),
+        ("https://payhip.com/b/9iDqT", "Team Manager Excel Bundle: 6 dashboards (attendance, shifts, hiring, timesheet)", "$15", "$28.44", "o_1k86mcvhkg5d1dt12c9nke3a21f.png"),
+        ("https://payhip.com/b/6AZU5", "Home Admin Excel Bundle: 7 trackers (bills, home repairs, car, subscriptions)", "$15", "$32.43", "o_1k86me0gf9879qr175u1e5o1ohp1f.png"),
+    ]
+    bundles_html = '<section id="bundles"><h2>Best value bundles</h2><p class="sub">Several tools in one download for less than buying them one by one. Instant download, 30-day money-back guarantee.</p><div class="grid">' + "".join(
+        f'<div class="card"><a href="{u}" rel="noopener"><img src="{S3}{im}" alt="{E(t)}" loading="lazy" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block"></a>'
+        f'<div style="padding:12px 14px"><span style="display:inline-block;background:#fde68a;color:#7c2d12;font-size:12px;font-weight:700;padding:2px 8px;border-radius:8px;margin-bottom:6px">Bundle deal</span><br><b>{E(t)}</b>'
+        f'<div class="big" style="font-size:18px;margin:6px 0"><s style="color:#94a3b8;font-size:14px;font-weight:400">{w}</s> {p}</div><a class="btn" style="padding:8px 16px;font-size:14px" href="{u}" rel="noopener">Get the bundle</a></div></div>'
+        for u, t, p, w, im in BUNDLES) + '</div></section>'
     picks_html = f'<section id="picks"><h2>Holiday &amp; New Year picks</h2><p class="sub">Printables, planners and AI packs for Christmas and a fresh start in 2027. Instant download.</p><div class="grid">{"".join(pick_card(k) for k in PICKS)}</div></section>'
     body = f"""<section class="hero"><div class="w"><h1>Excel Templates for Budgets, Deals, Small Business &amp; Life Planning</h1>
 <p>Ready-to-use spreadsheets that do the math for you: budget planners, Black Friday deal trackers, grocery price books, car loan calculators, invoice trackers and more. Built for the USA, UK and Canada.</p>
 <a class="btn" href="#picks">Holiday picks</a><a class="btn ghost" href="free/">Free templates</a>
 <div class="trust"><span>✓ Instant download</span><span>✓ No subscription</span><span>✓ Works in Excel &amp; Google Sheets</span><span>✓ Sample data included</span></div></div></section>
-<main class="w">{picks_html}<div class="cta" style="margin:8px 0 28px"><h3>Need a spreadsheet built for you?</h3><p>I build custom Excel dashboards, fix broken spreadsheets and translate Arabic and English - fixed prices from $20, fast delivery.</p><a class="btn" href="services/">See custom services</a></div><section><h2 id="tools">Free online calculators</h2><p class="sub">Quick answers in your browser, no download needed.</p><ul>{tl}</ul></section>{secs}<section><h2>Free money-saving guides</h2><ul>{guides}</ul></section><section><h2 id="deals-guides">Deals &amp; buying guides</h2><ul>{dl}</ul></section></main>"""
+<main class="w">{picks_html}{bundles_html}<div class="cta" style="margin:8px 0 28px"><h3>Need a spreadsheet built for you?</h3><p>I build custom Excel dashboards, fix broken spreadsheets and translate Arabic and English - fixed prices from $20, fast delivery.</p><a class="btn" href="services/">See custom services</a></div><section><h2 id="tools">Free online calculators</h2><p class="sub">Quick answers in your browser, no download needed.</p><ul>{tl}</ul></section>{secs}<section><h2>Free money-saving guides</h2><ul>{guides}</ul></section><section><h2 id="deals-guides">Deals &amp; buying guides</h2><ul>{dl}</ul></section></main>"""
     org = {"@context": "https://schema.org", "@type": "Organization", "name": "LaunchKit Labs", "url": BASE + "/",
            "sameAs": ["https://mahmoudian113.gumroad.com", "https://payhip.com/BestLaunchKitLabs", "https://contra.com/mahmoud_abuomair_7sxshnhl"]}
     site = {"@context": "https://schema.org", "@type": "WebSite", "name": "LaunchKit Labs", "url": BASE + "/"}
