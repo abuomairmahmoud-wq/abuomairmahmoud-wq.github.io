@@ -186,10 +186,11 @@ def build():
                 f'<div style="padding:12px 14px">{badge}<b>{E(title)}</b><div class="big" style="font-size:18px;margin:6px 0">{ptxt}</div>'
                 f'<a class="btn" style="padding:8px 16px;font-size:14px" href="{url}" data-gumroad-overlay-checkout="true" rel="noopener">{"Download free" if cents == 0 else "Buy now"}</a></div></div>')
     S3 = "https://pe56d.s3.amazonaws.com/"
+    BFX = "/BLACKFRIDAY" if SALE else ""
     BUNDLES = [
-        ("https://payhip.com/b/3erY5", "Family Library: 18 English & Arabic PDFs (kids books, ebooks, planners)", "$15", "$52.82", "o_1k86ltbfo1837lom1li2e1mmj91f.png"),
-        ("https://payhip.com/b/9iDqT", "Team Manager Excel Bundle: 6 dashboards (attendance, shifts, hiring, timesheet)", "$15", "$28.44", "o_1k86mcvhkg5d1dt12c9nke3a21f.png"),
-        ("https://payhip.com/b/6AZU5", "Home Admin Excel Bundle: 7 trackers (bills, home repairs, car, subscriptions)", "$15", "$32.43", "o_1k86me0gf9879qr175u1e5o1ohp1f.png"),
+        (GUM + "druthz" + BFX, "Family Library: 18 English & Arabic PDFs (kids books, ebooks, planners)", "$15", "$52.82", "o_1k86ltbfo1837lom1li2e1mmj91f.png"),
+        (GUM + "iwbyc" + BFX, "Team Manager Excel Bundle: 6 dashboards (attendance, shifts, hiring, timesheet)", "$15", "$28.44", "o_1k86mcvhkg5d1dt12c9nke3a21f.png"),
+        (GUM + "wxcihf" + BFX, "Home Admin Excel Bundle: 7 trackers (bills, home repairs, car, subscriptions)", "$15", "$32.43", "o_1k86me0gf9879qr175u1e5o1ohp1f.png"),
     ]
     bundles_html = '<section id="bundles"><h2>Best value bundles</h2><p class="sub">Several tools in one download for less than buying them one by one. Instant download, 30-day money-back guarantee.</p><div class="grid">' + "".join(
         f'<div class="card"><a href="{u}" rel="noopener"><img src="{S3}{im}" alt="{E(t)}" loading="lazy" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block"></a>'
