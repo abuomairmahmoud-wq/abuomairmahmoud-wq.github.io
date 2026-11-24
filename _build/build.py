@@ -42,7 +42,20 @@ def price(c):
 PWYW = {p['slug'] for p in _D['products'] if p.get('pwyw')}
 
 
+SALE = TODAY <= "2026-12-02"  # Black Friday: 40% off with code BLACKFRIDAY
+
+
+def sale(c):
+    return f"${round(c * 0.6) / 100:.2f}"
+
+
+def onsale(p):
+    return SALE and p[3] > 0 and p[0] not in PWYW
+
+
 def pr(p):
+    if onsale(p):
+        return f'<s style="color:#94a3b8;font-weight:400">{price(p[3])}</s> {sale(p[3])} <span style="color:#b91c1c;font-size:13px">40% off</span>'
     return f"Pay what you want ({price(p[3])} suggested)" if p[0] in PWYW else price(p[3])
 
 
@@ -147,11 +160,15 @@ def build():
     ]
     def pick_card(k):
         perm, title, cents, img, code = k
+        if SALE and cents:
+            code = "BLACKFRIDAY"
         url = GUM + perm + (("/" + code) if code else "")
-        badge = '<span style="display:inline-block;background:#fde68a;color:#7c2d12;font-size:12px;font-weight:700;padding:2px 8px;border-radius:8px;margin-bottom:6px">First 20 buyers: 25% off</span><br>' if code else ""
+        btxt = "Black Friday: 40% off until Dec 2" if code == "BLACKFRIDAY" else "First 20 buyers: 25% off"
+        badge = f'<span style="display:inline-block;background:#fde68a;color:#7c2d12;font-size:12px;font-weight:700;padding:2px 8px;border-radius:8px;margin-bottom:6px">{btxt}</span><br>' if code else ""
+        ptxt = (f'<s style="color:#94a3b8;font-size:14px;font-weight:400">${cents/100:.2f}</s> {sale(cents)}' if code == "BLACKFRIDAY" else ("FREE" if cents == 0 else f"${cents/100:.2f}"))
         return (f'<div class="card"><a href="{url}" data-gumroad-overlay-checkout="true" rel="noopener"><img src="{IMG}{img}" alt="{E(title)}" loading="lazy" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block"></a>'
-                f'<div style="padding:12px 14px">{badge}<b>{E(title)}</b><div class="big" style="font-size:18px;margin:6px 0">${cents/100:.2f}</div>'
-                f'<a class="btn" style="padding:8px 16px;font-size:14px" href="{url}" data-gumroad-overlay-checkout="true" rel="noopener">Buy now</a></div></div>')
+                f'<div style="padding:12px 14px">{badge}<b>{E(title)}</b><div class="big" style="font-size:18px;margin:6px 0">{ptxt}</div>'
+                f'<a class="btn" style="padding:8px 16px;font-size:14px" href="{url}" data-gumroad-overlay-checkout="true" rel="noopener">{"Download free" if cents == 0 else "Buy now"}</a></div></div>')
     picks_html = f'<section id="picks"><h2>Holiday &amp; New Year picks</h2><p class="sub">Printables, planners and AI packs for Christmas and a fresh start in 2027. Instant download.</p><div class="grid">{"".join(pick_card(k) for k in PICKS)}</div></section>'
     body = f"""<section class="hero"><div class="w"><h1>Excel Templates for Budgets, Deals, Small Business &amp; Life Planning</h1>
 <p>Ready-to-use spreadsheets that do the math for you: budget planners, Black Friday deal trackers, grocery price books, car loan calculators, invoice trackers and more. Built for the USA, UK and Canada.</p>
@@ -195,6 +212,9 @@ def build():
         faqhtml = "".join(f"<h3>{E(q)}</h3><p>{E(a)}</p>" for q, a in faqs)
         btn = "Download free" if cents == 0 else f"Buy now: {price(cents)}"
         pw = slug in PWYW
+        if onsale(p):
+            link = GUM + slug + "/BLACKFRIDAY"
+            btn = f"Buy now: {sale(cents)} (40% off until Dec 2)"
         if pw:
             btn = "Get it: pay what you want"
             faqs.insert(0, ("How does pay what you want work?", f"Enter any amount you like at checkout, from $0. The suggested price is {price(cents)}. If you download it for less, a rating on Gumroad helps a small shop a lot."))
